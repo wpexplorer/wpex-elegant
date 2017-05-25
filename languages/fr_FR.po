@@ -1,0 +1,1137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Elegant WordPress Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-23 09:42-0800\n"
+"PO-Revision-Date: 2016-03-23 09:42-0800\n"
+"Last-Translator: Jean-Jacques Schaeffer <jjschaeffer@aliceadsl.fr>\n"
+"Language-Team: J.-J. Schaeffer <jjschaeffer@aliceadsl.fr>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_nx\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:21
+msgid "Unfortunately, the page you tried accessing could not be retrieved."
+msgstr ""
+"Désolé, mais la page à laquelle vous vouliez accéder, n'a pu être trouvée."
+
+#: ../comments.php:32
+msgid "This article has 1 comment"
+msgstr "Cet article comprend 1 comentaire"
+
+#: ../comments.php:44
+msgid "Comment navigation"
+msgstr "Navigation dans les commentaires"
+
+#: ../comments.php:45
+msgid "&larr; Older Comments"
+msgstr "&larr; Commentaires plus anciens"
+
+#: ../comments.php:46
+msgid "Newer Comments &rarr;"
+msgstr "Commentaires plus récents &rarr;"
+
+#: ../comments.php:51
+msgid "Leave a Comment"
+msgstr "Ajouter un commentaire"
+
+#: ../functions.php:227
+msgid "Main"
+msgstr "Principal"
+
+#: ../functions.php:345
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: ../functions.php:347
+msgid "Widgets in this area are used in the sidebar region."
+msgstr "Les widgets de cette zone sont utilisés dans l'aire de la sidebar."
+
+#: ../functions.php:356
+msgid "Footer 1"
+msgstr "Pied de page 1"
+
+#: ../functions.php:358
+msgid "Widgets in this area are used in the first footer region."
+msgstr ""
+"Les widgets de cette zone sont utilisés dans la première aire du pied de "
+"page."
+
+#: ../functions.php:367
+msgid "Footer 2"
+msgstr "Pied de page 2"
+
+#: ../functions.php:369
+msgid "Widgets in this area are used in the second footer region."
+msgstr ""
+"Les widgets de cette zone sont utilisés dans la seconde aire du pied de page."
+
+#: ../functions.php:378
+msgid "Footer 3"
+msgstr "Pied de page 3"
+
+#: ../functions.php:380
+msgid "Widgets in this area are used in the third footer region."
+msgstr ""
+"Les widgets de cette zone sont utilisés dans la troisièmee aire du pied de "
+"page."
+
+#: ../inc/comments-callback.php:26
+msgid "Pingback:"
+msgstr "Pingback :"
+
+#: ../inc/comments-callback.php:26 ../inc/classes/post-types/portfolio.php:111
+msgid "Edit"
+msgstr "Modifier"
+
+#: ../inc/comments-callback.php:51
+msgid "Reply"
+msgstr "Répondre"
+
+#: ../inc/comments-callback.php:55
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+#: ../inc/helpers.php:91
+msgid "continue reading"
+msgstr "suite..."
+
+#: ../inc/helpers.php:180
+msgid "Newer Posts"
+msgstr "Articles plus récents"
+
+#: ../inc/helpers.php:182
+msgid "Older Posts"
+msgstr "Articlesplus anciens"
+
+#: ../inc/meta-config.php:27 ../inc/meta/usage.php:25
+msgid "Slide Settings"
+msgstr "Configuration des diapos"
+
+#: ../inc/meta-config.php:34 ../inc/meta-config.php:67
+#: ../inc/meta/usage.php:32 ../inc/meta/usage.php:58
+msgid "URL"
+msgstr "URL"
+
+#: ../inc/meta-config.php:35 ../inc/meta/usage.php:33
+msgid ""
+"Enter a custom URL to link this slide to. Don't forget the http// at the "
+"front!"
+msgstr ""
+"Tapez un URL personnalisé comme lien de cette diapo. N'oubliez pas http:// "
+"en tête."
+
+#: ../inc/meta-config.php:41
+#, fuzzy
+msgid "Hide Title"
+msgstr "Titre"
+
+#: ../inc/meta-config.php:48
+#, fuzzy
+msgid "Slide Caption"
+msgstr "Configuration des diapos"
+
+#: ../inc/meta-config.php:60 ../inc/meta/usage.php:51
+msgid "Feature Settings"
+msgstr "Configuration de l'exergue"
+
+#: ../inc/meta-config.php:68 ../inc/meta/usage.php:59
+msgid ""
+"Enter a custom URL to link this feature to. Don't forget the http// at the "
+"front! This link will be added to the featured image and title."
+msgstr ""
+"Tapez un URL personnalisé en lien pour cet exergue. N'oublirez pas http:// "
+"en tête. Ce lien sera ajouté à l'image en exergue et au titre."
+
+#: ../inc/meta-config.php:74 ../inc/meta/usage.php:65
+msgid "Icon Font Class"
+msgstr "Classe de la fonte icone"
+
+#: ../inc/meta-config.php:75 ../inc/meta/usage.php:66
+msgid ""
+"Enter the icon font classname (without the fa- part) to display an icon "
+"instead of a featured image."
+msgstr ""
+"Tapez le nom de classe de la fonte icone (sans la partie fa- ) pour afficher "
+"une icone à la place de l'image en exergue."
+
+#: ../inc/meta-config.php:75 ../inc/meta/usage.php:66
+msgid "Learn More."
+msgstr "En savoir plus."
+
+#: ../inc/meta-config.php:87 ../inc/meta-config.php:107
+#: ../inc/meta/usage.php:78 ../inc/meta/usage.php:98
+msgid "Post Settings"
+msgstr "Configuration des articles"
+
+#: ../inc/meta-config.php:94 ../inc/meta-config.php:114
+#: ../inc/meta/usage.php:85 ../inc/meta/usage.php:105
+msgid "Video URL"
+msgstr "URL vidéo"
+
+#: ../inc/meta-config.php:95 ../inc/meta-config.php:115
+#: ../inc/meta/usage.php:86 ../inc/meta/usage.php:106
+msgid ""
+"Enter in a video URL that is compatible with WordPress's built-in oEmbed "
+"feature."
+msgstr ""
+"Tapez l'URL d'une vidéo compatible avec la fonction d'incrustation WordPress."
+
+#: ../inc/meta-config.php:95 ../inc/meta-config.php:115
+#: ../inc/meta/usage.php:86 ../inc/meta/usage.php:106
+msgid "Learn More"
+msgstr "En savoir plus"
+
+#: ../inc/welcome.php:39 ../inc/welcome.php:40
+msgid "Elegant Theme"
+msgstr ""
+
+#: ../inc/classes/custom-metaboxes-and-fields/init.php:258
+#: ../inc/meta/init.php:207
+msgid "Clear"
+msgstr "Effcer"
+
+#: ../inc/classes/custom-metaboxes-and-fields/init.php:259
+#: ../inc/meta/init.php:208
+msgid "Default"
+msgstr "Par défaut"
+
+#: ../inc/classes/custom-metaboxes-and-fields/init.php:260
+#: ../inc/meta/init.php:209
+msgid "Select Color"
+msgstr "Choisir une couleur"
+
+#: ../inc/classes/custom-metaboxes-and-fields/init.php:261
+#: ../inc/meta/init.php:210
+msgid "Current Color"
+msgstr "Couleur actuelle"
+
+#: ../inc/classes/custom-metaboxes-and-fields/init.php:288
+msgid "Select / Deselect All"
+msgstr ""
+
+#: ../inc/classes/custom-metaboxes-and-fields/init.php:1179
+#: ../inc/meta/init.php:936
+msgid "Save"
+msgstr "Sauvegarder"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_ajax.php:47
+#: ../inc/meta/helpers/cmb_Meta_Box_ajax.php:47
+msgid "Please Try Again"
+msgstr "Veuillez ré-essayer"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_ajax.php:131
+#: ../inc/meta/helpers/cmb_Meta_Box_ajax.php:118
+msgid "Remove Embed"
+msgstr "Supprimer le relief"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_ajax.php:134
+#: ../inc/meta/helpers/cmb_Meta_Box_ajax.php:121
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+"Pas de résultat pour incrustation trouvé pour %s. Pour plus d'info, voyez"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_field.php:459
+#, fuzzy
+msgid "Add Group"
+msgstr "Ajouter une ligne"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_field.php:460
+#, fuzzy
+msgid "Remove Group"
+msgstr "Supprimer"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:250
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:139
+msgid "Add Row"
+msgstr "Ajouter une ligne"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:306
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:706
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:768
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:167
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:459
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:502
+msgid "Remove"
+msgstr "Supprimer"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:601
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:635
+msgid "No terms"
+msgstr ""
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:674
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:728
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:437
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:475
+msgid "Add or Upload File"
+msgstr "Ajouter ou charger un fichier"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:695
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:760
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:448
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:494
+msgid "Remove Image"
+msgstr "Supprimer l'image"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:706
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:768
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:459
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:502
+msgid "File:"
+msgstr "Fichier :"
+
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:706
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:768
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:459
+#: ../inc/meta/helpers/cmb_Meta_Box_types.php:502
+msgid "Download"
+msgstr "Téléchargement"
+
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:56
+#: ../inc/meta/gallery-metabox/gmb-admin.php:25
+msgid "Image Gallery"
+msgstr "Galerie d'images"
+
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:82
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:138
+#: ../inc/meta/gallery-metabox/gmb-admin.php:81
+#: ../inc/meta/gallery-metabox/gmb-admin.php:145
+msgid "Remove image"
+msgstr "Supprimer l'image"
+
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:92
+#: ../inc/meta/gallery-metabox/gmb-admin.php:92
+msgid "Add/Edit Images"
+msgstr "Ajouter/modifier des images"
+
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:97
+#: ../inc/meta/gallery-metabox/gmb-admin.php:102
+msgid "Enable Lightbox for this gallery?"
+msgstr "Activer Lightbox pour cette galerie ?"
+
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:119
+#: ../inc/meta/gallery-metabox/gmb-admin.php:126
+msgid "Add Images to Gallery"
+msgstr "Ajouter des images à la galerie"
+
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:121
+#: ../inc/meta/gallery-metabox/gmb-admin.php:128
+msgid "Add to gallery"
+msgstr "Ajouter à la galerie"
+
+#: ../inc/classes/post-types/features.php:49
+msgid "Features"
+msgstr "Exergues"
+
+#: ../inc/classes/post-types/features.php:50
+msgid "Home Features"
+msgstr "Exergues d'accueil"
+
+#: ../inc/classes/post-types/features.php:51
+msgid "Features Item"
+msgstr "Elément de l'exergue"
+
+#: ../inc/classes/post-types/features.php:52
+#: ../inc/classes/post-types/portfolio.php:73
+#: ../inc/classes/post-types/portfolio.php:75
+#: ../inc/classes/post-types/slides.php:52
+#: ../inc/classes/post-types/staff.php:53
+msgid "Add New Item"
+msgstr "Ajouter un nouvel élément"
+
+#: ../inc/classes/post-types/features.php:53
+#: ../inc/classes/post-types/features.php:55
+msgid "Add New Features Item"
+msgstr "Ajouter des éléments à l'exergue"
+
+#: ../inc/classes/post-types/features.php:54
+msgid "Edit Features Item"
+msgstr "Modifier les éléments en exergue"
+
+#: ../inc/classes/post-types/features.php:56
+#: ../inc/classes/post-types/portfolio.php:76
+#: ../inc/classes/post-types/slides.php:56
+#: ../inc/classes/post-types/staff.php:57
+msgid "View Item"
+msgstr "Voir l'élément"
+
+#: ../inc/classes/post-types/features.php:57
+msgid "Search Features"
+msgstr "Recherche exergues"
+
+#: ../inc/classes/post-types/features.php:58
+msgid "No features items found"
+msgstr "Aucun élément en exergue trouvé"
+
+#: ../inc/classes/post-types/features.php:59
+msgid "No features items found in trash"
+msgstr "Pas d'élément en exergue dans la corbeille"
+
+#: ../inc/classes/post-types/features.php:91
+#: ../inc/classes/post-types/slides.php:91
+msgid "Title"
+msgstr "Titre"
+
+#: ../inc/classes/post-types/features.php:92
+#: ../inc/classes/post-types/portfolio.php:148
+#: ../inc/classes/post-types/slides.php:92
+#: ../inc/classes/post-types/staff.php:128
+msgid "Thumbnail"
+msgstr "Miniature"
+
+#: ../inc/classes/post-types/portfolio.php:70
+#: ../inc/customizer/portfolio.php:16
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: ../inc/classes/post-types/portfolio.php:71
+msgid "Portfolio Item"
+msgstr "Elément de portfolio"
+
+#: ../inc/classes/post-types/portfolio.php:72
+#: ../inc/classes/post-types/portfolio.php:113
+#, fuzzy
+msgid "Add New"
+msgstr "Ajouter un nouvel élément"
+
+#: ../inc/classes/post-types/portfolio.php:74
+#, fuzzy
+msgid "Edit Item"
+msgstr "Modifier le membre du staff"
+
+#: ../inc/classes/post-types/portfolio.php:77
+#, fuzzy
+msgid "Search Items"
+msgstr "Recherche exergues"
+
+#: ../inc/classes/post-types/portfolio.php:78
+#, fuzzy
+msgid "No Items Found"
+msgstr "Pas de membre de staff trouvé"
+
+#: ../inc/classes/post-types/portfolio.php:79
+#, fuzzy
+msgid "No Items Found In Trash"
+msgstr "Pas de membre de staff dans la corbeille"
+
+#: ../inc/classes/post-types/portfolio.php:103
+#: ../inc/classes/post-types/portfolio.php:105
+#, fuzzy
+msgid "Categories"
+msgstr "Catégorie"
+
+#: ../inc/classes/post-types/portfolio.php:104
+#: ../inc/classes/post-types/portfolio.php:149
+#: ../inc/classes/post-types/staff.php:129
+msgid "Category"
+msgstr "Catégorie"
+
+#: ../inc/classes/post-types/portfolio.php:106
+#, fuzzy
+msgid "Search"
+msgstr "Rechercher dans le staff"
+
+#: ../inc/classes/post-types/portfolio.php:107
+msgid "Popular"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:108
+#: ../inc/customizer/portfolio.php:65
+msgid "All"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:109
+#: ../inc/classes/post-types/portfolio.php:110
+msgid "Parent"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:112
+msgid "Update"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:114
+msgid "New"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:115
+#, fuzzy
+msgid "Separate with commas"
+msgstr "Séparez les catégories de staff par des virgules"
+
+#: ../inc/classes/post-types/portfolio.php:116
+#, fuzzy
+msgid "Add or remove"
+msgstr "Ajouter ou supprimer ds catégories du staff"
+
+#: ../inc/classes/post-types/portfolio.php:117
+#, fuzzy
+msgid "Choose from the most used"
+msgstr "Choisissez parmi les catégories de staff les plus utilisées"
+
+#: ../inc/classes/post-types/slides.php:49
+msgid "Slides"
+msgstr "Diapos"
+
+#: ../inc/classes/post-types/slides.php:50
+msgid "Home Slides"
+msgstr "Diapos d'accueil"
+
+#: ../inc/classes/post-types/slides.php:51
+msgid "Slides Item"
+msgstr "Diapo"
+
+#: ../inc/classes/post-types/slides.php:53
+#: ../inc/classes/post-types/slides.php:55
+msgid "Add New Slides Item"
+msgstr "Ajouter denouvelles diapos"
+
+#: ../inc/classes/post-types/slides.php:54
+msgid "Edit Slides Item"
+msgstr "Modifier les diapos"
+
+#: ../inc/classes/post-types/slides.php:57
+msgid "Search Slides"
+msgstr "Rechercher des diapos"
+
+#: ../inc/classes/post-types/slides.php:58
+msgid "No slides items found"
+msgstr "Pas de diapo trouvée"
+
+#: ../inc/classes/post-types/slides.php:59
+msgid "No slides items found in trash"
+msgstr "Pas de diapo dans la corbeille"
+
+# In french: "encadrement" but staff is also well knowned.
+#: ../inc/classes/post-types/staff.php:51 ../inc/customizer/staff.php:16
+msgid "Staff"
+msgstr "Staff"
+
+#: ../inc/classes/post-types/staff.php:52
+msgid "Staff Item"
+msgstr "Membre du staff"
+
+#: ../inc/classes/post-types/staff.php:54
+#: ../inc/classes/post-types/staff.php:56
+msgid "Add New Staff Item"
+msgstr "Ajouter un nouveau membre au staff"
+
+#: ../inc/classes/post-types/staff.php:55
+msgid "Edit Staff Item"
+msgstr "Modifier le membre du staff"
+
+#: ../inc/classes/post-types/staff.php:58
+msgid "Search Staff"
+msgstr "Rechercher dans le staff"
+
+#: ../inc/classes/post-types/staff.php:59
+msgid "No staff items found"
+msgstr "Pas de membre de staff trouvé"
+
+#: ../inc/classes/post-types/staff.php:60
+msgid "No staff items found in trash"
+msgstr "Pas de membre de staff dans la corbeille"
+
+#: ../inc/classes/post-types/staff.php:83
+#: ../inc/classes/post-types/staff.php:97
+msgid "Staff Categories"
+msgstr "Catégories de staff"
+
+#: ../inc/classes/post-types/staff.php:84
+msgid "Staff Category"
+msgstr "Catégorie de staff"
+
+#: ../inc/classes/post-types/staff.php:85
+msgid "Search Staff Categories"
+msgstr "Recherche dans les catégories de staff"
+
+#: ../inc/classes/post-types/staff.php:86
+msgid "Popular Staff Categories"
+msgstr "Catégories de staff prisées"
+
+#: ../inc/classes/post-types/staff.php:87
+msgid "All Staff Categories"
+msgstr "Toutes les catégories de staff"
+
+#: ../inc/classes/post-types/staff.php:88
+msgid "Parent Staff Category"
+msgstr "Catégorie parente de staff"
+
+#: ../inc/classes/post-types/staff.php:89
+msgid "Parent Staff Category:"
+msgstr "Catégorie parente de staff :"
+
+#: ../inc/classes/post-types/staff.php:90
+msgid "Edit Staff Category"
+msgstr "Modifier la catégorie de staff"
+
+#: ../inc/classes/post-types/staff.php:91
+msgid "Update Staff Category"
+msgstr "Mettre à jour la catégorie de staff"
+
+#: ../inc/classes/post-types/staff.php:92
+msgid "Add New Staff Category"
+msgstr "Ajouterune nouvelle catégorie au staff"
+
+#: ../inc/classes/post-types/staff.php:93
+msgid "New Staff Category Name"
+msgstr "Nom de la nouvelle catégorie de staff"
+
+#: ../inc/classes/post-types/staff.php:94
+msgid "Separate staff categories with commas"
+msgstr "Séparez les catégories de staff par des virgules"
+
+#: ../inc/classes/post-types/staff.php:95
+msgid "Add or remove staff categories"
+msgstr "Ajouter ou supprimer ds catégories du staff"
+
+#: ../inc/classes/post-types/staff.php:96
+msgid "Choose from the most used staff categories"
+msgstr "Choisissez parmi les catégories de staff les plus utilisées"
+
+#: ../inc/classes/post-types/staff.php:167
+msgid "None"
+msgstr "Aucun(e)"
+
+#: ../inc/customizer/blog.php:16 ../partials/archive-header.php:39
+msgid "Blog"
+msgstr "Blog"
+
+#: ../inc/customizer/blog.php:27
+msgid "Read More Link"
+msgstr "Lien de plus de lecture"
+
+#: ../inc/customizer/blog.php:41
+msgid "Featured Image on Entries"
+msgstr "Image en exergue sur les entrées"
+
+#: ../inc/customizer/blog.php:55
+msgid "Featured Image on Posts"
+msgstr "Image en exergue sur les articles"
+
+#: ../inc/customizer/copyright.php:32 ../partials/footer/copyright.php:31
+msgid "Copyright"
+msgstr "Copyright"
+
+#: ../inc/customizer/copyright.php:42
+msgid "Custom Copyright"
+msgstr "Copyright personnalisé"
+
+#: ../inc/customizer/header.php:16
+msgid "Header"
+msgstr "En-tête"
+
+#: ../inc/customizer/header.php:26
+msgid "Image Logo"
+msgstr "Image logo"
+
+#: ../inc/customizer/portfolio.php:27
+msgid "Portfolio Post Type"
+msgstr "Type d'article portfolio"
+
+#: ../inc/customizer/portfolio.php:41
+msgid "Portfolio Comments"
+msgstr "Commentaires de portfolio"
+
+#: ../inc/customizer/portfolio.php:55
+msgid "Portfolio Related"
+msgstr "Portfolio joint"
+
+#: ../inc/customizer/portfolio.php:79
+#, fuzzy
+msgid "Portfolio Homepage Category"
+msgstr "Catégorie de portfolio"
+
+#: ../inc/customizer/portfolio.php:95
+msgid "Portfolio Homepage Posts Per Page"
+msgstr "Nombre d'article portfolio de l'accueil par page"
+
+#: ../inc/customizer/portfolio.php:109 ../inc/customizer/staff.php:58
+msgid "Archive Posts Per Page"
+msgstr "Articles d'archives par page"
+
+#: ../inc/customizer/staff.php:28
+#, fuzzy
+msgid "Staff Post Type"
+msgstr "Type d'article portfolio"
+
+#: ../inc/customizer/staff.php:43
+#, fuzzy
+msgid "Staff Comments"
+msgstr "0 commentaire"
+
+#: ../inc/meta/usage.php:39
+msgid "Subheading"
+msgstr "Sous-titre"
+
+#: ../partials/archive-header.php:30
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultat de recherche pour : %s"
+
+#: ../partials/edit-post.php:18
+msgid "Edit Post"
+msgstr "Modifier l'article"
+
+#: ../partials/none.php:15
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article ? <a href=\"%1$s\">Démarrez ici</a>."
+
+#: ../partials/none.php:17
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with "
+"different keywords."
+msgstr ""
+"Désolé, mais pas de résultat à votre recherche. Veuillez ré-essayer avec "
+"d'autres mots clés."
+
+#: ../partials/none.php:19
+msgid "There aren't any posts currently published in this category."
+msgstr "Il n'y a actuellement pas d'article publié dans cette catégorie."
+
+#: ../partials/none.php:21
+msgid "There aren't any posts currently published under this taxonomy."
+msgstr "Il n'y a actuellement pas d'article publié avec ette taxonomie."
+
+#: ../partials/none.php:23
+msgid "There aren't any posts currently published under this tag."
+msgstr "Il n'y a actuellement pas d'article publié sous cemot clé."
+
+#: ../partials/none.php:25
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr "Il semble impossible de trouver ce que vous cherchez."
+
+#: ../partials/entry/meta.php:20 ../partials/home/blog.php:65
+#: ../partials/portfolio/single-meta.php:20 ../partials/single/meta.php:20
+msgid "Posted on"
+msgstr "Envoyé le"
+
+#: ../partials/entry/meta.php:26 ../partials/portfolio/single-meta.php:27
+#: ../partials/single/meta.php:26
+msgid "Under"
+msgstr "Sous"
+
+#: ../partials/entry/meta.php:33 ../partials/portfolio/single-meta.php:35
+#: ../partials/single/meta.php:33
+msgid "With"
+msgstr "Avec"
+
+#: ../partials/entry/meta.php:34 ../partials/portfolio/single-meta.php:36
+#: ../partials/single/meta.php:34
+msgid "0 Comments"
+msgstr "0 commentaire"
+
+#: ../partials/entry/meta.php:34 ../partials/portfolio/single-meta.php:36
+#: ../partials/single/meta.php:34
+msgid "1 Comment"
+msgstr "1 commentaire"
+
+#: ../partials/entry/meta.php:34 ../partials/portfolio/single-meta.php:36
+#: ../partials/single/meta.php:34
+msgid "% Comments"
+msgstr "% commentaires"
+
+#: ../partials/header/nav.php:19
+msgid "Menu"
+msgstr "Menu"
+
+#: ../partials/home/blog.php:39
+msgid "From The Blog"
+msgstr "A partir du blog"
+
+#: ../partials/home/portfolio.php:35
+msgid "Recent Work"
+msgstr "Réalisations récentes"
+
+#: ../partials/portfolio/single-related.php:40
+msgid "Other Work"
+msgstr ""
+
+#: ../partials/single/author-bio.php:35
+#, php-format
+msgid "Written by %s"
+msgstr "Ecrit par %s"
+
+#~ msgid "WPExplorer Blog"
+#~ msgstr "Blog de WPEplorer"
+
+#, fuzzy
+#~ msgid "WDExplorer Blog"
+#~ msgstr "Blog de WPEplorer"
+
+#~ msgid "No items"
+#~ msgstr "Pas d'élément"
+
+#~ msgid "ago"
+#~ msgstr "passés"
+
+#~ msgid "Theme Details"
+#~ msgstr "Détails du thème"
+
+#~ msgid "Recommendations | Elegant Theme"
+#~ msgstr "Recommandations | Elegant Theme"
+
+#~ msgid "Recommendations"
+#~ msgstr "Recommandations"
+
+#~ msgid "About"
+#~ msgstr "Au sujet"
+
+#~ msgid "Recommended"
+#~ msgstr "Recommandé"
+
+#~ msgid "Theme"
+#~ msgstr "Thème"
+
+#~ msgid "Thank you for choosing this WordPress theme for your website."
+#~ msgstr "Nous vous remercions de choisir ce thème pour votre site."
+
+#~ msgid "GPL License"
+#~ msgstr "Licence GPL"
+
+#~ msgid ""
+#~ "This theme is licensed under the GPL license. This means you can use it "
+#~ "for anything you like as long as it remains GPL."
+#~ msgstr ""
+#~ "Ce thème est sous licence GPL. Cela veut dire que vous pouvez l'utiliser,"
+#~ "comme vous voulez, aussi longtemps qu'il restera sous licence GPL."
+
+#~ msgid "Credits"
+#~ msgstr "Crédits"
+
+#~ msgid ""
+#~ "This theme was created by <a href=\"http://www.wpexplorer.com\" target="
+#~ "\"_blank\">WPExplorer.com</a>."
+#~ msgstr ""
+#~ "Ce thème a été créé par <a href=\"http://www.wpexplorer.com\" target="
+#~ "\"_blank\">WPExplorer.com</a>."
+
+#~ msgid "We work hard to develop, host, release and update this theme."
+#~ msgstr ""
+#~ "Nous fournissons beaucoup d'efforts pour développer, héberger et mettre à "
+#~ "jour ce thème."
+
+#~ msgid ""
+#~ "A back-link to our website and or a donation is very much appreciated!"
+#~ msgstr "Un lien à notre site et/ou un don, sont hautement appréciés."
+
+#~ msgid "Liability"
+#~ msgstr "Engagement"
+
+#~ msgid ""
+#~ "WPExplorer.com shall not be held liable for any damages, including, but "
+#~ "not limited to, the loss of data or profit, arising from the use of, or "
+#~ "inability to use, this theme."
+#~ msgstr ""
+#~ "WPExplorer.com ne peut en aucun cas, être tenu responsable pour quel que "
+#~ "dommage que ce soit, incluant, sans limitation, une perte de données ou "
+#~ "de profit, suite à l'usage ou à l'incapacité d'utiliser ce thème."
+
+#~ msgid "Getting Started"
+#~ msgstr "Démarrage"
+
+#~ msgid ""
+#~ "Below you will find some useful links to get you started with this theme."
+#~ msgstr ""
+#~ "Vous trouverez ci-dessous quelques liens utiles pour bien démarrer avec "
+#~ "ce thème."
+
+#~ msgid "Customize Your Site"
+#~ msgstr "Personnalisez votre site"
+
+#~ msgid "Theme Page"
+#~ msgstr "Page du thème"
+
+#~ msgid "Documentation"
+#~ msgstr "Documentation"
+
+#~ msgid "Below are some of the resources we love and recommend."
+#~ msgstr ""
+#~ "Ci-dessous vous trouverez quelques ressources que nous aimons et "
+#~ "recommandons."
+
+#~ msgid "Plugins"
+#~ msgstr "Extensions"
+
+#~ msgid ""
+#~ "Below you will find links to plugins we (WPExplorer.com staff) personally "
+#~ "like and recommend. None of these plugins are required for your theme to "
+#~ "work, they simply add additional functionality."
+#~ msgstr ""
+#~ "Vous trouverez ci-dessous des liens pour des extensiosn que nous (le "
+#~ "staff de WPExplorer.com) aimons et recommandons personnellement. Aucune "
+#~ "des ces extensions n'est nécessaire pour faire fonctionner votre thème, "
+#~ "elles apportent simplement, plus de fonctionnalités."
+
+#, fuzzy
+#~ msgid "Total Theme"
+#~ msgstr "Theme Total"
+
+#~ msgid ""
+#~ "Check out our most advanced (yet easy to use) and flexible theme to date."
+#~ msgstr ""
+#~ "Voyez notre thème le plus avancé (et donc plus facile à utiliser) et plus "
+#~ "modulable, à l'heure actuelle."
+
+#~ msgid "WordPress Hosting"
+#~ msgstr "Hébergement WordPress"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you need fast and reliable hosting we recommend the same host we use "
+#~ "and love WPEngine."
+#~ msgstr ""
+#~ "Vous avez besoin d'un <a href=\"http://www.wpexplorer.com/wordpress-"
+#~ "hosting/\" target=\"_blank\">hébergeur /a> rapide et fiable. Nous "
+#~ "recommandons le même que le notre, qui aime bien le moteur WP."
+
+#~ msgid "Deals & Coupons"
+#~ msgstr "Affaires et réductions"
+
+#~ msgid "Check out our coupons page for great deals on WordPress resources."
+#~ msgstr ""
+#~ "Voyez notre page de réductions pour de bonnes affaires dans les "
+#~ "ressources WordPress."
+
+#~ msgid "Add New Portfolio Item"
+#~ msgstr "Ajouter un nouvel élément portfolio"
+
+#~ msgid "Edit Portfolio Item"
+#~ msgstr "Modifier l'élément de portfolio"
+
+#~ msgid "Search Portfolio"
+#~ msgstr "Recherche d'un portfolio"
+
+#~ msgid "No portfolio items found"
+#~ msgstr "Aucun élément de portfolio trouvé."
+
+#~ msgid "No portfolio items found in trash"
+#~ msgstr "Aucun élément de portfolio dans la corbeille"
+
+#~ msgid "Portfolio Categories"
+#~ msgstr "Catégories de portfolio"
+
+#~ msgid "Portfolio Category"
+#~ msgstr "Catégorie de portfolio"
+
+#~ msgid "Search Portfolio Categories"
+#~ msgstr "Recherche dans les catégories de portfolio"
+
+#~ msgid "Popular Portfolio Categories"
+#~ msgstr "Catégories de portfolio prisées"
+
+#~ msgid "All Portfolio Categories"
+#~ msgstr "Toutes les catégories du portfolio"
+
+#~ msgid "Parent Portfolio Category"
+#~ msgstr "Catégorie parente du portfolio"
+
+#~ msgid "Parent Portfolio Category:"
+#~ msgstr "Catégorie parente du portfolio :"
+
+#~ msgid "Edit Portfolio Category"
+#~ msgstr "Modifier la catégorie de portfolio"
+
+#~ msgid "Update Portfolio Category"
+#~ msgstr "Mettre à jour la catégorie de portfolio"
+
+#~ msgid "Add New Portfolio Category"
+#~ msgstr "Ajouter une nouvelle catégorie au portfolio"
+
+#~ msgid "New Portfolio Category Name"
+#~ msgstr "Nom de la nouvelle catégorie de portfolio"
+
+#~ msgid "Separate portfolio categories with commas"
+#~ msgstr "Séparez les catégories de portfolio par des virgules"
+
+#~ msgid "Add or remove portfolio categories"
+#~ msgstr "Ajouter ou supprimer des catégories du portfolio"
+
+#~ msgid "Choose from the most used portfolio categories"
+#~ msgstr "Choisssez parmi les catégories deportfolio, les plus utilisées"
+
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Archives journalières : %s"
+
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Archives mensuelles : %s"
+
+#~ msgid "Yearly Archives: %s"
+#~ msgstr "Archives annuelles : %s"
+
+#~ msgid "Articles Written By"
+#~ msgstr "Articles écrits par"
+
+#~ msgid "Edit Page"
+#~ msgstr "Modifier la page"
+
+#~ msgid "Read more"
+#~ msgstr "Lire davantage"
+
+#~ msgid "Install Required Plugins"
+#~ msgstr "Installer les extensions demandées"
+
+#~ msgid "Install Plugins"
+#~ msgstr "Installer des extensions"
+
+#~ msgid "Installing Plugin: %s"
+#~ msgstr "Installation de l'extension : %s"
+
+#~ msgid "Something went wrong."
+#~ msgstr "Disfonctionnement."
+
+#~ msgid "Return to Required Plugins Installer"
+#~ msgstr "Retour à l'installation de l'extension demandée"
+
+#~ msgid "Plugin activated successfully."
+#~ msgstr "Extension bien activée."
+
+#~ msgid "All plugins installed and activated successfully. %1$s"
+#~ msgstr "Toutes les extensions ont bien été installées et activées. %1$s"
+
+#~ msgid "Return to the Dashboard"
+#~ msgstr "Reoutr au tableau de bord"
+
+#~ msgid "The following plugin was activated successfully: %s."
+#~ msgstr "L'extension suivante a bien été activée : %s"
+
+#~ msgid "Dismiss this notice"
+#~ msgstr "Omettre ce message"
+
+#~ msgid "External Link"
+#~ msgstr "Lien externe"
+
+#~ msgid "Private Repository"
+#~ msgstr "Dépot privé"
+
+#~ msgid "Pre-Packaged"
+#~ msgstr "Pré-packagé"
+
+#~ msgid "WordPress Repository"
+#~ msgstr "Dépot WordPress"
+
+#~ msgid "Required"
+#~ msgstr "Nécessaire"
+
+#~ msgid "Not Installed"
+#~ msgstr "Pas installé"
+
+#~ msgid "Installed But Not Activated"
+#~ msgstr "Bien installé mais pas activé"
+
+#~ msgid ""
+#~ "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+#~ "Dashboard\">Return to the Dashboard</a>"
+#~ msgstr ""
+#~ "Aucune extension à installer ou à activer. <a href=\"%1$s\" title="
+#~ "\"Return to the Dashboard\">Retour au tableau de bord</a>"
+
+#~ msgid "Plugin"
+#~ msgstr "Extension"
+
+#~ msgid "Source"
+#~ msgstr "Source"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Status"
+#~ msgstr "Statut"
+
+#~ msgid "Install"
+#~ msgstr "Installer"
+
+#~ msgid "Activate"
+#~ msgstr "Activer"
+
+#~ msgid "The following plugin was activated successfully:"
+#~ msgstr "L'extension suivante a bien été activée :"
+
+#~ msgid "Install package not available."
+#~ msgstr "Le pack d'installation n'est pas disponibe."
+
+#~ msgid ""
+#~ "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+#~ msgstr ""
+#~ "Chargement du pack d'installation à partir de <span class=\"code\">%s</"
+#~ "span>&#8230;"
+
+#~ msgid "Unpacking the package&#8230;"
+#~ msgstr "Décompression du package&#8230;"
+
+#~ msgid "Installing the plugin&#8230;"
+#~ msgstr "Installation de l'extension&#8230;"
+
+#~ msgid "Plugin install failed."
+#~ msgstr "L'installation de l'extension a échoué."
+
+#~ msgid "Plugin installed successfully."
+#~ msgstr "Extension bien installée."
+
+#~ msgid "Plugin activation failed."
+#~ msgstr "L'activation de l'extension a échoué."
+
+#~ msgid ""
+#~ "The installation and activation process is starting. This process may "
+#~ "take a while on some hosts, so please be patient."
+#~ msgstr ""
+#~ "Installation et activation démarrées. Selon l'hébergeur cela prendra plus "
+#~ "ou moins de temps. Soyez patient."
+
+#~ msgid "%1$s installed and activated successfully."
+#~ msgstr "%1$s bien installé et activé."
+
+#~ msgid "Show Details"
+#~ msgstr "Afficher les détails"
+
+#~ msgid "Hide Details"
+#~ msgstr "Masquer les détails"
+
+#~ msgid "All installations and activations have been completed."
+#~ msgstr "Toutes les installations et activations ont été effectuées."
+
+#~ msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "IInstallation et activation de l'extension %1$s (%2$d/%3$d)"
+
+#~ msgid ""
+#~ "The installation process is starting. This process may take a while on "
+#~ "some hosts, so please be patient."
+#~ msgstr ""
+#~ "Installation démarrées. Selon l'hébergeur cela prendra plus ou moins de "
+#~ "temps. Soyez patient."
+
+#~ msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+#~ msgstr ""
+#~ "Une erreur est apparue lors de l'installation de %1$s: <strong>%2$s</"
+#~ "strong>."
+
+#~ msgid "The installation of %1$s failed."
+#~ msgstr "L'installation de %1$s a échoué."
+
+#~ msgid "%1$s installed successfully."
+#~ msgstr "%1$s bien installé."
+
+#~ msgid "All installations have been completed."
+#~ msgstr "Toutes les installations ont été effectuées."
+
+#~ msgid "Installing Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Installation de l'extension %1$s (%2$d/%3$d)"
+
+#~ msgid "Something went wrong with the plugin API."
+#~ msgstr "Disfonctionnement de l'API de l'extension."
+
+#~ msgid "All plugins installed and activated successfully. %s"
+#~ msgstr "Toutes les extensions ont bien été installées et activées. %s"
+
+#~ msgid "Changelog"
+#~ msgstr "Améliorations"

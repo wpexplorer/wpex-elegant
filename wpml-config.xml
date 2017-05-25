@@ -1,0 +1,32 @@
+<wpml-config>
+	<!-- Custom Post Types -->
+	<custom-types>
+		<custom-type translate="1">portfolio</custom-type>
+		<custom-type translate="1">staff</custom-type>
+		<custom-type translate="1">testimonials</custom-type>
+		<custom-type translate="1">faq</custom-type>
+		<custom-type translate="1">features</custom-type>
+		<custom-type translate="1">clients</custom-type>
+		<custom-type translate="1">services</custom-type>
+	</custom-types>
+	<!-- Custom Taxonomies -->
+	<taxonomies>
+		<taxonomy translate="1">portfolio_tag</taxonomy>
+		<taxonomy translate="1">portfolio_category</taxonomy>
+		<taxonomy translate="1">staff_tag</taxonomy>
+		<taxonomy translate="1">staff_category</taxonomy>
+		<taxonomy translate="1">testimonials_category</taxonomy>
+		<taxonomy translate="1">services_tag</taxonomy>
+		<taxonomy translate="1">services_category</taxonomy>
+		<taxonomy translate="1">faq_tag</taxonomy>
+		<taxonomy translate="1">faq_category</taxonomy>
+		<taxonomy translate="1">clients_category</taxonomy>
+	</taxonomies>
+	<!-- Admin Texts -->
+	<admin-texts>
+		<key name="theme_mods_wpex-elegant">
+			<key name="breadcrumbs_alt" />
+			<key name="home_portfolio_heading" />
+		</key>
+	</admin-texts>
+</wpml-config>

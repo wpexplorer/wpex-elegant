@@ -1,0 +1,77 @@
+/* Mobile Menu
+================================================== */
+	a#navigation-toggle { height: 55px; line-height: 55px; margin: 0; float: left; cursor: pointer; color: #888; padding-left: 35px; font-weight: 600; position: relative; z-index: 9; text-decoration: none !important; font-size: 1.1em; }
+	a#navigation-toggle .fa { margin-right: 10px; }
+	#navigation-toggle { color: #8b8b8b; }
+	#navigation-toggle:hover { color: #000; }
+	#sidr-main { font-family: 'Helvetica Neue', Helvetica, Arial; position: absolute; position: fixed; top: 0; height: 100%; z-index: 999999; width: 320px; overflow-x: none; overflow-y: auto;font-size: 13px; background: #222; color: #fff; }
+	#sidr-main { padding: 70px 30px 30px; font-size: 16px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+	.sidr.right { left: auto; right: -320px; }
+	.sidr.left { left: -320px; right: auto; }
+	#sidr-main a { color: #707070; }
+	#sidr-main a:hover { color: #fff; }
+	#sidr-main ul a { display: block; border-bottom: 1px solid #333; padding: 7px 0; font-weight: 400; }
+	#sidr-main ul li ul { margin-left: 0; margin: 0; }
+	#sidr-main ul li ul li a { padding-left: 10px; }
+	#sidr-main ul li ul li li a { padding-left: 20px; }
+	#sidr-main ul li ul li li li a { padding-left: 30px; }
+	#sidr-main ul li ul li a:before { content: '\f0da'; display: inline-block; -webkit-font-smoothing: antialiased; font-family: 'FontAwesome'; color: #888; margin-right: 10px; }
+	.sidr-class-toggle-sidr-close:before { position: absolute; top:30px; left: 30px; content: '\f00d'; font-family: 'FontAwesome'; color: #fff; margin: 0; }
+	#sidr-id-mobile-search-form { margin-top: 20px; }
+	#sidr-id-mobile-search-form input[type="search"] { font-size: 12px; background: #333; color: #fff; border:none; }
+
+/* Smaller Then Desktop
+================================================== */
+@media only screen and (max-width: 959px) {
+	a#navigation-toggle { display: block; }
+	#site-navigation .sf-menu{ display: none; }
+}
+/* Tablet (Portrait)
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.container { max-width: 85%; }
+	.left-content { width: 60%; }
+	.sidebar-container { width: 36%; }
+	.post-meta li { display: block; float: none; }
+	.post-meta li .meta-seperator { display: none; }
+	.portfolio-entry .overlay { display: none; }
+	.portfolio-entry-media a:hover img { opacity: 0.8; }
+	.search-entry { padding-left: 100px; min-height: 80px; }
+	.search-entry-thumbnail { width: 80px; }
+	.portfolio-entry.span_1_of_4 { width: 49.2%; margin-left: 1.6%; margin-bottom: 2%; }
+	.portfolio-entry.span_1_of_4.count-1 { margin-left: 0; }
+	.portfolio-entry.span_1_of_4.count-3 { clear: both; margin-left: 0; }
+}
+/* Mobile (Portrait & Landscape)
+================================================== */
+@media only screen and (max-width: 767px) {
+	.container { max-width: 480px; width: 90%; }
+	.sidebar-container,
+	.left-content { width: 100%; }
+	.sidebar-container {margin-top: 40px; padding-top: 40px; border-top: 10px solid #eee; }
+	.col{ width: 100%; margin-left: 0; margin-bottom: 25px; }
+	.portfolio-entry .overlay { display: none; }
+	.portfolio-entry-media a:hover img { opacity: 0.8; }
+	.post-meta li { display: block; float: none; }
+	.post-meta li .meta-seperator { display: none; }
+	.commentlist .children { margin: 0 }
+	.single-post-pagination { position: inherit; top: auto; margin: 10px 0 0; right: auto; }
+	.author-info .author-info-inner { padding-left: 0; }
+	.author-info .author-avatar { position: inherit; top: auto; left: auto; display: block; margin-bottom: 10px; }
+	.homepage-slide-content { display: none; }
+}
+/* Mobile (Landscape)
+================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.sidr { width: 480px; }
+	.sidr.right { right: -480px; }
+	.portfolio-entry.span_1_of_4 { width: 49.2%; margin-left: 1.6%; margin-bottom: 2%; }
+	.portfolio-entry.span_1_of_4.count-1 { margin-left: 0; }
+	.portfolio-entry.span_1_of_4.count-3 { clear: both; margin-left: 0; }
+}
+/* Mobile (Portrait only)
+================================================== */
+@media only screen and (max-width: 479px) {
+	.search-entry { padding-left: 100px; min-height: 80px; }
+	.search-entry-thumbnail { width: 80px; }
+}
