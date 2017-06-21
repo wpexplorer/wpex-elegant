@@ -26,7 +26,7 @@ if ( ! class_exists( 'WPEX_Theme_Auto_Updates' ) ) {
 
 			// Update vars
 			$this->api_endpoint = 'https://wpexplorer-updates.com/api/v1';
-			$this->theme_slug   = 'elegant';
+			$this->theme_slug   = 'elegant'; // Can't use wpex-elegant because updates have always used elegant as a slug 
 			$this->license_key  = '';
 
 			// Check for updates
@@ -43,7 +43,7 @@ if ( ! class_exists( 'WPEX_Theme_Auto_Updates' ) ) {
 		 * @return string	The theme version of the local installation.
 		 */
 		private function get_local_version() {
-			$theme_data = wp_get_theme();
+			$theme_data = wp_get_theme( 'wpex-elegant' );
 			return $theme_data->Version;
 		}
 
