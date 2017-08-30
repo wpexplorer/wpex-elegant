@@ -1,7 +1,17 @@
 ( function($) {
-    'use strict';
+	'use strict';
 	
 	$( document ).ready( function() {
+
+		// Returns current viewport width
+		function wpexViewportWidth() {
+			var e = window, a = 'inner';
+			if ( ! ( 'innerWidth' in window ) ) {
+				a = 'client';
+				e = document.documentElement || document.body;
+			}
+			return e[ a+'Width' ];
+		}
 		
 		// Main menu superfish
 		$( 'ul.sf-menu' ).superfish( {
@@ -28,7 +38,9 @@
 		
 		// Close the menu on window change
 		$( window ).resize( function() {
-			$.sidr( 'close', 'sidr-main' );
+			if ( wpexViewportWidth() >= 959 ) {
+				$.sidr( 'close', 'sidr-main' );
+			}
 		} );
 		
 		// Prettyphoto => for desktops only

@@ -46,7 +46,7 @@ if ( $wpex_query->posts ) : ?>
 			if ( $term ) {
 				$term = get_term( $term, 'portfolio_category' );
 			}
-			$heading = $term->name ? $term->name : __( 'Recent Work', 'elegant' );
+			$heading = ( $term && $term->name ) ? $term->name : __( 'Recent Work', 'elegant' );
 		}
 		if ( $heading ) : ?>
 			<h2 class="heading">
