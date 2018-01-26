@@ -27,7 +27,7 @@ if ( is_front_page() || is_home() ) {
 		// Search title
 		if ( is_search() ) :
 
-			printf( __( 'Search Results for: %s', 'elegant' ), get_search_query() );
+			printf( __( 'Search Results for: %s', 'wpex-elegant' ), get_search_query() );
 
 		// Home title
 		elseif ( is_home() ) :
@@ -36,7 +36,7 @@ if ( is_front_page() || is_home() ) {
 			if ( get_option( 'page_for_posts' ) ) {
 				echo get_the_title( get_option( 'page_for_posts' ) );
 			} else {
-				_e( 'Blog', 'elegant' );
+				_e( 'Blog', 'wpex-elegant' );
 			} 
 
 		// All else

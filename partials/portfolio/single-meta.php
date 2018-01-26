@@ -17,14 +17,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <ul class="post-meta clr">
 
 	<li class="meta-date">
-		<?php _e( 'Posted on', 'elegant' ); ?>
+		<?php _e( 'Posted on', 'wpex-elegant' ); ?>
 		<span class="meta-date-text"><?php echo get_the_date(); ?></span>
 	</li>
 
 	<?php if ( $cats = wpex_list_post_terms( 'portfolio_category', false ) ) : ?>
 
 		<li class="meta-category">
-			<span class="meta-seperator">/</span><?php _e( 'Under', 'elegant' ); ?>
+			<span class="meta-seperator">/</span><?php _e( 'Under', 'wpex-elegant' ); ?>
 			<?php echo $cats; ?>
 		</li>
 
@@ -32,8 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( comments_open() ) { ?>
 		<li class="meta-comments comment-scroll">
-			<span class="meta-seperator">/</span><?php _e( 'With', 'elegant' ); ?>
-			<?php comments_popup_link( __( '0 Comments', 'elegant' ), __( '1 Comment',  'elegant' ), __( '% Comments', 'elegant' ), 'comments-link' ); ?>
+			<span class="meta-seperator">/</span><?php _e( 'With', 'wpex-elegant' ); ?>
+			<?php comments_popup_link( __( '0 Comments', 'wpex-elegant' ), __( '1 Comment',  'wpex-elegant' ), __( '% Comments', 'wpex-elegant' ), 'comments-link' ); ?>
 		</li>
 	<?php } ?>
 	

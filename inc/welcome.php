@@ -51,8 +51,8 @@ class WPEX_Welcome {
 		
 		add_submenu_page(
 			'themes.php',
-			$this->theme_name .' '. __( 'Theme', 'elegant' ),
-			$this->theme_name .' '. __( 'Theme', 'elegant' ),
+			$this->theme_name .' '. __( 'Theme', 'wpex-elegant' ),
+			$this->theme_name .' '. __( 'Theme', 'wpex-elegant' ),
 			'manage_options',
 			'wpex-theme',
 			array( $this, 'recommended_screen' ),
@@ -90,26 +90,24 @@ class WPEX_Welcome {
 
 			<h1><?php echo esc_html( $this->theme_name ); ?> Theme v<?php echo esc_html( $theme_version ); ?></h1>
 
-			<div class="about-text" style="margin-bottom:40px;min-height:0;"><?php esc_html_e( 'A free WordPress theme by WPExplorer', 'elegant' ); ?> | <a href="<?php echo esc_url( $this->theme_changelog ); ?>" target="_blank"><?php esc_html_e( 'Changelog', 'elegant' ); ?></a> | <a href="<?php echo esc_url( $this->theme_url ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'elegant' ); ?></a> | <a href="http://www.wpexplorer.com/wordpress-themes/" target="_blank"><?php esc_html_e( 'More Themes', 'elegant' ); ?></a></div>
+			<div class="about-text" style="margin-bottom:40px;min-height:0;"><?php esc_html_e( 'A free WordPress theme by WPExplorer', 'wpex-elegant' ); ?> | <a href="<?php echo esc_url( $this->theme_changelog ); ?>" target="_blank"><?php esc_html_e( 'Changelog', 'wpex-elegant' ); ?></a> | <a href="<?php echo esc_url( $this->theme_url ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'wpex-elegant' ); ?></a> | <a href="http://www.wpexplorer.com/" target="_blank"><?php esc_html_e( 'More Themes', 'wpex-elegant' ); ?></a></div>
 
 			<div style="padding-bottom:100px;">
 
-				<h2 style="text-align:left;font-size:18px;font-weight:bold;margin:0 0 5px;line-height:1em;"><?php esc_html_e( 'About', 'elegant' ); ?></h2>
+				<h2 style="text-align:left;font-size:18px;font-weight:bold;margin:0 0 5px;line-height:1em;"><?php esc_html_e( 'About', 'wpex-elegant' ); ?></h2>
 				<hr />
 
 				<div>
-					<h4><?php esc_html_e( 'GPL License', 'elegant' ); ?></h4>
-					<p><?php esc_html_e( 'This theme is licensed under the GPL license. This means you can use it for anything you like as long as it remains GPL.', 'elegant' ); ?></p>
+					<h4><?php esc_html_e( 'GPL License', 'wpex-elegant' ); ?></h4>
+					<p><?php esc_html_e( 'This theme is licensed under the GPL license. This means you can use it for anything you like as long as it remains GPL.', 'wpex-elegant' ); ?></p>
 				</div>
 
 				<div>
-					<h4><?php esc_html_e( 'Credits', 'elegant' ); ?></h4>
+					<h4><?php esc_html_e( 'Credits', 'wpex-elegant' ); ?></h4>
 					<p>
-					<?php esc_html_e( 'This theme was created by:', 'elegant' ); ?> <a href="http://www.wpexplorer.com/">WPExplorer</a>
+					<?php esc_html_e( 'This theme was created by:', 'wpex-elegant' ); ?> <a href="http://www.wpexplorer.com/">WPExplorer</a>
 					<br />
-					<?php esc_html_e( 'We work hard to develop, support and update this theme.', 'elegant' ); ?>
-					<br />
-					<?php esc_html_e( 'A back-link to our website is very much appreciated or you can follow us via our social media!', 'elegant' ); ?>
+					<?php esc_html_e( 'Be sure to follow us on social media for awesome WordPress related content and new theme releases.', 'wpex-elegant' ); ?>
 					</p>
 					<p>
 						<a href="https://twitter.com/WPExplorer" class="button button-secondary">Twitter</a>
@@ -133,11 +131,11 @@ class WPEX_Welcome {
 						} ) ( jQuery );
 					</script>
 
-					<h2 style="text-align:left;font-size:18px;font-weight:bold;margin:0 0 5px;line-height:1em;"><?php esc_html_e( 'Video Guide', 'elegant' ); ?></h2>
+					<h2 style="text-align:left;font-size:18px;font-weight:bold;margin:0 0 5px;line-height:1em;"><?php esc_html_e( 'Video Guide', 'wpex-elegant' ); ?></h2>
 					
 					<hr />
 					
-					<p><?php esc_html_e( 'Learn how to use this theme easily via the Video Guide.', 'elegant' ); ?></p>
+					<p><?php esc_html_e( 'Learn how to use this theme easily via the Video Guide.', 'wpex-elegant' ); ?></p>
 
 					<div class="wpex-theme-video-guide" style="max-width:700px;"><?php echo wp_oembed_get( $this->video_guide ); ?></div>
 
@@ -145,13 +143,13 @@ class WPEX_Welcome {
 
 				<?php endif; ?>
 
-				<h2 style="text-align:left;font-size:18px;font-weight:bold;margin:0 0 5px;line-height:1em;"><?php esc_html_e( 'Getting Started', 'elegant' ); ?></h2>
+				<h2 style="text-align:left;font-size:18px;font-weight:bold;margin:0 0 5px;line-height:1em;"><?php esc_html_e( 'Getting Started', 'wpex-elegant' ); ?></h2>
 
 				<hr />
 
 				<div>
 					<p>
-					<?php esc_html_e( 'Below you will find some useful links to get you started with this theme.', 'elegant' ); ?>
+					<?php esc_html_e( 'Below you will find some useful links to get you started with this theme.', 'wpex-elegant' ); ?>
 					</p>
 					<?php
 					// Customizer url
@@ -161,18 +159,18 @@ class WPEX_Welcome {
 						),
 						'customize.php'
 					); ?>
-					<a href="<?php echo esc_url( $customize_url ); ?>" class="button button-primary load-customize hide-if-no-customize"><?php esc_html_e( 'Customize Your Site', 'elegant' ); ?></a>
+					<a href="<?php echo esc_url( $customize_url ); ?>" class="button button-primary load-customize hide-if-no-customize"><?php esc_html_e( 'Customize Your Site', 'wpex-elegant' ); ?></a>
 				</div>
 
 				<br /><br />
 
-				<h2 style="text-align:left;font-size:18px;font-weight:bold;margin:0 0 5px;line-height:1em;"><?php esc_html_e( 'Recommendations', 'elegant' ); ?></h2>
+				<h2 style="text-align:left;font-size:18px;font-weight:bold;margin:0 0 5px;line-height:1em;"><?php esc_html_e( 'Recommendations', 'wpex-elegant' ); ?></h2>
 
 				<hr />
 
 				<div>
-				<h4><?php esc_html_e( 'Plugins', 'elegant' ); ?></h4>
-				<p><?php esc_html_e( 'Below you will find links to plugins we (WPExplorer.com staff) personally like and recommend. None of these plugins are required for your theme to work, they simply add additional functionality.', 'elegant' ); ?></p>
+				<h4><?php esc_html_e( 'Plugins', 'wpex-elegant' ); ?></h4>
+				<p><?php esc_html_e( 'Below you will find links to plugins we (WPExplorer.com staff) personally like and recommend. None of these plugins are required for your theme to work, they simply add additional functionality.', 'wpex-elegant' ); ?></p>
 
 					<ul style="list-style: disc;margin: 20px 0 0 20px;">
 						<li><span style="font-weight:bold">Backups:</span> <a href="https://vaultpress.com/" target="_blank">VaultPress</a></li>
@@ -188,8 +186,8 @@ class WPEX_Welcome {
 				<hr />
 
 				<div>
-					<h4><?php esc_html_e( 'Total Drag & Drop Theme', 'elegant' ); ?></h4>
-					<p><?php esc_html_e( 'Check out our most advanced (yet easy to use) and flexible theme to date.', 'elegant' ); ?></p>
+					<h4><?php esc_html_e( 'Total Drag & Drop Theme', 'wpex-elegant' ); ?></h4>
+					<p><?php esc_html_e( 'Check out our most advanced (yet easy to use) and flexible theme to date.', 'wpex-elegant' ); ?></p>
 					<a href="http://wpexplorer-themes.com/total/" target="_blank"><img src="<?php echo esc_url( $this->dir ); ?>total.png" alt="Total WordPress Theme" /></a>
 				</div>
 
@@ -197,8 +195,8 @@ class WPEX_Welcome {
 				<hr />
 
 				<div>
-					<h4><?php esc_html_e( 'WordPress Hosting', 'elegant' ); ?></h4>
-					<p><?php esc_html_e( 'If you need fast and reliable hosting we recommend the same host we use and love WPEngine.', 'elegant' ); ?></p>
+					<h4><?php esc_html_e( 'WordPress Hosting', 'wpex-elegant' ); ?></h4>
+					<p><?php esc_html_e( 'If you need fast and reliable hosting we recommend the same host we use and love WPEngine.', 'wpex-elegant' ); ?></p>
 					<a href="http://www.wpexplorer.com/wordpress-hosting/" class="button button-primary" target="_blank"> WordPress Hosting</a>
 				</div>
 
@@ -206,8 +204,8 @@ class WPEX_Welcome {
 				<hr />
 
 				<div>
-					<h4><?php esc_html_e( 'Deals & Coupons', 'elegant' ); ?></h4>
-					<p><?php esc_html_e( 'Check out our coupons page for great deals on WordPress resources.', 'elegant' ); ?></p>
+					<h4><?php esc_html_e( 'Deals & Coupons', 'wpex-elegant' ); ?></h4>
+					<p><?php esc_html_e( 'Check out our coupons page for great deals on WordPress resources.', 'wpex-elegant' ); ?></p>
 					<a href="http://www.wpexplorer.com/coupons/" class="button button-primary" target="_blank">View Deals/Coupons</a>
 				</div>
 

@@ -23,7 +23,7 @@ if ( ! function_exists( 'wpex_comment' ) ) {
 			case 'trackback' :
 			// Display trackbacks differently than normal comments. ?>
 		<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
-			<p><?php _e( 'Pingback:', 'elegant' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'elegant' ), '<span class="ping-meta"><span class="edit-link">', '</span></span>' ); ?></p>
+			<p><?php _e( 'Pingback:', 'wpex-elegant' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'wpex-elegant' ), '<span class="ping-meta"><span class="edit-link">', '</span></span>' ); ?></p>
 		<?php
 				break;
 			default :
@@ -42,17 +42,17 @@ if ( ! function_exists( 'wpex_comment' ) ) {
 							printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
-								sprintf( _x( '%1$s', '1: date', 'elegant' ), get_comment_date() )
+								sprintf( _x( '%1$s', '1: date', 'wpex-elegant' ), get_comment_date() )
 							);
-							//edit_comment_link( __( 'Edit', 'elegant' ), '<span class="edit-link">', '<span>' );
+							//edit_comment_link( __( 'Edit', 'wpex-elegant' ), '<span class="edit-link">', '<span>' );
 						?>
 						</span><!-- .comment-date -->
 						<span class="reply">
-							<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'elegant' ) . '', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+							<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'wpex-elegant' ) . '', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 						</span><!-- .reply -->
 					</header><!-- .comment-meta -->
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'elegant' ); ?></p>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'wpex-elegant' ); ?></p>
 					<?php endif; ?>
 					<div class="comment-content">
 						<?php comment_text(); ?>

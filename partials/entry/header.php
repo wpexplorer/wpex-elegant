@@ -15,6 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 } ?>
 
 <header>
-	<h2 class="loop-entry-title"><a href="<?php the_permalink(); ?>" title="<?php wpex_esc_title(); ?>"><?php the_title(); ?></a></h2>
+	<h2 class="loop-entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 	<?php get_template_part( 'partials/entry/meta', get_post_type() );?>
 </header>

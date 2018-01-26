@@ -37,7 +37,7 @@ if ( $wpex_query->posts ) : ?>
 
 	<div id="single-portfolio-related" class="clr">
 
-		<h3 class="heading"><span><?php echo get_theme_mod( 'wpex_portfolio_related_heading', __( 'Other Work', 'elegant' ) ); ?></span></h3>
+		<h3 class="heading"><span><?php echo get_theme_mod( 'wpex_portfolio_related_heading', __( 'Other Work', 'wpex-elegant' ) ); ?></span></h3>
 
 		<div class="wpex-row clr">
 

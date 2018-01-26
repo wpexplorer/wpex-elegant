@@ -18,7 +18,7 @@ get_header(); ?>
 			<div id="error-page" class="clr">	
 				<h1 id="error-page-title">404</h1>			
 				<p id="error-page-text">
-				<?php _e( 'Unfortunately, the page you tried accessing could not be retrieved.', 'elegant' ); ?>
+				<?php _e( 'Unfortunately, the page you tried accessing could not be retrieved.', 'wpex-elegant' ); ?>
 				</p>
 			</div><!-- #error-page -->
 			

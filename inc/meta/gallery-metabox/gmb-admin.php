@@ -22,7 +22,7 @@ add_action( 'add_meta_boxes', 'wpex_add_gallery_metabox' );
 if ( ! function_exists( 'wpex_add_gallery_metabox' ) ) {
 	function wpex_add_gallery_metabox() {
 		// Portfolio
-		add_meta_box( 'easy_image_gallery', __( 'Image Gallery', 'elegant' ), 'wpex_gallery_metabox', 'portfolio', 'normal', 'high' );
+		add_meta_box( 'easy_image_gallery', __( 'Image Gallery', 'wpex-elegant' ), 'wpex_gallery_metabox', 'portfolio', 'normal', 'high' );
 	}
 }
 
@@ -78,7 +78,7 @@ function wpex_gallery_metabox() {
 						<li class="image attachment details" data-attachment_id="<?php echo absint( $attachment_id ); ?>">
                         	<div class="attachment-preview"><div class="thumbnail">
 								<?php echo wp_get_attachment_image( $attachment_id, 'thumbnail' ); ?></div>
-								<a href="#" class="wpex-gmb-remove" title="<?php _e( 'Remove image', 'elegant' ); ?>"><div class="media-modal-icon"></div></a>	   
+								<a href="#" class="wpex-gmb-remove" title="<?php _e( 'Remove image', 'wpex-elegant' ); ?>"><div class="media-modal-icon"></div></a>	   
 							</div>
                        </li>
 					<?php }
@@ -89,7 +89,7 @@ function wpex_gallery_metabox() {
         <?php wp_nonce_field( 'easy_image_gallery', 'easy_image_gallery' ); ?>
     </div>
     <p class="add_gallery_images hide-if-no-js">
-        <a href="#" class="button-secondary"><?php _e( 'Add/Edit Images', 'elegant' ); ?></a>
+        <a href="#" class="button-secondary"><?php _e( 'Add/Edit Images', 'wpex-elegant' ); ?></a>
     </p>
     <?php
     // options don't exist yet, set to checked by default
@@ -99,7 +99,7 @@ function wpex_gallery_metabox() {
         $checked = wpex_gallery_has_lightbox() ? checked( get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true ), 'on', false ) : ''; ?>
     <p>
         <label for="easy_image_gallery_link_images">
-            <input type="checkbox" id="easy_image_gallery_link_images" value="on" name="easy_image_gallery_link_images"<?php echo $checked; ?> /> <?php _e( 'Enable Lightbox for this gallery?', 'elegant' )?>
+            <input type="checkbox" id="easy_image_gallery_link_images" value="on" name="easy_image_gallery_link_images"<?php echo $checked; ?> /> <?php _e( 'Enable Lightbox for this gallery?', 'wpex-elegant' )?>
         </label>
     </p>
 
@@ -123,9 +123,9 @@ function wpex_gallery_metabox() {
                 // Create the media frame.
                 image_gallery_frame = wp.media.frames.downloadable_file = wp.media({
                     // Set the title of the modal.
-                    title: '<?php _e( 'Add Images to Gallery', 'elegant' ); ?>',
+                    title: '<?php _e( 'Add Images to Gallery', 'wpex-elegant' ); ?>',
                     button: {
-                        text: '<?php _e( 'Add to gallery', 'elegant' ); ?>',
+                        text: '<?php _e( 'Add to gallery', 'wpex-elegant' ); ?>',
                     },
                     multiple: true
                 });
@@ -142,7 +142,7 @@ function wpex_gallery_metabox() {
                                         <div class="thumbnail">\
                                             <img src="' + attachment.url + '" />\
                                         </div>\
-                                       <a href="#" class="wpex-gmb-remove" title="<?php _e( 'Remove image', 'elegant' ); ?>"><div class="media-modal-icon"></div></a>\
+                                       <a href="#" class="wpex-gmb-remove" title="<?php _e( 'Remove image', 'wpex-elegant' ); ?>"><div class="media-modal-icon"></div></a>\
                                     </div>\
                                 </li>');
                         }

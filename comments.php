@@ -32,9 +32,9 @@ if ( ! comments_open() && get_comment_pages_count() == 0 ) {
 				// Get comments title
 				$comments_number = number_format_i18n( get_comments_number() );
 				if ( '1' == $comments_number ) {
-					$comments_title = esc_html__( 'This Post Has One Comment', 'elegant' );
+					$comments_title = esc_html__( 'This Post Has One Comment', 'wpex-elegant' );
 				} else {
-					$comments_title = sprintf( esc_html__( 'This Post Has %s Comments', 'elegant' ), $comments_number );
+					$comments_title = sprintf( esc_html__( 'This Post Has %s Comments', 'wpex-elegant' ), $comments_number );
 				}
 				echo apply_filters( 'wpex_comments_title', $comments_title ); ?>
 			</span>
@@ -46,13 +46,13 @@ if ( ! comments_open() && get_comment_pages_count() == 0 ) {
 		</ol><!-- .commentlist -->
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { ?>
 			<nav class="navigation comment-navigation row clr" role="navigation">
-				<h4 class="assistive-text section-heading heading"><span><?php _e( 'Comment navigation', 'elegant' ); ?></span></h4>
-				<div class="nav-previous span_12 col clr-margin"><?php previous_comments_link( __( '&larr; Older Comments', 'elegant' ) ); ?></div>
-				<div class="nav-next span_12 col"><?php next_comments_link( __( 'Newer Comments &rarr;', 'elegant' ) ); ?></div>
+				<h4 class="assistive-text section-heading heading"><span><?php _e( 'Comment navigation', 'wpex-elegant' ); ?></span></h4>
+				<div class="nav-previous span_12 col clr-margin"><?php previous_comments_link( __( '&larr; Older Comments', 'wpex-elegant' ) ); ?></div>
+				<div class="nav-next span_12 col"><?php next_comments_link( __( 'Newer Comments &rarr;', 'wpex-elegant' ) ); ?></div>
 			</nav>
 		<?php } ?>
 	<?php } // have_comments() ?>
 	<?php comment_form( array(
-		'title_reply'	=> '<div class="heading"><span>'. __('Leave a Comment','elegant') .'</span></div>',
+		'title_reply'	=> '<div class="heading"><span>'. __('Leave a Comment','wpex-elegant') .'</span></div>',
 	)); ?>
 </div><!-- #comments -->

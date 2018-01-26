@@ -13,8 +13,42 @@ function wpex_customizer_blog( $wp_customize ) {
 
 	// Blog Section
 	$wp_customize->add_section( 'wpex_blog' , array(
-		'title' => __( 'Blog', 'elegant' ),
+		'title' => __( 'Blog', 'wpex-elegant' ),
 		'priority' => 210,
+	) );
+
+	// Homepage Count
+	$wp_customize->add_setting( 'wpex_home_blog_count', array(
+		'type'		=> 'theme_mod',
+		'default'	=> '3',
+		'sanitize_callback' => 'absint',
+	) );
+	
+	$wp_customize->add_control( 'wpex_home_blog_count', array(
+		'label'		=> __( 'Homepage Count', 'wpex-elegant' ),
+		'section'	=> 'wpex_blog',
+		'settings'	=> 'wpex_home_blog_count',
+		'type'		=> 'text',
+	) );
+
+	// Homepage Columns
+	$wp_customize->add_setting( 'wpex_home_blog_columns', array(
+		'type'		=> 'theme_mod',
+		'default'	=> '3',
+		'sanitize_callback' => 'absint',
+	) );
+	
+	$wp_customize->add_control( 'wpex_home_blog_columns', array(
+		'label'		=> __( 'Homepage Columns', 'wpex-elegant' ),
+		'section'	=> 'wpex_blog',
+		'settings'	=> 'wpex_home_blog_columns',
+		'type'		=> 'select',
+		'choices'   => array(
+			'1' => '1',
+			'2' => '2',
+			'3' => '3',
+			'4' => '4',
+		),
 	) );
 	
 	// Enable/Disable Readmore
@@ -25,11 +59,10 @@ function wpex_customizer_blog( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_blog_readmore', array(
-		'label' => __('Read More Link','elegant'),
+		'label' => __('Read More Link','wpex-elegant'),
 		'section' => 'wpex_blog',
 		'settings' => 'wpex_blog_readmore',
 		'type' => 'checkbox',
-		'priority' => '1',
 	) );
 
 	// Enable/Disable Featured Images on Entries
@@ -40,11 +73,10 @@ function wpex_customizer_blog( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_blog_entry_thumb', array(
-		'label' => __('Featured Image on Entries','elegant'),
+		'label' => __('Featured Image on Entries','wpex-elegant'),
 		'section' => 'wpex_blog',
 		'settings' => 'wpex_blog_entry_thumb',
 		'type' => 'checkbox',
-		'priority' => '1',
 	) );
 
 	// Enable/Disable Featured Images on Posts
@@ -55,11 +87,10 @@ function wpex_customizer_blog( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_blog_post_thumb', array(
-		'label' => __('Featured Image on Posts','elegant'),
+		'label' => __('Featured Image on Posts','wpex-elegant'),
 		'section' => 'wpex_blog',
 		'settings' => 'wpex_blog_post_thumb',
 		'type' => 'checkbox',
-		'priority' => '1',
 	) );
 		
 		

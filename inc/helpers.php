@@ -88,8 +88,8 @@ if ( ! function_exists( 'wpex_excerpt' ) ) {
 		else {
 			$output = wp_trim_words( strip_shortcodes( get_the_content( $id ) ), $length );
 			if ( $readmore == true ) {
-				$text			= apply_filters( 'wpex_readmore_text', __( 'continue reading', 'elegant' ) );
-				$readmore_link	= '<span class="wpex-readmore"><a href="'. get_permalink( $id ) .'" title="'. $text .'" rel="bookmark">'. $text .' &rarr;</a></span>';
+				$text			= apply_filters( 'wpex_readmore_text', __( 'continue reading', 'wpex-elegant' ) );
+				$readmore_link	= '<span class="wpex-readmore"><a href="'. get_permalink( $id ) .'" rel="bookmark">'. $text .' &rarr;</a></span>';
 				$output .= apply_filters( 'wpex_readmore_link', $readmore_link );
 			}
 		}
@@ -141,8 +141,8 @@ if ( ! function_exists( 'wpex_pagination') ) {
 				'total'     => $total,
 				'mid_size'  => 2,
 				'type'      => 'list',
-				'prev_text' => '<i class="fa fa-angle-left"></i>',
-				'next_text' => '<i class="fa fa-angle-right"></i>',
+				'prev_text' => '<i class="fa fa-angle-left" aria-hidden="true"></i><span class="screen-reader-text">' . esc_html__( 'Previous Posts', 'wpex-elegant' ) . '</span>',
+				'next_text' => '<i class="fa fa-angle-right" aria-hidden="true"></i><span class="screen-reader-text">' . esc_html__( 'Next Posts', 'wpex-elegant' ) . '</span>',
 			) );
 		}
 	}
@@ -177,9 +177,9 @@ if ( ! function_exists( 'wpex_pagejump' ) ) {
 		// Display next/previous pagination
 		if ( 1 != $pages ) {
 			echo '<div class="post-navigation clr"><div class="alignleft">';
-				previous_posts_link( '&larr; ' . __( 'Newer Posts', 'elegant' ) );
+				previous_posts_link( '&larr; ' . __( 'Newer Posts', 'wpex-elegant' ) );
 			echo '</div><div class="alignright">';
-				next_posts_link( __( 'Older Posts', 'elegant' ) .' &rarr;' );
+				next_posts_link( __( 'Older Posts', 'wpex-elegant' ) .' &rarr;' );
 			echo '</div></div>';
 		}
 		

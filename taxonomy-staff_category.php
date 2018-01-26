@@ -23,13 +23,19 @@ get_header(); ?>
 
 					<?php $wpex_count=0; ?>
 
+					<?php
+					$columns = get_theme_mod( 'wpex_staff_columns' );
+					$columns = $columns ? absint( $columns ) : 3; ?>
+
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php $wpex_count++; ?>
 
 							<?php get_template_part( 'partials/staff/entry' ); ?>
 
-						<?php if ( $wpex_count == '3' ) $wpex_count=0; ?>
+						<?php if ( $wpex_count == $columns ) {
+							$wpex_count = 0;
+						} ?>
 						
 					<?php endwhile; ?>
 

@@ -44,23 +44,36 @@ if ( ! function_exists( 'wpex_post_entry_classes' ) ) {
 
 		// Portfolio
 		if ( $post_type == 'portfolio' ) {
-			$classes[] = 'span_1_of_4 col clr';
+			$columns = get_theme_mod( 'wpex_portfolio_columns' );
+			$columns = $columns ? $columns : '4';
+			$classes[] = 'span_1_of_' . esc_attr( $columns );
+			$classes[] = 'col';
+			$classes[] = 'clr';
 		}
 
 		// Staff
 		elseif ( $post_type == 'staff' ) {
-			$classes[] = 'span_1_of_3 col clr';
+			$columns = get_theme_mod( 'wpex_staff_columns' );
+			$columns = $columns ? $columns : '3';
+			$classes[] = 'span_1_of_' . esc_attr( $columns );
+			$classes[] = 'col';
+			$classes[] = 'clr';
 		}
 
 
 		// Features
 		elseif ( $post_type == 'features' ) {
-			$classes[] = 'span_1_of_4 col clr';
+			$columns = get_theme_mod( 'wpex_features_columns' );
+			$columns = $columns ? $columns : '4';
+			$classes[] = 'span_1_of_' . esc_attr( $columns );
+			$classes[] = 'col';
+			$classes[] = 'clr';
 		}
 
 		// All other posts
 		else {
-			$classes[] = 'loop-entry clr';
+			$classes[] = 'loop-entry';
+			$classes[] = 'clr';
 		}
 
 		// Return classes

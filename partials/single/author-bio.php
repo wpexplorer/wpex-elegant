@@ -32,7 +32,7 @@ if ( ! $author_description ) {
 
 <div class="author-info clr">
 
-	<h4 class="heading"><span><?php printf( __( 'Written by %s', 'elegant' ), $author ); ?></span></h4>
+	<h4 class="heading"><span><?php printf( __( 'Written by %s', 'wpex-elegant' ), $author ); ?></span></h4>
 
 	<div class="author-info-inner clr">
 	

@@ -14,15 +14,18 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+// Get count
+$count = intval( get_theme_mod( 'wpex_home_portfolio_count', 4 ) );
+
 // Return if disabled
-if ( ! get_theme_mod( 'wpex_homepage_portfolio', true ) ) {
+if ( ! $count || ! get_theme_mod( 'wpex_homepage_portfolio', true ) ) {
 	return;
 }
 
 // Query posts
 $args = apply_filters( 'wpex_homepage_portfolio_args', array(
 	'post_type'			=> 'portfolio',
-	'posts_per_page'	=> get_theme_mod('wpex_home_portfolio_count', '4'),
+	'posts_per_page'	=> $count,
 	'no_found_rows'		=> true,
 ) );
 if ( $term = get_theme_mod( 'wpex_home_portfolio_category' ) ) {
@@ -46,7 +49,7 @@ if ( $wpex_query->posts ) : ?>
 			if ( $term ) {
 				$term = get_term( $term, 'portfolio_category' );
 			}
-			$heading = ( $term && $term->name ) ? $term->name : __( 'Recent Work', 'elegant' );
+			$heading = ( $term && $term->name ) ? $term->name : __( 'Recent Work', 'wpex-elegant' );
 		}
 		if ( $heading ) : ?>
 			<h2 class="heading">
@@ -56,12 +59,14 @@ if ( $wpex_query->posts ) : ?>
 
 		<div class="wpex-row clr">
 			<?php
-			$wpex_count=0;
+			$wpex_count = 0;
+			$columns    = get_theme_mod( 'wpex_portfolio_columns' );
+			$columns    = $columns ? absint( $columns ) : 4;
 			foreach( $wpex_query->posts as $post ) : setup_postdata( $post );
 				$wpex_count++;
 				get_template_part( 'partials/portfolio/entry', get_post_format() );
-				if ( '4' == $wpex_count ) {
-					$wpex_count=0;
+				if ( $columns == $wpex_count ) {
+					$wpex_count = 0;
 				}
 			endforeach; ?>
 		</div><!-- .wpex-row -->

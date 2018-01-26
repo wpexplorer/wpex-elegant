@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elegant WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-19 07:17-0700\n"
+"POT-Creation-Date: 2018-01-26 12:22-0800\n"
 "PO-Revision-Date: 2016-03-23 09:42-0800\n"
 "Last-Translator: AJ Clarke <wpexplorer@gmail.com>\n"
 "Language-Team: WPExplorer.com\n"
@@ -46,39 +46,39 @@ msgstr ""
 msgid "Leave a Comment"
 msgstr ""
 
-#: ../functions.php:214
+#: ../functions.php:226
 msgid "Main"
 msgstr ""
 
-#: ../functions.php:332
+#: ../functions.php:344
 msgid "Sidebar"
 msgstr ""
 
-#: ../functions.php:334
+#: ../functions.php:346
 msgid "Widgets in this area are used in the sidebar region."
 msgstr ""
 
-#: ../functions.php:343
+#: ../functions.php:355
 msgid "Footer 1"
 msgstr ""
 
-#: ../functions.php:345
+#: ../functions.php:357
 msgid "Widgets in this area are used in the first footer region."
 msgstr ""
 
-#: ../functions.php:354
+#: ../functions.php:366
 msgid "Footer 2"
 msgstr ""
 
-#: ../functions.php:356
+#: ../functions.php:368
 msgid "Widgets in this area are used in the second footer region."
 msgstr ""
 
-#: ../functions.php:365
+#: ../functions.php:377
 msgid "Footer 3"
 msgstr ""
 
-#: ../functions.php:367
+#: ../functions.php:379
 msgid "Widgets in this area are used in the third footer region."
 msgstr ""
 
@@ -159,6 +159,8 @@ msgid "Clear"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/init.php:259
+#: ../inc/customizer/typography.php:205 ../inc/customizer/typography.php:237
+#: ../inc/customizer/typography.php:262 ../inc/customizer/typography.php:282
 #: ../inc/meta/init.php:208
 msgid "Default"
 msgstr ""
@@ -218,7 +220,7 @@ msgstr ""
 msgid "Features"
 msgstr ""
 
-#: ../inc/classes/post-types/features.php:50
+#: ../inc/classes/post-types/features.php:50 ../inc/customizer/features.php:15
 msgid "Home Features"
 msgstr ""
 
@@ -230,7 +232,6 @@ msgstr ""
 #: ../inc/classes/post-types/portfolio.php:73
 #: ../inc/classes/post-types/portfolio.php:75
 #: ../inc/classes/post-types/slides.php:52
-#: ../inc/classes/post-types/staff.php:53
 msgid "Add New Item"
 msgstr ""
 
@@ -246,7 +247,6 @@ msgstr ""
 #: ../inc/classes/post-types/features.php:56
 #: ../inc/classes/post-types/portfolio.php:76
 #: ../inc/classes/post-types/slides.php:56
-#: ../inc/classes/post-types/staff.php:57
 msgid "View Item"
 msgstr ""
 
@@ -305,14 +305,16 @@ msgid "No Items Found In Trash"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:103
-#: ../inc/classes/post-types/portfolio.php:105
-msgid "Categories"
+msgid "Portfolio Categories"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:104
-#: ../inc/classes/post-types/portfolio.php:149
-#: ../inc/classes/post-types/staff.php:129
-msgid "Category"
+msgid "Portfolio Category"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:105
+#: ../inc/classes/post-types/staff.php:97
+msgid "Categories"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:106
@@ -324,7 +326,7 @@ msgid "Popular"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:108
-#: ../inc/customizer/portfolio.php:68
+#: ../inc/customizer/portfolio.php:85
 msgid "All"
 msgstr ""
 
@@ -355,6 +357,11 @@ msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:117
 msgid "Choose from the most used"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:149
+#: ../inc/classes/post-types/staff.php:129
+msgid "Category"
 msgstr ""
 
 #: ../inc/classes/post-types/slides.php:49
@@ -395,16 +402,24 @@ msgid "Staff"
 msgstr ""
 
 #: ../inc/classes/post-types/staff.php:52
-msgid "Staff Item"
+msgid "Staff Member"
+msgstr ""
+
+#: ../inc/classes/post-types/staff.php:53
+msgid "Add New Member"
 msgstr ""
 
 #: ../inc/classes/post-types/staff.php:54
 #: ../inc/classes/post-types/staff.php:56
-msgid "Add New Staff Item"
+msgid "Add New Staff Member"
 msgstr ""
 
 #: ../inc/classes/post-types/staff.php:55
-msgid "Edit Staff Item"
+msgid "Edit Staff Member"
+msgstr ""
+
+#: ../inc/classes/post-types/staff.php:57
+msgid "View Member"
 msgstr ""
 
 #: ../inc/classes/post-types/staff.php:58
@@ -420,7 +435,6 @@ msgid "No staff items found in trash"
 msgstr ""
 
 #: ../inc/classes/post-types/staff.php:83
-#: ../inc/classes/post-types/staff.php:97
 msgid "Staff Categories"
 msgstr ""
 
@@ -496,24 +510,37 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: ../inc/customizer/blog.php:28
+#: ../inc/customizer/blog.php:28 ../inc/customizer/portfolio.php:116
+msgid "Homepage Count"
+msgstr ""
+
+#: ../inc/customizer/blog.php:42 ../inc/customizer/features.php:40
+#: ../inc/customizer/portfolio.php:70 ../inc/customizer/staff.php:57
+msgid "Homepage Columns"
+msgstr ""
+
+#: ../inc/customizer/blog.php:62
 msgid "Read More Link"
 msgstr ""
 
-#: ../inc/customizer/blog.php:43
+#: ../inc/customizer/blog.php:76
 msgid "Featured Image on Entries"
 msgstr ""
 
-#: ../inc/customizer/blog.php:58
+#: ../inc/customizer/blog.php:90
 msgid "Featured Image on Posts"
 msgstr ""
 
-#: ../inc/customizer/copyright.php:32 ../partials/footer/copyright.php:31
+#: ../inc/customizer/copyright.php:16 ../inc/customizer/typography.php:92
 msgid "Copyright"
 msgstr ""
 
-#: ../inc/customizer/copyright.php:43
+#: ../inc/customizer/copyright.php:27
 msgid "Custom Copyright"
+msgstr ""
+
+#: ../inc/customizer/features.php:26
+msgid "Enable Home Features Post Type"
 msgstr ""
 
 #: ../inc/customizer/header.php:16
@@ -524,36 +551,328 @@ msgstr ""
 msgid "Image Logo"
 msgstr ""
 
+#: ../inc/customizer/home-slides.php:15
+msgid "Home Slider"
+msgstr ""
+
+#: ../inc/customizer/home-slides.php:26
+msgid "Enable Home Slider"
+msgstr ""
+
+#: ../inc/customizer/home-slides.php:39
+msgid "Center (Box) Home Slider"
+msgstr ""
+
+#: ../inc/customizer/home-slides.php:52
+msgid "Show Title"
+msgstr ""
+
 #: ../inc/customizer/portfolio.php:28
 msgid "Portfolio Post Type"
 msgstr ""
 
-#: ../inc/customizer/portfolio.php:43
+#: ../inc/customizer/portfolio.php:42
 msgid "Portfolio Comments"
 msgstr ""
 
-#: ../inc/customizer/portfolio.php:58
+#: ../inc/customizer/portfolio.php:56
 msgid "Portfolio Related"
 msgstr ""
 
-#: ../inc/customizer/portfolio.php:83
+#: ../inc/customizer/portfolio.php:100
 msgid "Portfolio Homepage Category"
 msgstr ""
 
-#: ../inc/customizer/portfolio.php:100
-msgid "Portfolio Homepage Posts Per Page"
-msgstr ""
-
-#: ../inc/customizer/portfolio.php:115 ../inc/customizer/staff.php:58
-msgid "Archive Posts Per Page"
+#: ../inc/customizer/portfolio.php:130
+msgid "Archive Items Per Page"
 msgstr ""
 
 #: ../inc/customizer/staff.php:28
 msgid "Staff Post Type"
 msgstr ""
 
-#: ../inc/customizer/staff.php:43
+#: ../inc/customizer/staff.php:42
 msgid "Staff Comments"
+msgstr ""
+
+#: ../inc/customizer/staff.php:77
+msgid "Archive Posts Per Page"
+msgstr ""
+
+#: ../inc/customizer/styling.php:19
+msgid "Styling"
+msgstr ""
+
+#: ../inc/customizer/styling.php:115
+msgid "Header Top Padding"
+msgstr ""
+
+#: ../inc/customizer/styling.php:124
+msgid "Header Bottom Padding"
+msgstr ""
+
+#: ../inc/customizer/styling.php:133 ../inc/customizer/styling.php:140
+msgid "Logo Text Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:147
+msgid "Menu Link Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:154
+msgid "Menu Link Hover Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:161
+msgid "Active Menu Link Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:168
+msgid "Sub-Menu Background"
+msgstr ""
+
+#: ../inc/customizer/styling.php:175
+msgid "Sub-Menu Link Bottom Border"
+msgstr ""
+
+#: ../inc/customizer/styling.php:182
+msgid "Sub-Menu Link Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:189
+msgid "Sub-Menu Link Hover Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:196
+msgid "Sub-Menu Link Hover Background"
+msgstr ""
+
+#: ../inc/customizer/styling.php:203
+msgid "Mobile Menu Link Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:210
+msgid "Footer Widgets Background"
+msgstr ""
+
+#: ../inc/customizer/styling.php:217
+msgid "Footer Widgets Text"
+msgstr ""
+
+#: ../inc/customizer/styling.php:224
+msgid "Footer Widgets Heading"
+msgstr ""
+
+#: ../inc/customizer/styling.php:231
+msgid "Footer Widgets Links"
+msgstr ""
+
+#: ../inc/customizer/styling.php:238
+msgid "Footer Widgets Links Hover"
+msgstr ""
+
+#: ../inc/customizer/styling.php:245
+msgid "Footer Widgets Borders"
+msgstr ""
+
+#: ../inc/customizer/styling.php:252
+msgid "Copyright Backgorund"
+msgstr ""
+
+#: ../inc/customizer/styling.php:259
+msgid "Copyright Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:266
+msgid "Copyright Link Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:273
+msgid "Heading Title Hover Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:280
+msgid "Link Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:287
+msgid "Link Hover Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:294
+msgid "Sidebar Link Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:301
+msgid "Sidebar Link Hover Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:308
+msgid "Theme Button Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:315
+msgid "Theme Button Background"
+msgstr ""
+
+#: ../inc/customizer/styling.php:322
+msgid "Theme Button Hover Color"
+msgstr ""
+
+#: ../inc/customizer/styling.php:329
+msgid "Theme Button Hover Background"
+msgstr ""
+
+#: ../inc/customizer/styling.php:336
+msgid "Homepage Icons"
+msgstr ""
+
+#: ../inc/customizer/styling.php:343
+msgid "Homepage Slider Caption Background"
+msgstr ""
+
+#: ../inc/customizer/styling.php:350
+msgid "Homepage Slider Arrows Hover Background"
+msgstr ""
+
+#: ../inc/customizer/typography.php:49
+msgid "Body"
+msgstr ""
+
+#: ../inc/customizer/typography.php:53
+msgid "Logo"
+msgstr ""
+
+#: ../inc/customizer/typography.php:57
+msgid "Site Description"
+msgstr ""
+
+#: ../inc/customizer/typography.php:61
+msgid "Headings"
+msgstr ""
+
+#: ../inc/customizer/typography.php:66
+msgid "Page Title"
+msgstr ""
+
+#: ../inc/customizer/typography.php:71
+msgid "Archive Descriptions"
+msgstr ""
+
+#: ../inc/customizer/typography.php:76
+msgid "Blog Entry Title"
+msgstr ""
+
+#: ../inc/customizer/typography.php:80
+msgid "Blog Post Title"
+msgstr ""
+
+#: ../inc/customizer/typography.php:84
+msgid "Sidebar Headings"
+msgstr ""
+
+#: ../inc/customizer/typography.php:88
+msgid "Footer Headings"
+msgstr ""
+
+#: ../inc/customizer/typography.php:100
+msgid "Portfolio Entry Title"
+msgstr ""
+
+#: ../inc/customizer/typography.php:108
+msgid "Staff Entry Title"
+msgstr ""
+
+#: ../inc/customizer/typography.php:139
+msgid "Typography"
+msgstr ""
+
+#: ../inc/customizer/typography.php:214
+msgid "Font Family"
+msgstr ""
+
+#: ../inc/customizer/typography.php:231
+msgid "Font Weight"
+msgstr ""
+
+#: ../inc/customizer/typography.php:238
+msgid "Extra Light: 100"
+msgstr ""
+
+#: ../inc/customizer/typography.php:239
+msgid "Light: 200"
+msgstr ""
+
+#: ../inc/customizer/typography.php:240
+msgid "Book: 300"
+msgstr ""
+
+#: ../inc/customizer/typography.php:241
+msgid "Normal: 400"
+msgstr ""
+
+#: ../inc/customizer/typography.php:242
+msgid "Semibold: 600"
+msgstr ""
+
+#: ../inc/customizer/typography.php:243
+msgid "Bold: 700"
+msgstr ""
+
+#: ../inc/customizer/typography.php:244
+msgid "Extra Bold: 800"
+msgstr ""
+
+#: ../inc/customizer/typography.php:256
+msgid "Font Style"
+msgstr ""
+
+#: ../inc/customizer/typography.php:263
+msgid "Normal"
+msgstr ""
+
+#: ../inc/customizer/typography.php:264
+msgid "Italic"
+msgstr ""
+
+#: ../inc/customizer/typography.php:276
+msgid "Text Transform"
+msgstr ""
+
+#: ../inc/customizer/typography.php:283
+msgid "Capitalize"
+msgstr ""
+
+#: ../inc/customizer/typography.php:284
+msgid "Lowercase"
+msgstr ""
+
+#: ../inc/customizer/typography.php:285
+msgid "Uppercase"
+msgstr ""
+
+#: ../inc/customizer/typography.php:297
+msgid "Font Size"
+msgstr ""
+
+#: ../inc/customizer/typography.php:302
+msgid "Value in pixels."
+msgstr ""
+
+#: ../inc/customizer/typography.php:318
+msgid "Font Color"
+msgstr ""
+
+#: ../inc/customizer/typography.php:335
+msgid "Line Height"
+msgstr ""
+
+#: ../inc/customizer/typography.php:354
+msgid "Letter Spacing"
+msgstr ""
+
+#: ../inc/customizer/typography.php:372
+msgid "Margin"
 msgstr ""
 
 #: ../inc/dashboard-feed.php:9
@@ -566,6 +885,14 @@ msgstr ""
 
 #: ../inc/helpers.php:91
 msgid "continue reading"
+msgstr ""
+
+#: ../inc/helpers.php:144
+msgid "Previous Posts"
+msgstr ""
+
+#: ../inc/helpers.php:145
+msgid "Next Posts"
 msgstr ""
 
 #: ../inc/helpers.php:180
@@ -692,75 +1019,71 @@ msgid "This theme was created by:"
 msgstr ""
 
 #: ../inc/welcome.php:110
-msgid "We work hard to develop, support and update this theme."
-msgstr ""
-
-#: ../inc/welcome.php:112
 msgid ""
-"A back-link to our website is very much appreciated or you can follow us "
-"via our social media!"
+"Be sure to follow us on social media for awesome WordPress related content "
+"and new theme releases."
 msgstr ""
 
-#: ../inc/welcome.php:136
+#: ../inc/welcome.php:134
 msgid "Video Guide"
 msgstr ""
 
-#: ../inc/welcome.php:140
+#: ../inc/welcome.php:138
 msgid "Learn how to use this theme easily via the Video Guide."
 msgstr ""
 
-#: ../inc/welcome.php:148
+#: ../inc/welcome.php:146
 msgid "Getting Started"
 msgstr ""
 
-#: ../inc/welcome.php:154
+#: ../inc/welcome.php:152
 msgid ""
 "Below you will find some useful links to get you started with this theme."
 msgstr ""
 
-#: ../inc/welcome.php:164
+#: ../inc/welcome.php:162
 msgid "Customize Your Site"
 msgstr ""
 
-#: ../inc/welcome.php:169
+#: ../inc/welcome.php:167
 msgid "Recommendations"
 msgstr ""
 
-#: ../inc/welcome.php:174
+#: ../inc/welcome.php:172
 msgid "Plugins"
 msgstr ""
 
-#: ../inc/welcome.php:175
+#: ../inc/welcome.php:173
 msgid ""
 "Below you will find links to plugins we (WPExplorer.com staff) personally "
 "like and recommend. None of these plugins are required for your theme to "
 "work, they simply add additional functionality."
 msgstr ""
 
-#: ../inc/welcome.php:191
+#: ../inc/welcome.php:189
 msgid "Total Drag & Drop Theme"
 msgstr ""
 
-#: ../inc/welcome.php:192
+#: ../inc/welcome.php:190
 msgid ""
 "Check out our most advanced (yet easy to use) and flexible theme to date."
 msgstr ""
 
-#: ../inc/welcome.php:200
+#: ../inc/welcome.php:198
 msgid "WordPress Hosting"
 msgstr ""
 
-#: ../inc/welcome.php:201
+#: ../inc/welcome.php:199
 msgid ""
 "If you need fast and reliable hosting we recommend the same host we use and "
 "love WPEngine."
 msgstr ""
 
-#: ../inc/welcome.php:209
+#: ../inc/welcome.php:207
 msgid "Deals & Coupons"
 msgstr ""
 
-#: ../inc/welcome.php:210
+#: ../inc/welcome.php:208
 msgid "Check out our coupons page for great deals on WordPress resources."
 msgstr ""
 
@@ -769,11 +1092,11 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: ../partials/edit-post.php:18
-msgid "Edit Post"
+#: ../partials/edit-post.php:20
+msgid "Edit this "
 msgstr ""
 
-#: ../partials/entry/meta.php:20 ../partials/home/blog.php:63
+#: ../partials/entry/meta.php:20 ../partials/home/blog.php:65
 #: ../partials/portfolio/single-meta.php:20 ../partials/single/meta.php:20
 msgid "Posted on"
 msgstr ""
@@ -807,11 +1130,11 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: ../partials/home/blog.php:37
+#: ../partials/home/blog.php:39
 msgid "From The Blog"
 msgstr ""
 
-#: ../partials/home/portfolio.php:49
+#: ../partials/home/portfolio.php:52
 msgid "Recent Work"
 msgstr ""
 
@@ -850,4 +1173,8 @@ msgstr ""
 #: ../partials/single/author-bio.php:35
 #, php-format
 msgid "Written by %s"
+msgstr ""
+
+#: ../searchform.php:14
+msgid "To search type and hit enter"
 msgstr ""

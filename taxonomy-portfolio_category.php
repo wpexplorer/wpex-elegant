@@ -23,13 +23,19 @@ get_header(); ?>
 
 					<?php $wpex_count=0; ?>
 
+					<?php
+					$columns = get_theme_mod( 'wpex_portfolio_columns' );
+					$columns = $columns ? absint( $columns ) : 4; ?>
+
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php $wpex_count++; ?>
 
 							<?php get_template_part( 'partials/portfolio/entry' ); ?>
 
-						<?php if ( $wpex_count == '4' ) $wpex_count=0; ?>
+						<?php if ( $wpex_count == $columns ) {
+							$wpex_count = 0;
+						} ?>
 						
 					<?php endwhile; ?>
 

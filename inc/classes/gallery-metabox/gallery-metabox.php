@@ -53,7 +53,7 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
             foreach ( $types as $type ) {
                 add_meta_box(
                     'wpex-gallery-metabox',         // ID
-                    __( 'Image Gallery', 'elegant' ),  // Title
+                    __( 'Image Gallery', 'wpex-elegant' ),  // Title
                     array( $this, 'render' ),       // Callback
                     $type,                          // Post type
                     'normal',                       // Cotext
@@ -79,7 +79,7 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
                             if ( wp_attachment_is_image ( $attachment_id  ) ) {
                                 echo '<li class="image" data-attachment_id="' . $attachment_id . '"><div class="attachment-preview"><div class="thumbnail">
                                             ' . wp_get_attachment_image( $attachment_id, 'thumbnail' ) . '</div>
-                                            <a href="#" class="wpex-gmb-remove" title="' . __( 'Remove image', 'elegant' ) . '"><div class="media-modal-icon"></div></a>
+                                            <a href="#" class="wpex-gmb-remove" title="' . __( 'Remove image', 'wpex-elegant' ) . '"><div class="media-modal-icon"></div></a>
                                         </div></li>';
                             }
                         }
@@ -89,12 +89,12 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
                 <?php wp_nonce_field( 'easy_image_gallery', 'easy_image_gallery' ); ?>
             </div>
             <p class="add_wpex_gallery_images hide-if-no-js">
-                <a href="#" class="button-primary"><?php _e( 'Add/Edit Images', 'elegant' ); ?></a>
+                <a href="#" class="button-primary"><?php _e( 'Add/Edit Images', 'wpex-elegant' ); ?></a>
             </p>
             <?php $checked = checked( get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true ), 'on', false ); ?>
             <p>
                 <label for="easy_image_gallery_link_images">
-                    <input type="checkbox" id="easy_image_gallery_link_images" value="on" name="easy_image_gallery_link_images"<?php echo $checked; ?> /> <?php _e( 'Enable Lightbox for this gallery?', 'elegant' )?>
+                    <input type="checkbox" id="easy_image_gallery_link_images" value="on" name="easy_image_gallery_link_images"<?php echo $checked; ?> /> <?php _e( 'Enable Lightbox for this gallery?', 'wpex-elegant' )?>
                 </label>
             </p>
             <?php // Props to WooCommerce for the following JS code ?>
@@ -116,9 +116,9 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
                         // Create the media frame.
                         image_gallery_frame = wp.media.frames.downloadable_file = wp.media({
                             // Set the title of the modal.
-                            title: "<?php _e( 'Add Images to Gallery', 'elegant' ); ?>",
+                            title: "<?php _e( 'Add Images to Gallery', 'wpex-elegant' ); ?>",
                             button: {
-                                text: "<?php _e( 'Add to gallery', 'elegant' ); ?>",
+                                text: "<?php _e( 'Add to gallery', 'wpex-elegant' ); ?>",
                             },
                             multiple: true
                         });
@@ -135,7 +135,7 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
                                                 <div class="thumbnail">\
                                                     <img src="' + attachment.url + '" />\
                                                 </div>\
-                                               <a href="#" class="wpex-gmb-remove" title="<?php _e( 'Remove image', 'elegant' ); ?>"><div class="media-modal-icon"></div></a>\
+                                               <a href="#" class="wpex-gmb-remove" title="<?php _e( 'Remove image', 'wpex-elegant' ); ?>"><div class="media-modal-icon"></div></a>\
                                             </div>\
                                         </li>');
                                 }

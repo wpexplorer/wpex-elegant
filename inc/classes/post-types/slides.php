@@ -46,17 +46,17 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 
 			// Define post type labels
 			$labels = array(
-				'name'					=> __( 'Slides', 'elegant' ),
-				'menu_name'				=> __( 'Home Slides', 'elegant' ),
-				'singular_name'			=> __( 'Slides Item', 'elegant' ),
-				'add_new'				=> __( 'Add New Item', 'elegant' ),
-				'add_new_item'			=> __( 'Add New Slides Item', 'elegant' ),
-				'edit_item'				=> __( 'Edit Slides Item', 'elegant' ),
-				'new_item'				=> __( 'Add New Slides Item', 'elegant' ),
-				'view_item'				=> __( 'View Item', 'elegant' ),
-				'search_items'			=> __( 'Search Slides', 'elegant' ),
-				'not_found'				=> __( 'No slides items found', 'elegant' ),
-				'not_found_in_trash'	=> __( 'No slides items found in trash', 'elegant' )
+				'name'					=> __( 'Slides', 'wpex-elegant' ),
+				'menu_name'				=> __( 'Home Slides', 'wpex-elegant' ),
+				'singular_name'			=> __( 'Slides Item', 'wpex-elegant' ),
+				'add_new'				=> __( 'Add New Item', 'wpex-elegant' ),
+				'add_new_item'			=> __( 'Add New Slides Item', 'wpex-elegant' ),
+				'edit_item'				=> __( 'Edit Slides Item', 'wpex-elegant' ),
+				'new_item'				=> __( 'Add New Slides Item', 'wpex-elegant' ),
+				'view_item'				=> __( 'View Item', 'wpex-elegant' ),
+				'search_items'			=> __( 'Search Slides', 'wpex-elegant' ),
+				'not_found'				=> __( 'No slides items found', 'wpex-elegant' ),
+				'not_found_in_trash'	=> __( 'No slides items found in trash', 'wpex-elegant' )
 			);
 			
 			// Define post type args
@@ -71,7 +71,7 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 			); 
 			
 			// Apply filters for child theming
-			$args = apply_filters('wpex_slides_args', $args);
+			$args = apply_filters( 'wpex_slides_args', $args);
 			
 			// Register the post type
 			register_post_type( 'slides', $args );
@@ -88,8 +88,8 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 		public function edit_cols( $columns ) {
 			$slides_columns = array(
 				"cb"				=> "<input type=\"checkbox\" />",
-				"title"				=> __('Title', 'column name'),
-				"slides_thumbnail"	=> __('Thumbnail', 'elegant')
+				"title"				=> __( 'Title', 'wpex-elegant' ),
+				"slides_thumbnail"	=> __( 'Thumbnail', 'wpex-elegant' )
 			);
 			return $slides_columns;
 		}

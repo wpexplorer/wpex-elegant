@@ -48,16 +48,16 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 
 			// Define post type labels
 			$labels = array(
-				'name'					=> __( 'Staff', 'elegant' ),
-				'singular_name'			=> __( 'Staff Item', 'elegant' ),
-				'add_new'				=> __( 'Add New Item', 'elegant' ),
-				'add_new_item'			=> __( 'Add New Staff Item', 'elegant' ),
-				'edit_item'				=> __( 'Edit Staff Item', 'elegant' ),
-				'new_item'				=> __( 'Add New Staff Item', 'elegant' ),
-				'view_item'				=> __( 'View Item', 'elegant' ),
-				'search_items'			=> __( 'Search Staff', 'elegant' ),
-				'not_found'				=> __( 'No staff items found', 'elegant' ),
-				'not_found_in_trash'	=> __( 'No staff items found in trash', 'elegant' )
+				'name'					=> __( 'Staff', 'wpex-elegant' ),
+				'singular_name'			=> __( 'Staff Member', 'wpex-elegant' ),
+				'add_new'				=> __( 'Add New Member', 'wpex-elegant' ),
+				'add_new_item'			=> __( 'Add New Staff Member', 'wpex-elegant' ),
+				'edit_item'				=> __( 'Edit Staff Member', 'wpex-elegant' ),
+				'new_item'				=> __( 'Add New Staff Member', 'wpex-elegant' ),
+				'view_item'				=> __( 'View Member', 'wpex-elegant' ),
+				'search_items'			=> __( 'Search Staff', 'wpex-elegant' ),
+				'not_found'				=> __( 'No staff items found', 'wpex-elegant' ),
+				'not_found_in_trash'	=> __( 'No staff items found in trash', 'wpex-elegant' )
 			);
 			
 			// Define post type args
@@ -80,21 +80,21 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 
 			// Define staff category taxonomy labels
 			$cat_labels = array(
-				'name'							=> __( 'Staff Categories', 'elegant' ),
-				'singular_name'					=> __( 'Staff Category', 'elegant' ),
-				'search_items'					=> __( 'Search Staff Categories', 'elegant' ),
-				'popular_items'					=> __( 'Popular Staff Categories', 'elegant' ),
-				'all_items'						=> __( 'All Staff Categories', 'elegant' ),
-				'parent_item'					=> __( 'Parent Staff Category', 'elegant' ),
-				'parent_item_colon'				=> __( 'Parent Staff Category:', 'elegant' ),
-				'edit_item'						=> __( 'Edit Staff Category', 'elegant' ),
-				'update_item'					=> __( 'Update Staff Category', 'elegant' ),
-				'add_new_item'					=> __( 'Add New Staff Category', 'elegant' ),
-				'new_item_name'					=> __( 'New Staff Category Name', 'elegant' ),
-				'separate_items_with_commas'	=> __( 'Separate staff categories with commas', 'elegant' ),
-				'add_or_remove_items'			=> __( 'Add or remove staff categories', 'elegant' ),
-				'choose_from_most_used'			=> __( 'Choose from the most used staff categories', 'elegant' ),
-				'menu_name'						=> __( 'Staff Categories', 'elegant' ),
+				'name'							=> __( 'Staff Categories', 'wpex-elegant' ),
+				'singular_name'					=> __( 'Staff Category', 'wpex-elegant' ),
+				'search_items'					=> __( 'Search Staff Categories', 'wpex-elegant' ),
+				'popular_items'					=> __( 'Popular Staff Categories', 'wpex-elegant' ),
+				'all_items'						=> __( 'All Staff Categories', 'wpex-elegant' ),
+				'parent_item'					=> __( 'Parent Staff Category', 'wpex-elegant' ),
+				'parent_item_colon'				=> __( 'Parent Staff Category:', 'wpex-elegant' ),
+				'edit_item'						=> __( 'Edit Staff Category', 'wpex-elegant' ),
+				'update_item'					=> __( 'Update Staff Category', 'wpex-elegant' ),
+				'add_new_item'					=> __( 'Add New Staff Category', 'wpex-elegant' ),
+				'new_item_name'					=> __( 'New Staff Category Name', 'wpex-elegant' ),
+				'separate_items_with_commas'	=> __( 'Separate staff categories with commas', 'wpex-elegant' ),
+				'add_or_remove_items'			=> __( 'Add or remove staff categories', 'wpex-elegant' ),
+				'choose_from_most_used'			=> __( 'Choose from the most used staff categories', 'wpex-elegant' ),
+				'menu_name'						=> __( 'Categories', 'wpex-elegant' ),
 			);
 
 			// Define staff category taxonomy args
@@ -125,8 +125,8 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 		 *
 		 */
 		public function edit_cols( $columns ) {
-			$columns['staff_thumbnail']	= __( 'Thumbnail', 'elegant' );
-			$columns['staff_category']	= __( 'Category', 'elegant' );
+			$columns['staff_thumbnail']	= __( 'Thumbnail', 'wpex-elegant' );
+			$columns['staff_category']	= __( 'Category', 'wpex-elegant' );
 			return $columns;
 		}
 
@@ -164,7 +164,7 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 					if ( $category_list = get_the_term_list( $post_id, 'staff_category', '', ', ', '' ) ) {
 						echo $category_list;
 					} else {
-						echo __( 'None', 'elegant' );
+						echo __( 'None', 'wpex-elegant' );
 					}
 
 				break;	

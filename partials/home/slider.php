@@ -22,9 +22,11 @@ $wpex_query = new WP_Query( array(
 ) );
 
 // Display slides if we find some
-if ( $wpex_query->posts ) : ?>
+if ( $wpex_query->posts ) :
 
-	<div id="homepage-slider-wrap" class="clr flexslider-container">
+	$center = get_theme_mod( 'wpex_homepage_slider_center' ); ?>
+
+	<div id="homepage-slider-wrap" class="clr flexslider-container<?php if ( $center ) echo ' container'; ?>">
 
 		<div id="homepage-slider" class="flexslider">
 
@@ -38,7 +40,8 @@ if ( $wpex_query->posts ) : ?>
 					// Get data
 					$post_id       = get_the_ID();
 					$title         = wpex_get_esc_title();
-					$title_display = ( 'on' == get_post_meta( $post_id ,'wpex_slide_hide_title', true ) ) ? false : true;
+					$title_display = get_theme_mod( 'wpex_homepage_slider_title' );
+					$title_display = ( 'on' == get_post_meta( $post_id ,'wpex_slide_hide_title', true ) ) ? false : $title_display;
 					$caption       = get_post_meta( $post_id, 'wpex_slide_caption', true );
 					$url           = get_post_meta( $post_id, 'wpex_slide_url', true );
 					$url_target    = get_post_meta( $post_id, 'wpex_slide_target', true );

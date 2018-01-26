@@ -16,11 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="footer-wrap" class="site-footer clr">
 
-	<div id="footer" class="clr container">
-
-		<?php get_template_part( 'partials/footer/widgets' ); ?>
-
-	</div><!-- #footer -->
+	<?php get_template_part( 'partials/footer/widgets' ); ?>
 
 	<?php get_template_part( 'partials/footer/copyright' ); ?>
 

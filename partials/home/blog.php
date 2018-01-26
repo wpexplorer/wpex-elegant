@@ -19,8 +19,10 @@ if ( ! get_theme_mod( 'wpex_homepage_features', true ) ) {
 	return;
 }
 
-// Get data
+// Get theme settings
 $posts_per_page = get_theme_mod( 'wpex_home_blog_count', '3' );
+$columns = get_theme_mod( 'wpex_home_blog_columns' );
+$columns = $columns ? $columns : '3';
 
 // Query features
 $wpex_query = new WP_Query( array(
@@ -34,7 +36,7 @@ if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 
 	<div id="homepage-blog" class="clr">
 
-		<h2 class="heading"><span><?php _e( 'From The Blog', 'elegant' ); ?></span></h2>
+		<h2 class="heading"><span><?php _e( 'From The Blog', 'wpex-elegant' ); ?></span></h2>
 
 		<?php $wpex_count=0; ?>
 
@@ -42,7 +44,7 @@ if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 
 			<?php $wpex_count++; ?>
 
-				<article class="recent-blog-entry clr col span_1_of_3 col-<?php echo $wpex_count; ?>">
+				<article class="recent-blog-entry clr col span_1_of_<?php echo esc_attr( $columns ); ?> col-<?php echo $wpex_count; ?>">
 
 					<?php
 					// Display post thumbnail
@@ -57,10 +59,10 @@ if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 					<?php } ?>
 
 					<header>
-						<h3 class="recent-blog-entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a></h3>
+						<h3 class="recent-blog-entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<ul class="post-meta clr">
 							<li class="meta-date">
-								<?php _e( 'Posted on', 'elegant' ); ?>
+								<?php _e( 'Posted on', 'wpex-elegant' ); ?>
 								<span class="meta-date-text"><?php echo get_the_date(); ?></span>
 							</li>
 							
@@ -73,7 +75,9 @@ if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 
 				</article><!-- .recent-blog -->
 
-			<?php if ( $wpex_count == '3' ) $wpex_count=0; ?>
+			<?php if ( $wpex_count == $columns ) {
+				$wpex_count=0;
+				} ?>
 
 		<?php endforeach; ?>
 

@@ -30,7 +30,7 @@ $icon = get_post_meta( get_the_ID(), 'wpex_icon_font', true ); ?>
 	// Display icon
 	if ( $icon ) : ?>
 
-		<div class="feature-icon-font"><i class="fa fa-<?php echo esc_attr( $icon ); ?>"></i></div>
+		<div class="feature-icon-font"><i class="fa fa-<?php echo esc_attr( $icon ); ?>" aria-hidden="true"></i></div>
 
 	<?php
 	// Display featured image
@@ -51,17 +51,13 @@ $icon = get_post_meta( get_the_ID(), 'wpex_icon_font', true ); ?>
 	<header class="feature-entry-header clr">
 		<h2 class="feature-entry-title">
 			<?php if ( $url ) : ?>
-				<a href="<?php echo esc_url( $url ); ?>" title="<?php wpex_esc_title(); ?>" target="_blank" class="feature-entry-url clr">
-					<?php the_title(); ?>
-				</a>
+				<a href="<?php echo esc_url( $url ); ?>" target="_blank" class="feature-entry-url clr"><?php the_title(); ?></a>
 			<?php else : ?>
 				<?php the_title(); ?>
 			<?php endif; ?>
 		</h2>
 	</header>
 
-	<div class="feature-entry-content entry clr">
-		<?php the_content(); ?>
-	</div>
+	<div class="feature-entry-content entry clr"><?php the_content(); ?></div>
 
 </article>

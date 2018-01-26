@@ -46,17 +46,17 @@ if ( ! class_exists( 'WPEX_Features_Post_Type' ) ) {
 
 			// Declare post type labels
 			$labels = array(
-				'name'					=> __( 'Features', 'elegant' ),
-				'menu_name'				=> __( 'Home Features', 'elegant' ),
-				'singular_name'			=> __( 'Features Item', 'elegant' ),
-				'add_new'				=> __( 'Add New Item', 'elegant' ),
-				'add_new_item'			=> __( 'Add New Features Item', 'elegant' ),
-				'edit_item'				=> __( 'Edit Features Item', 'elegant' ),
-				'new_item'				=> __( 'Add New Features Item', 'elegant' ),
-				'view_item'				=> __( 'View Item', 'elegant' ),
-				'search_items'			=> __( 'Search Features', 'elegant' ),
-				'not_found'				=> __( 'No features items found', 'elegant' ),
-				'not_found_in_trash'	=> __( 'No features items found in trash', 'elegant' )
+				'name'					=> __( 'Features', 'wpex-elegant' ),
+				'menu_name'				=> __( 'Home Features', 'wpex-elegant' ),
+				'singular_name'			=> __( 'Features Item', 'wpex-elegant' ),
+				'add_new'				=> __( 'Add New Item', 'wpex-elegant' ),
+				'add_new_item'			=> __( 'Add New Features Item', 'wpex-elegant' ),
+				'edit_item'				=> __( 'Edit Features Item', 'wpex-elegant' ),
+				'new_item'				=> __( 'Add New Features Item', 'wpex-elegant' ),
+				'view_item'				=> __( 'View Item', 'wpex-elegant' ),
+				'search_items'			=> __( 'Search Features', 'wpex-elegant' ),
+				'not_found'				=> __( 'No features items found', 'wpex-elegant' ),
+				'not_found_in_trash'	=> __( 'No features items found in trash', 'wpex-elegant' )
 			);
 			
 			// Declare post type args
@@ -88,8 +88,8 @@ if ( ! class_exists( 'WPEX_Features_Post_Type' ) ) {
 		public function edit_cols( $features_columns ) {
 			$features_columns = array(
 				"cb"					=> "<input type=\"checkbox\" />",
-				"title"					=> __('Title', 'column name'),
-				"features_thumbnail"	=> __('Thumbnail', 'elegant')
+				"title"					=> __( 'Title', 'wpex-elegant' ),
+				"features_thumbnail"	=> __( 'Thumbnail', 'wpex-elegant' )
 			);
 			return $features_columns;
 		}

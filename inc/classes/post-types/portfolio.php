@@ -67,16 +67,16 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 
 			// Define post type labels
 			$labels = array(
-				'name'                  => __( 'Portfolio', 'elegant' ),
-				'singular_name'         => __( 'Portfolio Item', 'elegant' ),
-				'add_new'               => __( 'Add New', 'elegant' ),
-				'add_new_item'          => __( 'Add New Item', 'elegant' ),
-				'edit_item'             => __( 'Edit Item', 'elegant' ),
-				'new_item'              => __( 'Add New Item', 'elegant' ),
-				'view_item'             => __( 'View Item', 'elegant' ),
-				'search_items'          => __( 'Search Items', 'elegant' ),
-				'not_found'             => __( 'No Items Found', 'elegant' ),
-				'not_found_in_trash'    => __( 'No Items Found In Trash', 'elegant' )
+				'name'                  => __( 'Portfolio', 'wpex-elegant' ),
+				'singular_name'         => __( 'Project', 'wpex-elegant' ),
+				'add_new'               => __( 'Add New Project', 'wpex-elegant' ),
+				'add_new_item'          => __( 'Add New Project', 'wpex-elegant' ),
+				'edit_item'             => __( 'Edit Project', 'wpex-elegant' ),
+				'new_item'              => __( 'Add New Project', 'wpex-elegant' ),
+				'view_item'             => __( 'View Project', 'wpex-elegant' ),
+				'search_items'          => __( 'Search Projects', 'wpex-elegant' ),
+				'not_found'             => __( 'No Projects Found', 'wpex-elegant' ),
+				'not_found_in_trash'    => __( 'No Projects Found In Trash', 'wpex-elegant' )
 			);
 			
 			// Define post type args
@@ -100,21 +100,21 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 
 			// Define portfolio category taxonomy labels
 			$labels = array(
-				'name'                       => __( 'Categories', 'elegant' ),
-				'singular_name'              => __( 'Category', 'elegant' ),
-				'menu_name'                  => __( 'Categories', 'elegant' ),
-				'search_items'               => __( 'Search','elegant' ),
-				'popular_items'              => __( 'Popular', 'elegant' ),
-				'all_items'                  => __( 'All', 'elegant' ),
-				'parent_item'                => __( 'Parent', 'elegant' ),
-				'parent_item_colon'          => __( 'Parent', 'elegant' ),
-				'edit_item'                  => __( 'Edit', 'elegant' ),
-				'update_item'                => __( 'Update', 'elegant' ),
-				'add_new_item'               => __( 'Add New', 'elegant' ),
-				'new_item_name'              => __( 'New', 'elegant' ),
-				'separate_items_with_commas' => __( 'Separate with commas', 'elegant' ),
-				'add_or_remove_items'        => __( 'Add or remove', 'elegant' ),
-				'choose_from_most_used'      => __( 'Choose from the most used', 'elegant' ),
+				'name'                       => __( 'Portfolio Categories', 'wpex-elegant' ),
+				'singular_name'              => __( 'Portfolio Category', 'wpex-elegant' ),
+				'menu_name'                  => __( 'Categories', 'wpex-elegant' ),
+				'search_items'               => __( 'Search','wpex-elegant' ),
+				'popular_items'              => __( 'Popular', 'wpex-elegant' ),
+				'all_items'                  => __( 'All', 'wpex-elegant' ),
+				'parent_item'                => __( 'Parent', 'wpex-elegant' ),
+				'parent_item_colon'          => __( 'Parent', 'wpex-elegant' ),
+				'edit_item'                  => __( 'Edit', 'wpex-elegant' ),
+				'update_item'                => __( 'Update', 'wpex-elegant' ),
+				'add_new_item'               => __( 'Add New', 'wpex-elegant' ),
+				'new_item_name'              => __( 'New', 'wpex-elegant' ),
+				'separate_items_with_commas' => __( 'Separate with commas', 'wpex-elegant' ),
+				'add_or_remove_items'        => __( 'Add or remove', 'wpex-elegant' ),
+				'choose_from_most_used'      => __( 'Choose from the most used', 'wpex-elegant' ),
 			);
 
 			// Define portfolio category taxonomy args
@@ -145,8 +145,8 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 		 *
 		 */
 		public function edit_cols( $columns ) {
-			$columns['portfolio_thumbnail']	= __( 'Thumbnail', 'elegant' );
-			$columns['portfolio_category']	= __( 'Category', 'elegant' );
+			$columns['portfolio_thumbnail']	= __( 'Thumbnail', 'wpex-elegant' );
+			$columns['portfolio_category']	= __( 'Category', 'wpex-elegant' );
 			return $columns;
 		}
 

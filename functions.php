@@ -82,6 +82,9 @@ class WPEX_Theme_Class {
 		// Filter the archive title
 		add_filter( 'get_the_archive_title', array( 'WPEX_Theme_Class', 'get_the_archive_title' ) );
 
+		// Add current year shortcode
+		add_shortcode( 'current_year', array( 'WPEX_Theme_Class', 'current_year_shortcode' ) );
+
 	}
 
 	/**
@@ -132,10 +135,14 @@ class WPEX_Theme_Class {
 
 		// Include Customizer functions
 		require_once ( $dir .'customizer/header.php' );
+		require_once ( $dir .'customizer/home-slides.php' );
+		require_once ( $dir .'customizer/features.php' );
 		require_once ( $dir .'customizer/portfolio.php' );
 		require_once ( $dir .'customizer/staff.php' );
 		require_once ( $dir .'customizer/blog.php' );
 		require_once ( $dir .'customizer/copyright.php' );
+		require_once ( $dir .'customizer/styling.php' );
+		require_once ( $dir .'customizer/typography.php' );
 
 		// Helper functions
 		require_once ( $dir .'helpers.php' );
@@ -178,8 +185,13 @@ class WPEX_Theme_Class {
 		require_once( WPEX_CLASSES_DIR .'gallery-metabox/gallery-metabox.php' );
 
 		// Post Types
-		require_once( WPEX_CLASSES_DIR .'post-types/slides.php' );
-		require_once( WPEX_CLASSES_DIR .'post-types/features.php' );
+		if ( get_theme_mod( 'wpex_homepage_slider', true ) ) {
+			require_once( WPEX_CLASSES_DIR .'post-types/slides.php' );
+		}
+
+		if ( get_theme_mod( 'wpex_home_features', true ) ) {
+			require_once( WPEX_CLASSES_DIR .'post-types/features.php' );
+		}
 
 		if ( get_theme_mod( 'wpex_portfolio', true ) ) {
 			require_once( WPEX_CLASSES_DIR .'post-types/portfolio.php' );
@@ -211,12 +223,12 @@ class WPEX_Theme_Class {
 		// Register navigation menus
 		register_nav_menus (
 			array(
-				'main_menu'	=> __( 'Main', 'elegant' ),
+				'main_menu'	=> __( 'Main', 'wpex-elegant' ),
 			)
 		);
 		
 		// Localization support
-		load_theme_textdomain( 'elegant', get_template_directory() .'/languages' );
+		load_theme_textdomain( 'wpex-elegant', get_template_directory() .'/languages' );
 		
 		// Enable some useful post formats for the blog
 		add_theme_support( 'post-formats', array( 'video' ) );
@@ -329,10 +341,10 @@ class WPEX_Theme_Class {
 
 		// Sidebar
 		register_sidebar( array(
-			'name'			=> __( 'Sidebar', 'elegant' ),
+			'name'			=> __( 'Sidebar', 'wpex-elegant' ),
 			'id'			=> 'sidebar',
-			'description'	=> __( 'Widgets in this area are used in the sidebar region.', 'elegant' ),
-			'before_widget'	=> '<div class="sidebar-widget %2$s clr">',
+			'description'	=> __( 'Widgets in this area are used in the sidebar region.', 'wpex-elegant' ),
+			'before_widget'	=> '<div d="%1$s" class="sidebar-widget %2$s clr">',
 			'after_widget'	=> '</div>',
 			'before_title'	=> '<h5 class="widget-title">',
 			'after_title'	=> '</h5>',
@@ -340,10 +352,10 @@ class WPEX_Theme_Class {
 
 		// Footer 1
 		register_sidebar( array(
-			'name'			=> __( 'Footer 1', 'elegant' ),
+			'name'			=> __( 'Footer 1', 'wpex-elegant' ),
 			'id'			=> 'footer-one',
-			'description'	=> __( 'Widgets in this area are used in the first footer region.', 'elegant' ),
-			'before_widget'	=> '<div class="footer-widget %2$s clr">',
+			'description'	=> __( 'Widgets in this area are used in the first footer region.', 'wpex-elegant' ),
+			'before_widget'	=> '<div d="%1$s" class="footer-widget %2$s clr">',
 			'after_widget'	=> '</div>',
 			'before_title'	=> '<h6 class="widget-title">',
 			'after_title'	=> '</h6>',
@@ -351,10 +363,10 @@ class WPEX_Theme_Class {
 
 		// Footer 2
 		register_sidebar( array(
-			'name'			=> __( 'Footer 2', 'elegant' ),
+			'name'			=> __( 'Footer 2', 'wpex-elegant' ),
 			'id'			=> 'footer-two',
-			'description'	=> __( 'Widgets in this area are used in the second footer region.', 'elegant' ),
-			'before_widget'	=> '<div class="footer-widget %2$s clr">',
+			'description'	=> __( 'Widgets in this area are used in the second footer region.', 'wpex-elegant' ),
+			'before_widget'	=> '<div d="%1$s" class="footer-widget %2$s clr">',
 			'after_widget'	=> '</div>',
 			'before_title'	=> '<h6 class="widget-title">',
 			'after_title'	=> '</h6>',
@@ -362,10 +374,10 @@ class WPEX_Theme_Class {
 
 		// Footer 3
 		register_sidebar( array(
-			'name'			=> __( 'Footer 3', 'elegant' ),
+			'name'			=> __( 'Footer 3', 'wpex-elegant' ),
 			'id'			=> 'footer-three',
-			'description'	=> __( 'Widgets in this area are used in the third footer region.', 'elegant' ),
-			'before_widget'	=> '<div class="footer-widget %2$s clr">',
+			'description'	=> __( 'Widgets in this area are used in the third footer region.', 'wpex-elegant' ),
+			'before_widget'	=> '<div d="%1$s" class="footer-widget %2$s clr">',
 			'after_widget'	=> '</div>',
 			'before_title'	=> '<h6 class="widget-title">',
 			'after_title'	=> '</h6>',
@@ -467,6 +479,16 @@ class WPEX_Theme_Class {
 			$title = single_term_title();
 		}
 		return $title;
+	}
+
+	/**
+	 * Current year shortcode, useful for the footer copyright
+	 *
+	 * @since   2.3
+	 * @access  public
+	 */
+	public static function current_year_shortcode() {
+		return date( 'Y' );
 	}
 
 }

@@ -15,22 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Get copyright text
-$copy = get_theme_mod( 'wpex_copyright', '<a href="http://www.wpexplorer.com/elegant-free-wordpress-theme/" target="_blank" title="Elegant WordPress Theme">Elegant</a> Theme by <a href="http://themeforest.net/user/wpexplorer?ref=WPExplorer" title="WPExplorer Themes">WPExplorer</a> Powered by <a href="https://wordpress.org/" title="WordPress" target="_blank">WordPress</a>' ); ?>
+$copy = get_theme_mod( 'wpex_copyright' );
+$copy = $copy ? $copy : '&copy; [current_year] Theme by <a href="http://www.wpexplorer.com/" target="_blank">WPExplorer</a> Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>'; ?>
 
 <footer id="copyright-wrap" class="clr">
-
 	<div id="copyright" role="contentinfo" class="clr">
-
-		<?php
-		// Display custom copyright
-		if ( $copy ) : ?>
-			<?php echo wp_kses_post( do_shortcode( $copy ) ); ?>
-		<?php
-		// Copyright fallback
-		else : ?>
-			&copy; <?php _e( 'Copyright', 'elegant' ); ?> <?php the_date( 'Y' ); ?> &middot; <a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
-		<?php endif; ?>
-
+		<?php echo wp_kses_post( do_shortcode( $copy ) ); ?>
 	</div><!-- #copyright -->
-
 </footer><!-- #footer-wrap -->

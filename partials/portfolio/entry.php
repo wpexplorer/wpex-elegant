@@ -20,14 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="portfolio-entry-media">
 
-				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-					<?php
-				// Display post thumbnail
-				the_post_thumbnail( 'wpex-portfolio-entry', array(
-					'alt'	=> wpex_get_esc_title(),
+			<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>">
+				<?php the_post_thumbnail( 'wpex-portfolio-entry', array(
 					'class'	=> 'portfolio-entry-img',
 				) ); ?>
-				</a>
+			</a>
 
 		</div><!-- .portfolio-entry-media -->
 
@@ -36,9 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="portfolio-entry-details clr">
 
 		<h3 class="portfolio-entry-title">
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-				<?php the_title(); ?>
-			</a>
+			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h3>
 
 		<div class="portfolio-entry-categories clr">
