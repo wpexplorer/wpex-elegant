@@ -22,20 +22,20 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 		public function __construct() {
 
 			// Adds the staff post type and taxonomies
-			add_action( 'init', array( &$this, 'register' ), 0 );
+			add_action( 'init', array( $this, 'register' ), 0 );
 
 			// Thumbnail support for staff posts
 			add_theme_support( 'post-thumbnails', array( 'staff' ) );
 
 			// Adds columns in the admin view for thumbnail and taxonomies
-			add_filter( 'manage_edit-staff_columns', array( &$this, 'edit_cols' ) );
-			add_action( 'manage_posts_custom_column', array( &$this, 'cols_display' ), 10, 2 );
+			add_filter( 'manage_edit-staff_columns', array( $this, 'edit_cols' ) );
+			add_action( 'manage_posts_custom_column', array( $this, 'cols_display' ), 10, 2 );
 
 			// Allows filtering of posts by taxonomy in the admin view
-			add_action( 'restrict_manage_posts', array( &$this, 'tax_filters' ) );
+			add_action( 'restrict_manage_posts', array( $this, 'tax_filters' ) );
 
 		}
-		
+
 		/**
 		 * Register the post type
 		 *
@@ -59,21 +59,31 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 				'not_found'				=> __( 'No staff items found', 'wpex-elegant' ),
 				'not_found_in_trash'	=> __( 'No staff items found in trash', 'wpex-elegant' )
 			);
-			
+
 			// Define post type args
 			$args = array(
 				'labels'			=> $labels,
 				'public'			=> true,
-				'supports'			=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'custom-fields', 'revisions' ),
+				'supports'			=> array(
+					'title',
+					'editor',
+					'excerpt',
+					'thumbnail',
+					'comments',
+					'custom-fields',
+					'revisions'
+				),
 				'capability_type'	=> 'post',
-				'rewrite'			=> array("slug" => "staff-member"), // Permalinks format
+				'rewrite'			=> array(
+					'slug' => 'staff-member'
+				),
 				'has_archive'		=> false,
 				'menu_icon'			=> 'dashicons-groups',
-			); 
-			
+			);
+
 			// Apply filters for child theming
 			$args = apply_filters( 'wpex_staff_args', $args);
-			
+
 			// Register the post type
 			register_post_type( 'staff', $args );
 
@@ -105,13 +115,15 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 				'show_ui'			=> true,
 				'show_tagcloud'		=> true,
 				'hierarchical'		=> true,
-				'rewrite'			=> array( 'slug' => 'staff-category' ),
+				'rewrite'			=> array(
+					'slug' => 'staff-category'
+				),
 				'query_var'			=> true
 			);
 
 			// Apply filters for child theming
 			$cat_args = apply_filters( 'wpex_taxonomy_staff_category_args', $cat_args );
-			
+
 			// Register the staff_category taxonomy
 			register_taxonomy( 'staff_category', array( 'staff' ), $cat_args );
 
@@ -125,8 +137,8 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 		 *
 		 */
 		public function edit_cols( $columns ) {
-			$columns['staff_thumbnail']	= __( 'Thumbnail', 'wpex-elegant' );
-			$columns['staff_category']	= __( 'Category', 'wpex-elegant' );
+			$columns[ 'staff_thumbnail' ] = __( 'Thumbnail', 'wpex-elegant' );
+			$columns[ 'staff_category' ]  = __( 'Category', 'wpex-elegant' );
 			return $columns;
 		}
 
@@ -141,34 +153,29 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 			switch ( $staff_columns ) {
 
 				// Display the thumbnail in the column view
-				case "staff_thumbnail":
-					
-					// Get post thumbnail ID
-					$thumbnail_id = get_post_thumbnail_id();
+				case 'staff_thumbnail':
 
-					// Display the featured image in the column view if possible
-					if ( $thumbnail_id ) {
-						$thumb = wp_get_attachment_image( $thumbnail_id, array( '80', '80' ), true );
-					}
-					if ( isset( $thumb ) ) {
-						echo $thumb;
+					$thumb = get_post_thumbnail_id();
+
+					if ( ! empty( $thumb ) ) {
+						echo wp_get_attachment_image( $thumb, array( '80', '80' ), true );
 					} else {
 						echo '&mdash;';
 					}
 
-				break;	
+				break;
 
 				// Display the staff tags in the column view
-				case "staff_category":
+				case 'staff_category':
 
-					if ( $category_list = get_the_term_list( $post_id, 'staff_category', '', ', ', '' ) ) {
-						echo $category_list;
+					if ( get_the_terms( $post_id, 'staff_category' ) ) {
+						echo get_the_term_list( $post_id, 'staff_category', '', ', ', '' );
 					} else {
-						echo __( 'None', 'wpex-elegant' );
+						echo '&mdash;';
 					}
 
-				break;	
-		
+				break;
+
 			}
 		}
 
@@ -199,16 +206,18 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 						echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
 						echo "<option value=''>$tax_name</option>";
 						foreach ( $terms as $term ) {
-							echo '<option value=' . $term->slug, $current_tax_slug == $term->slug ? ' selected="selected"' : '','>' . $term->name .' ( ' . $term->count .')</option>';
+							echo '<option value="' . esc_attr( $term->slug ) . '" ' . selected( $current_tax_slug, $term->slug ) . '>' . esc_html( $term->name ) .' ( ' . absint( $term->count ) . ')</option>';
 						}
 						echo "</select>";
 					}
 
 				}
+
 			}
+
 		}
 
 	}
 
 }
-$wpex_staff_post_type = new WPEX_Staff_Post_Type;
+new WPEX_Staff_Post_Type;

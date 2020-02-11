@@ -22,17 +22,17 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 		public function __construct() {
 
 			// Adds the slides post type and taxonomies
-			add_action( 'init', array( &$this, 'register' ), 0 );
+			add_action( 'init', array( $this, 'register' ), 0 );
 
 			// Thumbnail support for slides posts
 			add_theme_support( 'post-thumbnails', array( 'slides' ) );
 
 			// Adds columns in the admin view for thumbnail and taxonomies
-			add_filter( 'manage_edit-slides_columns', array( &$this, 'edit_cols' ) );
-			add_action( 'manage_posts_custom_column', array( &$this, 'cols_display' ), 10, 2 );
-			
+			add_filter( 'manage_edit-slides_columns', array( $this, 'edit_cols' ) );
+			add_action( 'manage_posts_custom_column', array( $this, 'cols_display' ), 10, 2 );
+
 		}
-		
+
 
 		/**
 		 * Register the post type
@@ -58,21 +58,21 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 				'not_found'				=> __( 'No slides items found', 'wpex-elegant' ),
 				'not_found_in_trash'	=> __( 'No slides items found in trash', 'wpex-elegant' )
 			);
-			
+
 			// Define post type args
 			$args = array(
 				'labels'			=> $labels,
 				'public'			=> true,
 				'supports'			=> array( 'title', 'thumbnail', 'custom-fields' ),
 				'capability_type'	=> 'post',
-				'rewrite'			=> array("slug" => "slides"), // Permalinks format
+				'rewrite'			=> array( 'slug' => 'slides' ),
 				'has_archive'		=> false,
 				'menu_icon'			=> 'dashicons-images-alt2',
-			); 
-			
+			);
+
 			// Apply filters for child theming
 			$args = apply_filters( 'wpex_slides_args', $args);
-			
+
 			// Register the post type
 			register_post_type( 'slides', $args );
 
@@ -87,9 +87,9 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 		 */
 		public function edit_cols( $columns ) {
 			$slides_columns = array(
-				"cb"				=> "<input type=\"checkbox\" />",
-				"title"				=> __( 'Title', 'wpex-elegant' ),
-				"slides_thumbnail"	=> __( 'Thumbnail', 'wpex-elegant' )
+				'cb'				=> '<input type=\"checkbox\" />',
+				'title'				=> __( 'Title', 'wpex-elegant' ),
+				'slides_thumbnail'	=> __( 'Thumbnail', 'wpex-elegant' )
 			);
 			return $slides_columns;
 		}
@@ -105,21 +105,18 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 			switch ( $slides_columns ) {
 
 				// Display the thumbnail in the column view
-				case "slides_thumbnail":
+				case 'slides_thumbnail':
 
-					// Get post thumbnail ID
-					$thumbnail_id = get_post_thumbnail_id();
+					$thumb = get_post_thumbnail_id();
 
-					// Display the featured image in the column view if possible
-					if ( $thumbnail_id ) {
-						$thumb = wp_get_attachment_image( $thumbnail_id, array( '80', '80' ), true );
-					}
-					if ( isset( $thumb ) ) {
-						echo $thumb;
+					if ( ! empty( $thumb ) ) {
+						echo wp_get_attachment_image( $thumb, array( '80', '80' ), true );
 					} else {
 						echo '&mdash;';
 					}
-				
+
+				break;
+
 			}
 
 		}
@@ -127,4 +124,4 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 	}
 
 }
-$wpex_slides_post_type = new WPEX_Slides_Post_Type;
+new WPEX_Slides_Post_Type;

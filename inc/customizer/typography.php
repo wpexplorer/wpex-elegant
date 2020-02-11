@@ -1,7 +1,7 @@
 <?php
 /**
  * Adds all Typography options to the Customizer and outputs the custom CSS for them
- * 
+ *
  * @package		Typography Class
  * @subpackage	Premium
  * @author		Alexander Clarke
@@ -452,14 +452,14 @@ if ( ! class_exists( 'WPEX_Typography' ) ) {
 							}
 
 							// Add custom CSS
-							$add_css .= esc_attr( $attribute ) .':'. esc_attr( $val ) .';';
+							$add_css .= esc_attr( $attribute ) . ':' . esc_attr( $val ) . ';';
 
 						}
 					}
 
 					// If there is CSS to add, then add it
 					if ( $add_css ) {
-						$css .= $target .'{'. $add_css .'}';
+						$css .= wp_strip_all_tags( $target ) . '{' . $add_css . '}';
 					}
 
 				}
@@ -606,7 +606,7 @@ if ( ! class_exists( 'WPEX_Typography' ) ) {
 				}
 
 			}
-			
+
 		}
 
 		/**

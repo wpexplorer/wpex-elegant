@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<li class="meta-category">
 			<span class="meta-seperator">/</span><?php _e( 'Under', 'wpex-elegant' ); ?>
-			<?php echo $cats; ?>
+			<?php echo $cats; // already sanitized ?>
 		</li>
 
 	<?php endif; ?>
@@ -36,5 +36,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php comments_popup_link( __( '0 Comments', 'wpex-elegant' ), __( '1 Comment',  'wpex-elegant' ), __( '% Comments', 'wpex-elegant' ), 'comments-link' ); ?>
 		</li>
 	<?php } ?>
-	
+
 </ul><!-- .post-meta -->

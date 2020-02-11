@@ -23,14 +23,15 @@
  */
 
 // Theme info
-function wpex_get_theme_info() {
-	return array(
-		'name'        => 'Elegant',
-		'dir'         => get_template_directory_uri() .'/inc/',
-		'url'         => 'http://www.wpexplorer.com/elegant-free-wordpress-theme/',
-		'changelog'   => 'https://wpexplorer-updates.com/changelog/elegant/',
-		'video_guide' => 'https://www.youtube.com/watch?v=SogTFYfByaY',
-	);
+if ( ! function_exists( 'wpex_theme_info' ) ) {
+	function wpex_theme_info() {
+		return array(
+			'name'    => 'Elegant Theme',
+			'slug'    => 'wpex-elegant',
+			'url'     => 'https://www.wpexplorer.com/elegant-free-wordpress-theme/',
+			'support' => 'https://github.com/wpexplorer/wpex-elegant/issues/',
+		);
+	}
 }
 
 class WPEX_Theme_Class {
@@ -42,11 +43,6 @@ class WPEX_Theme_Class {
 	 * @access  public
 	 */
 	public function __construct() {
-
-		// Auto updates
-		if ( is_admin() ) {
-			require_once( get_template_directory() .'/inc/updates.php' );
-		}
 
 		// Define Contstants
 		add_action( 'after_setup_theme', array( 'WPEX_Theme_Class', 'constants' ) );
@@ -156,14 +152,13 @@ class WPEX_Theme_Class {
 		// MCE Editor tweaks
 		require_once( $dir .'mce-tweaks.php' );
 
-		// Dashboard feeds
-		if ( ! defined( 'WPEX_DISABLE_THEME_DASHBOARD_FEEDS' ) ) {
-			require_once( $dir .'dashboard-feed.php' );
-		}
-
-		// Welcome page
-		if ( ! defined( 'WPEX_DISABLE_THEME_ABOUT_PAGE' ) ) {
-			require_once( $dir .'welcome.php' );
+		if ( is_admin() ) {
+			if ( ! defined( 'WPEX_DISABLE_THEME_DASHBOARD_FEEDS' ) ) {
+				require_once get_parent_theme_file_path( '/admin/dashboard-feed.php' );
+			}
+			if ( ! defined( 'WPEX_DISABLE_THEME_ABOUT_PAGE' ) ) {
+				require_once get_parent_theme_file_path( '/admin/about.php' );
+			}
 		}
 
 	}
@@ -226,13 +221,13 @@ class WPEX_Theme_Class {
 				'main_menu'	=> __( 'Main', 'wpex-elegant' ),
 			)
 		);
-		
+
 		// Localization support
 		load_theme_textdomain( 'wpex-elegant', get_template_directory() .'/languages' );
-		
+
 		// Enable some useful post formats for the blog
 		add_theme_support( 'post-formats', array( 'video' ) );
-			
+
 		// Add theme support
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'automatic-feed-links' );

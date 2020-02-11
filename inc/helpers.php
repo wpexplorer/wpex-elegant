@@ -9,7 +9,6 @@
  * @since       2.0.0
  */
 
-
 /**
  * Returns escaped post title
  *
@@ -30,7 +29,7 @@ function wpex_esc_title() {
 
 /**
  * List categories for specific taxonomy
- * 
+ *
  * @link    http://codex.wordpress.org/Function_Reference/wp_get_post_terms
  * @since   1.0.0
  */
@@ -41,7 +40,7 @@ if ( ! function_exists( 'wpex_list_post_terms' ) ) {
         $terms      = wp_get_post_terms( get_the_ID(), $taxonomy );
         foreach ( $terms as $term ) {
             $permalink      = get_term_link( $term->term_id, $taxonomy );
-            $list_terms[]   = '<a href="'. $permalink .'" title="'. $term->name .'">'. $term->name .'</a>';
+            $list_terms[]   = '<a href="' . esc_url( $permalink ) . '" title="' . esc_attr( $term->name ) . '">' . esc_html( $term->name ) . '</a>';
         }
         if ( ! $list_terms ) {
             return;
@@ -53,7 +52,7 @@ if ( ! function_exists( 'wpex_list_post_terms' ) ) {
             return $list_terms;
         }
     }
-    
+
 }
 
 /**
@@ -89,13 +88,13 @@ if ( ! function_exists( 'wpex_excerpt' ) ) {
 			$output = wp_trim_words( strip_shortcodes( get_the_content( $id ) ), $length );
 			if ( $readmore == true ) {
 				$text			= apply_filters( 'wpex_readmore_text', __( 'continue reading', 'wpex-elegant' ) );
-				$readmore_link	= '<span class="wpex-readmore"><a href="'. get_permalink( $id ) .'" rel="bookmark">'. $text .' &rarr;</a></span>';
+				$readmore_link	= '<span class="wpex-readmore"><a href="' . esc_url( get_permalink( $id ) ) . '" rel="bookmark">' . esc_html( $text ) . ' &rarr;</a></span>';
 				$output .= apply_filters( 'wpex_readmore_link', $readmore_link );
 			}
 		}
 
 		// Echo output
-		echo $output;
+		echo wp_kses_post( $output );
 
 	}
 }
@@ -182,7 +181,7 @@ if ( ! function_exists( 'wpex_pagejump' ) ) {
 				next_posts_link( __( 'Older Posts', 'wpex-elegant' ) .' &rarr;' );
 			echo '</div></div>';
 		}
-		
+
 	}
 
 }

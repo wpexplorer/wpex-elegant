@@ -44,7 +44,7 @@ if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 
 			<?php $wpex_count++; ?>
 
-				<article class="recent-blog-entry clr col span_1_of_<?php echo esc_attr( $columns ); ?> col-<?php echo $wpex_count; ?>">
+				<article class="recent-blog-entry clr col span_1_of_<?php echo esc_attr( $columns ); ?> col-<?php echo absint( $wpex_count ); ?>">
 
 					<?php
 					// Display post thumbnail
@@ -65,7 +65,7 @@ if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 								<?php _e( 'Posted on', 'wpex-elegant' ); ?>
 								<span class="meta-date-text"><?php echo get_the_date(); ?></span>
 							</li>
-							
+
 						</ul><!-- .post-meta -->
 					</header>
 
@@ -77,7 +77,7 @@ if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 
 			<?php if ( $wpex_count == $columns ) {
 				$wpex_count=0;
-				} ?>
+			} ?>
 
 		<?php endforeach; ?>
 

@@ -91,10 +91,9 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
             <p class="add_wpex_gallery_images hide-if-no-js">
                 <a href="#" class="button-primary"><?php _e( 'Add/Edit Images', 'wpex-elegant' ); ?></a>
             </p>
-            <?php $checked = checked( get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true ), 'on', false ); ?>
             <p>
                 <label for="easy_image_gallery_link_images">
-                    <input type="checkbox" id="easy_image_gallery_link_images" value="on" name="easy_image_gallery_link_images"<?php echo $checked; ?> /> <?php _e( 'Enable Lightbox for this gallery?', 'wpex-elegant' )?>
+                    <input type="checkbox" id="easy_image_gallery_link_images" value="on" name="easy_image_gallery_link_images"<?php checked( get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true ), 'on', true ); ?> /> <?php _e( 'Enable Lightbox for this gallery?', 'wpex-elegant' )?>
                 </label>
             </p>
             <?php // Props to WooCommerce for the following JS code ?>
@@ -234,16 +233,16 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
                 .wpex_gallery_images .details.attachment { box-shadow: none }
                 .wpex_gallery_images .image > div { width: 80px; height: 80px; box-shadow: none; }
                 .wpex_gallery_images .attachment-preview { position: relative; padding: 4px; }
-                .wpex_gallery_images .attachment-preview .thumbnail { cursor: move }    
-                .wpex_gallery_images .wc-metabox-sortable-placeholder{width: 80px;height: 80px;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;border:4px dashed #ddd;background:#f7f7f7 url("<?php echo $this->dir; ?>watermark.png") no-repeat center}      
-                .wpex_gallery_images .wpex-gmb-remove {background: #eee url("<?php echo $this->dir; ?>delete.png") center center no-repeat;position: absolute;top: 2px;right: 2px;border-radius: 2px;padding: 2px;display: none;width: 10px;height: 10px;margin: 0;display: none;overflow: hidden;} 
+                .wpex_gallery_images .attachment-preview .thumbnail { cursor: move }
+                .wpex_gallery_images .wc-metabox-sortable-placeholder{width: 80px;height: 80px;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;border:4px dashed #ddd;background:#f7f7f7 url("<?php echo esc_url( $this->dir . 'watermark.png' ); ?>") no-repeat center}
+                .wpex_gallery_images .wpex-gmb-remove {background: #eee url("<?php echo esc_url( $this->dir . 'delete.png' ); ?>") center center no-repeat;position: absolute;top: 2px;right: 2px;border-radius: 2px;padding: 2px;display: none;width: 10px;height: 10px;margin: 0;display: none;overflow: hidden;}
                 .wpex_gallery_images .image div:hover .wpex-gmb-remove { display: block }
                 .wpex_gallery_images:after, #wpex_gallery_images_container:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
                 #wpex_gallery_images_container ul { margin: 0 !important }
                 .wpex_gallery_images > li { float: left; cursor: move; margin: 9px 9px 0 0; }
                 .wpex_gallery_images li.image img { width: 80px; height: 80px; }
                 .wpex_gallery_images .attachment-preview:before { display: none !important; }
-            </style>    
+            </style>
             <?php
         }
     }
@@ -251,7 +250,7 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
 
 // Class needed only in the admin
 if ( is_admin() ) {
-    $wpex_gallery_metabox = new WPEX_Gallery_Metabox;
+    new WPEX_Gallery_Metabox;
 }
 
 

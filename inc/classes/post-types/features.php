@@ -22,17 +22,17 @@ if ( ! class_exists( 'WPEX_Features_Post_Type' ) ) {
 		public function __construct() {
 
 			// Adds the features post type and taxonomies
-			add_action( 'init', array( &$this, 'register' ), 0 );
+			add_action( 'init', array( $this, 'register' ), 0 );
 
 			// Thumbnail support for features posts
 			add_theme_support( 'post-thumbnails', array( 'features' ) );
 
 			// Adds columns in the admin view for thumbnail and taxonomies
-			add_filter( 'manage_edit-features_columns', array( &$this, 'edit_cols' ) );
-			add_action( 'manage_posts_custom_column', array( &$this, 'cols_display' ), 10, 2 );
-			
+			add_filter( 'manage_edit-features_columns', array( $this, 'edit_cols' ) );
+			add_action( 'manage_posts_custom_column', array( $this, 'cols_display' ), 10, 2 );
+
 		}
-		
+
 
 		/**
 		 * Register the post type
@@ -58,7 +58,7 @@ if ( ! class_exists( 'WPEX_Features_Post_Type' ) ) {
 				'not_found'				=> __( 'No features items found', 'wpex-elegant' ),
 				'not_found_in_trash'	=> __( 'No features items found in trash', 'wpex-elegant' )
 			);
-			
+
 			// Declare post type args
 			$args = array(
 				'labels'				=> $labels,
@@ -69,11 +69,11 @@ if ( ! class_exists( 'WPEX_Features_Post_Type' ) ) {
 				'has_archive'			=> false,
 				'menu_icon'				=> 'dashicons-star-filled',
 				'exclude_from_search'	=> true,
-			); 
-			
+			);
+
 			// Apply filters for child theming
 			$args = apply_filters( 'wpex_features_args', $args );
-			
+
 			// Register the features post type
 			register_post_type( 'features', $args );
 
@@ -107,25 +107,20 @@ if ( ! class_exists( 'WPEX_Features_Post_Type' ) ) {
 				// Display the thumbnail in the column view
 				case "features_thumbnail":
 
-					// Get post thumbnail ID
-					$thumbnail_id = get_post_thumbnail_id();
+					$thumb = get_post_thumbnail_id();
 
-					// Display the featured image in the column view if possible
-					if ( $thumbnail_id ) {
-						$thumb = wp_get_attachment_image( $thumbnail_id, array( '80', '80' ), true );
-					}
-					if ( isset( $thumb ) ) {
-						echo $thumb;
+					if ( ! empty( $thumb ) ) {
+						echo wp_get_attachment_image( $thumb, array( '80', '80' ), true );
 					} else {
 						echo '&mdash;';
 					}
 
 				break;
-			
+
 			}
 		}
 
 	}
 
 }
-$wpex_features_post_type = new WPEX_Features_Post_Type;
+new WPEX_Features_Post_Type;

@@ -32,17 +32,17 @@ class WPEX_Theme_Customizer_Styling {
 			$count='2';
 			foreach( $color_options as $option ) {
 				$count++;
-				
+
 				$default = isset($option['default']) ? $option['default'] : '';
 				$type    = isset( $option['type']) ? $option['type'] : '';
-				
+
 				$wp_customize->add_setting( 'wpex_'. $option['id'], array(
 					'type'		=> 'theme_mod',
 					'default'	=> $default,
 					'transport'	=> 'refresh',
 					'sanitize_callback' => 'esc_html',
 				) );
-				
+
 				if ( 'text' == $type ) {
 					$wp_customize->add_control( 'wpex_'. $option['id'] .'', array(
 						'label'		=> $option['label'],
@@ -68,23 +68,23 @@ class WPEX_Theme_Customizer_Styling {
 	/**
 	* This will output the custom styling settings to the live theme's WP head.
 	* Used by hook: 'wp_head'
-	* 
+	*
 	* @see add_action('wp_head',$func)
 	* @since Fabulous 1.0
 	*/
 	public static function header_output() {
-		
+
 		$color_options = self::wpex_color_options();
 		$css = '';
-		
+
 		foreach( $color_options as $option ) {
 
 			$theme_mod = get_theme_mod( 'wpex_'. $option['id'] );
-			
+
 			if ( ! $theme_mod ) {
 				continue;
 			}
-			
+
 			if ( ! empty( $option['media_query'] ) ) {
 				$css .= $option['media_query'] . '{' . $option['element'] . '{ ' . esc_attr( $option['style'] ) . ':' . esc_attr( $theme_mod ) .' !important; } }';
 			} else {
@@ -92,9 +92,9 @@ class WPEX_Theme_Customizer_Styling {
 			}
 
 		}
-		
+
 		$css = preg_replace( '/\s+/', ' ', $css );
-		
+
 		if ( ! empty( $css ) ) {
 			echo "<!-- Theme Customizer Styling Options -->\n<style type=\"text/css\">\n" . $css . "\n</style>";
 		}
@@ -104,7 +104,7 @@ class WPEX_Theme_Customizer_Styling {
 
 	/**
 	* Array of styling options
-	* 
+	*
 	* @since Fabulous 1.0
 	*/
 	public static function wpex_color_options() {
@@ -367,26 +367,3 @@ add_action( 'customize_register' , array( 'WPEX_Theme_Customizer_Styling' , 'reg
 
 // Output custom CSS to live site
 add_action( 'wp_head' , array( 'WPEX_Theme_Customizer_Styling' , 'header_output' ) );
-
-/**
-* Remove Inner shadow for buttons if their colors
-* have been altered via the customizer
-* 
-* @since Fabulous 1.0
-*/
-if ( ! function_exists('wpex_remove_button_shadow') ) {
-	function wpex_remove_button_shadow() {
-		$css='';
-		if ( '' != get_theme_mod( 'wpex_theme_button_bg' ) ) {
-			$css = 'input[type="button"], input[type="submit"], .page-numbers a:hover, .page-numbers.current, .page-links span, .page-links a:hover span { box-shadow: 0 1px 2px rgba(0,0,0,0.07); }';
-		}
-		if ( $css ) {
-			$css =  preg_replace( '/\s+/', ' ', $css );
-			$css = "<!-- Remove Button Box Shadow -->\n<style type=\"text/css\">\n" . $css . "\n</style>";
-			echo $css;
-		}
-	}
-}
-
-// Output custom CSS to live site
-add_action( 'wp_head' , 'wpex_remove_button_shadow' );

@@ -22,23 +22,23 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 		public function __construct() {
 
 			// Adds image sizes for portfolio items
-			add_action( 'after_setup_theme', array( &$this, 'image_sizes' ) );
+			add_action( 'after_setup_theme', array( $this, 'image_sizes' ) );
 
 			// Adds the portfolio post type and taxonomies
-			add_action( 'init', array( &$this, 'register' ), 0 );
+			add_action( 'init', array( $this, 'register' ), 0 );
 
 			// Thumbnail support for portfolio posts
 			add_theme_support( 'post-thumbnails', array( 'portfolio' ) );
 
 			// Adds columns in the admin view for thumbnail and taxonomies
-			add_filter( 'manage_edit-portfolio_columns', array( &$this, 'edit_cols' ) );
-			add_action( 'manage_posts_custom_column', array( &$this, 'cols_display' ), 10, 2 );
+			add_filter( 'manage_edit-portfolio_columns', array( $this, 'edit_cols' ) );
+			add_action( 'manage_posts_custom_column', array( $this, 'cols_display' ), 10, 2 );
 
 			// Allows filtering of posts by taxonomy in the admin view
-			add_action( 'restrict_manage_posts', array( &$this, 'tax_filters' ) );
+			add_action( 'restrict_manage_posts', array( $this, 'tax_filters' ) );
 
 			// Enable the gallery metabox for portfolio items
-			add_filter( 'wpex_gallery_metabox_post_types', array( &$this, 'gallery_metabox' ) );
+			add_filter( 'wpex_gallery_metabox_post_types', array( $this, 'gallery_metabox' ) );
 
 		}
 
@@ -54,7 +54,7 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 			add_image_size( 'wpex-portfolio-entry', 400, 340, true );
 			add_image_size( 'wpex-portfolio-post', 9999, 9999, false );
 		}
-		
+
 		/**
 		 * Register the post type
 		 *
@@ -78,12 +78,21 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 				'not_found'             => __( 'No Projects Found', 'wpex-elegant' ),
 				'not_found_in_trash'    => __( 'No Projects Found In Trash', 'wpex-elegant' )
 			);
-			
+
 			// Define post type args
 			$args = array(
 				'labels'			=> $labels,
 				'public'			=> true,
-				'supports'			=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'custom-fields', 'revisions', 'post-formats' ),
+				'supports'			=> array(
+					'title',
+					'editor',
+					'excerpt',
+					'thumbnail',
+					'comments',
+					'custom-fields',
+					'revisions',
+					'post-formats'
+				),
 				'capability_type'	=> 'post',
 				'rewrite'			=> array(
 					'slug' => 'portfolio-item',
@@ -91,10 +100,10 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 				'has_archive'		=> false,
 				'menu_icon'			=> 'dashicons-portfolio',
 			);
-			
+
 			// Apply filters for child theming
 			$args = apply_filters( 'wpex_portfolio_args', $args);
-			
+
 			// Register the post type
 			register_post_type( 'portfolio', $args );
 
@@ -125,13 +134,15 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 				'show_ui'			=> true,
 				'show_tagcloud'		=> true,
 				'hierarchical'		=> true,
-				'rewrite'			=> array( 'slug' => 'portfolio-category' ),
+				'rewrite'			=> array(
+					'slug' => 'portfolio-category'
+				),
 				'query_var'			=> true
 			);
 
 			// Apply filters for child theming
 			$args = apply_filters( 'wpex_portfolio_category_args', $args );
-			
+
 			// Register the portfolio_category taxonomy
 			register_taxonomy( 'portfolio_category', array( 'portfolio' ), $args );
 
@@ -145,8 +156,8 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 		 *
 		 */
 		public function edit_cols( $columns ) {
-			$columns['portfolio_thumbnail']	= __( 'Thumbnail', 'wpex-elegant' );
-			$columns['portfolio_category']	= __( 'Category', 'wpex-elegant' );
+			$columns[ 'portfolio_thumbnail' ] = __( 'Thumbnail', 'wpex-elegant' );
+			$columns[ 'portfolio_category' ]  = __( 'Category', 'wpex-elegant' );
 			return $columns;
 		}
 
@@ -161,34 +172,29 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 			switch ( $portfolio_columns ) {
 
 				// Display the thumbnail in the column view
-				case "portfolio_thumbnail":
+				case 'portfolio_thumbnail':
 
-					// Get post thumbnail ID
-					$thumbnail_id = get_post_thumbnail_id();
+					$thumb = get_post_thumbnail_id();
 
-					// Display the featured image in the column view if possible
-					if ( $thumbnail_id ) {
-						$thumb = wp_get_attachment_image( $thumbnail_id, array( '80', '80' ), true );
-					}
-					if ( isset( $thumb ) ) {
-						echo $thumb;
+					if ( ! empty( $thumb ) ) {
+						echo wp_get_attachment_image( $thumb, array( '80', '80' ), true );
 					} else {
 						echo '&mdash;';
 					}
 
-				break;	
+				break;
 
 				// Display the portfolio tags in the column view
-				case "portfolio_category":
+				case 'portfolio_category':
 
-					if ( $category_list = get_the_term_list( $post_id, 'portfolio_category', '', ', ', '' ) ) {
-						echo $category_list;
+					if ( get_the_terms( $post_id, 'portfolio_category' ) ) {
+						echo get_the_term_list( $post_id, 'portfolio_category', '', ', ', '' );
 					} else {
 						echo '&mdash;';
 					}
 
-				break;	
-		
+				break;
+
 			}
 		}
 
@@ -199,7 +205,7 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 		 * @access  public
 		 */
 		public function tax_filters() {
-			
+
 			global $typenow;
 
 			// An array of all the taxonomyies you want to display. Use the taxonomy name or slug
@@ -209,20 +215,25 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 			if ( $typenow == 'portfolio' ) {
 
 				foreach ( $taxonomies as $tax_slug ) {
-					$current_tax_slug = isset( $_GET[$tax_slug] ) ? $_GET[$tax_slug] : false;
-					$tax_obj = get_taxonomy( $tax_slug );
-					$tax_name = $tax_obj->labels->name;
-					$terms = get_terms($tax_slug);
-					if ( count( $terms ) > 0) {
+
+					$current_tax_slug	= isset( $_GET[$tax_slug] ) ? $_GET[$tax_slug] : false;
+					$tax_obj			= get_taxonomy( $tax_slug );
+					$tax_name			= $tax_obj->labels->name;
+					$terms				= get_terms( $tax_slug );
+
+					if ( count( $terms ) > 0 ) {
 						echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
 						echo "<option value=''>$tax_name</option>";
 						foreach ( $terms as $term ) {
-							echo '<option value=' . $term->slug, $current_tax_slug == $term->slug ? ' selected="selected"' : '','>' . $term->name .' ( ' . $term->count .')</option>';
+							echo '<option value="' . esc_attr( $term->slug ) . '" ' . selected( $current_tax_slug, $term->slug ) . '>' . esc_html( $term->name ) .' ( ' . absint( $term->count ) . ')</option>';
 						}
 						echo "</select>";
 					}
+
 				}
+
 			}
+
 		}
 
 		/**
@@ -244,4 +255,4 @@ if ( ! class_exists( 'WPEX_Portfolio_Post_Type' ) ) {
 
 	}
 }
-$wpex_portfolio_post_type = new WPEX_Portfolio_Post_Type;
+new WPEX_Portfolio_Post_Type;

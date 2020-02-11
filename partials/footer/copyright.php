@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Get copyright text
 $copy = get_theme_mod( 'wpex_copyright' );
-$copy = $copy ? $copy : '&copy; [current_year] Theme by <a href="http://www.wpexplorer.com/" target="_blank">WPExplorer</a> Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>'; ?>
+$copy = $copy ? $copy : '&copy; [current_year] Theme by <a href="https://www.wpexplorer.com/" target="_blank">WPExplorer</a> powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>'; ?>
 
 <footer id="copyright-wrap" class="clr">
 	<div id="copyright" role="contentinfo" class="clr">
