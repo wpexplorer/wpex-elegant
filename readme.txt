@@ -44,3 +44,18 @@ Source: https://fontawesome.com/v4/icons/
 * Removed portfolio/post video URL setting - for displaying videos it's best to insert them in the post with Gutenberg.
 * Removed current_year shortcode.
 * Removed mce editor tweaks.
+
+== Copyright ==
+
+Elegant WordPress Theme, (C) 2024 WPExplorer.
+Elegant is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
