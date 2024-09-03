@@ -106,8 +106,8 @@ hr { border: solid #eee; border-width: 1px 0 0; clear: both; height: 0; margin: 
 .page-header { position: relative; margin-bottom: 30px; }
 .page-template-templatesportfolio-php .page-header { margin-bottom: 25px; }
 .page-header-title { color: #000000; margin: 0; font-weight: 600; }
-.single-post .page-header { margin: 0 0 20px; }
-.single-post .page-header-title { margin: 0 0 10px; }
+.single-post .page-header { margin: 0 0 15px; }
+.single-post .page-header-title { margin: 0; }
 #archive-description,
 #portfolio-template-content { margin-top: 10px; }
 #portfolio-template-content p:last-child,
@@ -210,9 +210,8 @@ hr { border: solid #eee; border-width: 1px 0 0; clear: both; height: 0; margin: 
 
 /* Post Meta
 --------------------------------------------------------------*/
-.post-meta { color: #000; display: block; float: none; line-height: 2em; margin-bottom: 10px; }
-.single-portfolio .post-meta,
-.single-post .post-meta { margin-bottom: 0; margin-top: 10px; }
+.post-meta { color: #000; display: block; float: none; margin-bottom: 20px; }
+.single-portfolio .post-meta { margin-bottom: 0; }
 .post-meta li { display: block; float: left; float: inline-start; margin: 0; }
 .post-meta li .meta-seperator { margin: 0 15px; opacity: .5; }
 
