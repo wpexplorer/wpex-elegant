@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elegant WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-26 12:22-0800\n"
+"POT-Creation-Date: 2024-09-03 01:08-0700\n"
 "PO-Revision-Date: 2016-03-23 09:42-0800\n"
 "Last-Translator: AJ Clarke <wpexplorer@gmail.com>\n"
 "Language-Team: WPExplorer.com\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_nx;esc_html__;"
 "esc_html_e;esc_attr_;esc_attr_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
@@ -46,77 +46,70 @@ msgstr ""
 msgid "Leave a Comment"
 msgstr ""
 
-#: ../functions.php:226
+#: ../functions.php:168
 msgid "Main"
 msgstr ""
 
-#: ../functions.php:344
+#: ../functions.php:326
 msgid "Sidebar"
 msgstr ""
 
-#: ../functions.php:346
+#: ../functions.php:328
 msgid "Widgets in this area are used in the sidebar region."
 msgstr ""
 
-#: ../functions.php:355
+#: ../functions.php:337
 msgid "Footer 1"
 msgstr ""
 
-#: ../functions.php:357
+#: ../functions.php:339
 msgid "Widgets in this area are used in the first footer region."
 msgstr ""
 
-#: ../functions.php:366
+#: ../functions.php:348
 msgid "Footer 2"
 msgstr ""
 
-#: ../functions.php:368
+#: ../functions.php:350
 msgid "Widgets in this area are used in the second footer region."
 msgstr ""
 
-#: ../functions.php:377
+#: ../functions.php:359
 msgid "Footer 3"
 msgstr ""
 
-#: ../functions.php:379
+#: ../functions.php:361
 msgid "Widgets in this area are used in the third footer region."
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_ajax.php:47
-#: ../inc/meta/helpers/cmb_Meta_Box_ajax.php:47
 msgid "Please Try Again"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_ajax.php:131
-#: ../inc/meta/helpers/cmb_Meta_Box_ajax.php:118
 msgid "Remove Embed"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_ajax.php:134
-#: ../inc/meta/helpers/cmb_Meta_Box_ajax.php:121
 #, php-format
 msgid "No oEmbed Results Found for %s. View more info at"
 msgstr ""
 
-#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_field.php:459
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_field.php:460
 msgid "Add Group"
 msgstr ""
 
-#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_field.php:460
+#: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_field.php:461
 msgid "Remove Group"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:250
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:139
 msgid "Add Row"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:306
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:706
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:768
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:167
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:459
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:502
 msgid "Remove"
 msgstr ""
 
@@ -127,51 +120,37 @@ msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:674
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:728
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:437
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:475
 msgid "Add or Upload File"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:695
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:760
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:448
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:494
 msgid "Remove Image"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:706
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:768
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:459
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:502
 msgid "File:"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:706
 #: ../inc/classes/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:768
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:459
-#: ../inc/meta/helpers/cmb_Meta_Box_types.php:502
 msgid "Download"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/init.php:258
-#: ../inc/meta/init.php:207
 msgid "Clear"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/init.php:259
-#: ../inc/customizer/typography.php:205 ../inc/customizer/typography.php:237
-#: ../inc/customizer/typography.php:262 ../inc/customizer/typography.php:282
-#: ../inc/meta/init.php:208
 msgid "Default"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/init.php:260
-#: ../inc/meta/init.php:209
 msgid "Select Color"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/init.php:261
-#: ../inc/meta/init.php:210
 msgid "Current Color"
 msgstr ""
 
@@ -180,39 +159,27 @@ msgid "Select / Deselect All"
 msgstr ""
 
 #: ../inc/classes/custom-metaboxes-and-fields/init.php:1179
-#: ../inc/meta/init.php:936
 msgid "Save"
 msgstr ""
 
 #: ../inc/classes/gallery-metabox/gallery-metabox.php:56
-#: ../inc/meta/gallery-metabox/gmb-admin.php:25
 msgid "Image Gallery"
 msgstr ""
 
 #: ../inc/classes/gallery-metabox/gallery-metabox.php:82
-#: ../inc/classes/gallery-metabox/gallery-metabox.php:138
-#: ../inc/meta/gallery-metabox/gmb-admin.php:81
-#: ../inc/meta/gallery-metabox/gmb-admin.php:145
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:132
 msgid "Remove image"
 msgstr ""
 
 #: ../inc/classes/gallery-metabox/gallery-metabox.php:92
-#: ../inc/meta/gallery-metabox/gmb-admin.php:92
 msgid "Add/Edit Images"
 msgstr ""
 
-#: ../inc/classes/gallery-metabox/gallery-metabox.php:97
-#: ../inc/meta/gallery-metabox/gmb-admin.php:102
-msgid "Enable Lightbox for this gallery?"
-msgstr ""
-
-#: ../inc/classes/gallery-metabox/gallery-metabox.php:119
-#: ../inc/meta/gallery-metabox/gmb-admin.php:126
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:113
 msgid "Add Images to Gallery"
 msgstr ""
 
-#: ../inc/classes/gallery-metabox/gallery-metabox.php:121
-#: ../inc/meta/gallery-metabox/gmb-admin.php:128
+#: ../inc/classes/gallery-metabox/gallery-metabox.php:115
 msgid "Add to gallery"
 msgstr ""
 
@@ -229,8 +196,6 @@ msgid "Features Item"
 msgstr ""
 
 #: ../inc/classes/post-types/features.php:52
-#: ../inc/classes/post-types/portfolio.php:73
-#: ../inc/classes/post-types/portfolio.php:75
 #: ../inc/classes/post-types/slides.php:52
 msgid "Add New Item"
 msgstr ""
@@ -245,7 +210,6 @@ msgid "Edit Features Item"
 msgstr ""
 
 #: ../inc/classes/post-types/features.php:56
-#: ../inc/classes/post-types/portfolio.php:76
 #: ../inc/classes/post-types/slides.php:56
 msgid "View Item"
 msgstr ""
@@ -263,14 +227,14 @@ msgid "No features items found in trash"
 msgstr ""
 
 #: ../inc/classes/post-types/features.php:91
-#: ../inc/classes/post-types/slides.php:91
+#: ../inc/classes/post-types/slides.php:92
 msgid "Title"
 msgstr ""
 
 #: ../inc/classes/post-types/features.php:92
-#: ../inc/classes/post-types/portfolio.php:148
-#: ../inc/classes/post-types/slides.php:92
-#: ../inc/classes/post-types/staff.php:128
+#: ../inc/classes/post-types/portfolio.php:159
+#: ../inc/classes/post-types/slides.php:93
+#: ../inc/classes/post-types/staff.php:138
 msgid "Thumbnail"
 msgstr ""
 
@@ -280,87 +244,96 @@ msgid "Portfolio"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:71
-msgid "Portfolio Item"
+msgid "Project"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:72
-#: ../inc/classes/post-types/portfolio.php:113
-msgid "Add New"
+#: ../inc/classes/post-types/portfolio.php:73
+#: ../inc/classes/post-types/portfolio.php:75
+msgid "Add New Project"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:74
-msgid "Edit Item"
+msgid "Edit Project"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:76
+msgid "View Project"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:77
-msgid "Search Items"
+msgid "Search Projects"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:78
-msgid "No Items Found"
+msgid "No Projects Found"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:79
-msgid "No Items Found In Trash"
-msgstr ""
-
-#: ../inc/classes/post-types/portfolio.php:103
-msgid "Portfolio Categories"
-msgstr ""
-
-#: ../inc/classes/post-types/portfolio.php:104
-msgid "Portfolio Category"
-msgstr ""
-
-#: ../inc/classes/post-types/portfolio.php:105
-#: ../inc/classes/post-types/staff.php:97
-msgid "Categories"
-msgstr ""
-
-#: ../inc/classes/post-types/portfolio.php:106
-msgid "Search"
-msgstr ""
-
-#: ../inc/classes/post-types/portfolio.php:107
-msgid "Popular"
-msgstr ""
-
-#: ../inc/classes/post-types/portfolio.php:108
-#: ../inc/customizer/portfolio.php:85
-msgid "All"
-msgstr ""
-
-#: ../inc/classes/post-types/portfolio.php:109
-#: ../inc/classes/post-types/portfolio.php:110
-msgid "Parent"
-msgstr ""
-
-#: ../inc/classes/post-types/portfolio.php:111 ../inc/comments-callback.php:26
-msgid "Edit"
+msgid "No Projects Found In Trash"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:112
-msgid "Update"
+msgid "Portfolio Categories"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:113
+msgid "Portfolio Category"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:114
-msgid "New"
+#: ../inc/classes/post-types/staff.php:105
+msgid "Categories"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:115
-msgid "Separate with commas"
+msgid "Search"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:116
-msgid "Add or remove"
+msgid "Popular"
 msgstr ""
 
 #: ../inc/classes/post-types/portfolio.php:117
+#: ../inc/customizer/portfolio.php:99
+msgid "All"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:118
+#: ../inc/classes/post-types/portfolio.php:119
+msgid "Parent"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:120 ../inc/comments-callback.php:26
+msgid "Edit"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:121
+msgid "Update"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:122
+msgid "Add New"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:123
+msgid "New"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:124
+msgid "Separate with commas"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:125
+msgid "Add or remove"
+msgstr ""
+
+#: ../inc/classes/post-types/portfolio.php:126
 msgid "Choose from the most used"
 msgstr ""
 
-#: ../inc/classes/post-types/portfolio.php:149
-#: ../inc/classes/post-types/staff.php:129
+#: ../inc/classes/post-types/portfolio.php:160
+#: ../inc/classes/post-types/staff.php:139
 msgid "Category"
 msgstr ""
 
@@ -434,64 +407,60 @@ msgstr ""
 msgid "No staff items found in trash"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:83
+#: ../inc/classes/post-types/staff.php:91
 msgid "Staff Categories"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:84
+#: ../inc/classes/post-types/staff.php:92
 msgid "Staff Category"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:85
+#: ../inc/classes/post-types/staff.php:93
 msgid "Search Staff Categories"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:86
+#: ../inc/classes/post-types/staff.php:94
 msgid "Popular Staff Categories"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:87
+#: ../inc/classes/post-types/staff.php:95
 msgid "All Staff Categories"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:88
+#: ../inc/classes/post-types/staff.php:96
 msgid "Parent Staff Category"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:89
+#: ../inc/classes/post-types/staff.php:97
 msgid "Parent Staff Category:"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:90
+#: ../inc/classes/post-types/staff.php:98
 msgid "Edit Staff Category"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:91
+#: ../inc/classes/post-types/staff.php:99
 msgid "Update Staff Category"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:92
+#: ../inc/classes/post-types/staff.php:100
 msgid "Add New Staff Category"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:93
+#: ../inc/classes/post-types/staff.php:101
 msgid "New Staff Category Name"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:94
+#: ../inc/classes/post-types/staff.php:102
 msgid "Separate staff categories with commas"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:95
+#: ../inc/classes/post-types/staff.php:103
 msgid "Add or remove staff categories"
 msgstr ""
 
-#: ../inc/classes/post-types/staff.php:96
+#: ../inc/classes/post-types/staff.php:104
 msgid "Choose from the most used staff categories"
-msgstr ""
-
-#: ../inc/classes/post-types/staff.php:167
-msgid "None"
 msgstr ""
 
 #: ../inc/comments-callback.php:26
@@ -510,12 +479,12 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: ../inc/customizer/blog.php:28 ../inc/customizer/portfolio.php:116
+#: ../inc/customizer/blog.php:28 ../inc/customizer/portfolio.php:130
 msgid "Homepage Count"
 msgstr ""
 
 #: ../inc/customizer/blog.php:42 ../inc/customizer/features.php:40
-#: ../inc/customizer/portfolio.php:70 ../inc/customizer/staff.php:57
+#: ../inc/customizer/portfolio.php:144
 msgid "Homepage Columns"
 msgstr ""
 
@@ -531,11 +500,11 @@ msgstr ""
 msgid "Featured Image on Posts"
 msgstr ""
 
-#: ../inc/customizer/copyright.php:16 ../inc/customizer/typography.php:92
+#: ../inc/customizer/copyright.php:16
 msgid "Copyright"
 msgstr ""
 
-#: ../inc/customizer/copyright.php:27
+#: ../inc/customizer/copyright.php:26
 msgid "Custom Copyright"
 msgstr ""
 
@@ -579,12 +548,24 @@ msgstr ""
 msgid "Portfolio Related"
 msgstr ""
 
-#: ../inc/customizer/portfolio.php:100
+#: ../inc/customizer/portfolio.php:70
+msgid "Archive Columns"
+msgstr ""
+
+#: ../inc/customizer/portfolio.php:90
+msgid "Archive Items Per Page"
+msgstr ""
+
+#: ../inc/customizer/portfolio.php:114
 msgid "Portfolio Homepage Category"
 msgstr ""
 
-#: ../inc/customizer/portfolio.php:130
-msgid "Archive Items Per Page"
+#: ../inc/customizer/portfolio.php:164
+msgid "Related Count"
+msgstr ""
+
+#: ../inc/customizer/portfolio.php:178
+msgid "Related Columns"
 msgstr ""
 
 #: ../inc/customizer/staff.php:28
@@ -595,496 +576,78 @@ msgstr ""
 msgid "Staff Comments"
 msgstr ""
 
+#: ../inc/customizer/staff.php:57
+msgid "Columns"
+msgstr ""
+
 #: ../inc/customizer/staff.php:77
 msgid "Archive Posts Per Page"
 msgstr ""
 
-#: ../inc/customizer/styling.php:19
-msgid "Styling"
-msgstr ""
-
-#: ../inc/customizer/styling.php:115
-msgid "Header Top Padding"
-msgstr ""
-
-#: ../inc/customizer/styling.php:124
-msgid "Header Bottom Padding"
-msgstr ""
-
-#: ../inc/customizer/styling.php:133 ../inc/customizer/styling.php:140
-msgid "Logo Text Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:147
-msgid "Menu Link Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:154
-msgid "Menu Link Hover Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:161
-msgid "Active Menu Link Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:168
-msgid "Sub-Menu Background"
-msgstr ""
-
-#: ../inc/customizer/styling.php:175
-msgid "Sub-Menu Link Bottom Border"
-msgstr ""
-
-#: ../inc/customizer/styling.php:182
-msgid "Sub-Menu Link Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:189
-msgid "Sub-Menu Link Hover Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:196
-msgid "Sub-Menu Link Hover Background"
-msgstr ""
-
-#: ../inc/customizer/styling.php:203
-msgid "Mobile Menu Link Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:210
-msgid "Footer Widgets Background"
-msgstr ""
-
-#: ../inc/customizer/styling.php:217
-msgid "Footer Widgets Text"
-msgstr ""
-
-#: ../inc/customizer/styling.php:224
-msgid "Footer Widgets Heading"
-msgstr ""
-
-#: ../inc/customizer/styling.php:231
-msgid "Footer Widgets Links"
-msgstr ""
-
-#: ../inc/customizer/styling.php:238
-msgid "Footer Widgets Links Hover"
-msgstr ""
-
-#: ../inc/customizer/styling.php:245
-msgid "Footer Widgets Borders"
-msgstr ""
-
-#: ../inc/customizer/styling.php:252
-msgid "Copyright Backgorund"
-msgstr ""
-
-#: ../inc/customizer/styling.php:259
-msgid "Copyright Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:266
-msgid "Copyright Link Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:273
-msgid "Heading Title Hover Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:280
-msgid "Link Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:287
-msgid "Link Hover Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:294
-msgid "Sidebar Link Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:301
-msgid "Sidebar Link Hover Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:308
-msgid "Theme Button Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:315
-msgid "Theme Button Background"
-msgstr ""
-
-#: ../inc/customizer/styling.php:322
-msgid "Theme Button Hover Color"
-msgstr ""
-
-#: ../inc/customizer/styling.php:329
-msgid "Theme Button Hover Background"
-msgstr ""
-
-#: ../inc/customizer/styling.php:336
-msgid "Homepage Icons"
-msgstr ""
-
-#: ../inc/customizer/styling.php:343
-msgid "Homepage Slider Caption Background"
-msgstr ""
-
-#: ../inc/customizer/styling.php:350
-msgid "Homepage Slider Arrows Hover Background"
-msgstr ""
-
-#: ../inc/customizer/typography.php:49
-msgid "Body"
-msgstr ""
-
-#: ../inc/customizer/typography.php:53
-msgid "Logo"
-msgstr ""
-
-#: ../inc/customizer/typography.php:57
-msgid "Site Description"
-msgstr ""
-
-#: ../inc/customizer/typography.php:61
-msgid "Headings"
-msgstr ""
-
-#: ../inc/customizer/typography.php:66
-msgid "Page Title"
-msgstr ""
-
-#: ../inc/customizer/typography.php:71
-msgid "Archive Descriptions"
-msgstr ""
-
-#: ../inc/customizer/typography.php:76
-msgid "Blog Entry Title"
-msgstr ""
-
-#: ../inc/customizer/typography.php:80
-msgid "Blog Post Title"
-msgstr ""
-
-#: ../inc/customizer/typography.php:84
-msgid "Sidebar Headings"
-msgstr ""
-
-#: ../inc/customizer/typography.php:88
-msgid "Footer Headings"
-msgstr ""
-
-#: ../inc/customizer/typography.php:100
-msgid "Portfolio Entry Title"
-msgstr ""
-
-#: ../inc/customizer/typography.php:108
-msgid "Staff Entry Title"
-msgstr ""
-
-#: ../inc/customizer/typography.php:139
-msgid "Typography"
-msgstr ""
-
-#: ../inc/customizer/typography.php:214
-msgid "Font Family"
-msgstr ""
-
-#: ../inc/customizer/typography.php:231
-msgid "Font Weight"
-msgstr ""
-
-#: ../inc/customizer/typography.php:238
-msgid "Extra Light: 100"
-msgstr ""
-
-#: ../inc/customizer/typography.php:239
-msgid "Light: 200"
-msgstr ""
-
-#: ../inc/customizer/typography.php:240
-msgid "Book: 300"
-msgstr ""
-
-#: ../inc/customizer/typography.php:241
-msgid "Normal: 400"
-msgstr ""
-
-#: ../inc/customizer/typography.php:242
-msgid "Semibold: 600"
-msgstr ""
-
-#: ../inc/customizer/typography.php:243
-msgid "Bold: 700"
-msgstr ""
-
-#: ../inc/customizer/typography.php:244
-msgid "Extra Bold: 800"
-msgstr ""
-
-#: ../inc/customizer/typography.php:256
-msgid "Font Style"
-msgstr ""
-
-#: ../inc/customizer/typography.php:263
-msgid "Normal"
-msgstr ""
-
-#: ../inc/customizer/typography.php:264
-msgid "Italic"
-msgstr ""
-
-#: ../inc/customizer/typography.php:276
-msgid "Text Transform"
-msgstr ""
-
-#: ../inc/customizer/typography.php:283
-msgid "Capitalize"
-msgstr ""
-
-#: ../inc/customizer/typography.php:284
-msgid "Lowercase"
-msgstr ""
-
-#: ../inc/customizer/typography.php:285
-msgid "Uppercase"
-msgstr ""
-
-#: ../inc/customizer/typography.php:297
-msgid "Font Size"
-msgstr ""
-
-#: ../inc/customizer/typography.php:302
-msgid "Value in pixels."
-msgstr ""
-
-#: ../inc/customizer/typography.php:318
-msgid "Font Color"
-msgstr ""
-
-#: ../inc/customizer/typography.php:335
-msgid "Line Height"
-msgstr ""
-
-#: ../inc/customizer/typography.php:354
-msgid "Letter Spacing"
-msgstr ""
-
-#: ../inc/customizer/typography.php:372
-msgid "Margin"
-msgstr ""
-
-#: ../inc/dashboard-feed.php:9
-msgid "WPExplorer Blog"
-msgstr ""
-
-#: ../inc/dashboard-feed.php:10
-msgid "Web Design Blog"
-msgstr ""
-
-#: ../inc/helpers.php:91
+#: ../inc/helpers.php:90
 msgid "continue reading"
 msgstr ""
 
-#: ../inc/helpers.php:144
+#: ../inc/helpers.php:143
 msgid "Previous Posts"
 msgstr ""
 
-#: ../inc/helpers.php:145
+#: ../inc/helpers.php:144
 msgid "Next Posts"
 msgstr ""
 
-#: ../inc/helpers.php:180
+#: ../inc/helpers.php:179
 msgid "Newer Posts"
 msgstr ""
 
-#: ../inc/helpers.php:182
+#: ../inc/helpers.php:181
 msgid "Older Posts"
 msgstr ""
 
-#: ../inc/meta-config.php:27 ../inc/meta/usage.php:25
+#: ../inc/meta-config.php:27
 msgid "Slide Settings"
 msgstr ""
 
-#: ../inc/meta-config.php:34 ../inc/meta-config.php:67
-#: ../inc/meta/usage.php:32 ../inc/meta/usage.php:58
+#: ../inc/meta-config.php:34
+msgid "Hide Title"
+msgstr ""
+
+#: ../inc/meta-config.php:41 ../inc/meta-config.php:67
 msgid "URL"
 msgstr ""
 
-#: ../inc/meta-config.php:35 ../inc/meta/usage.php:33
+#: ../inc/meta-config.php:42
 msgid ""
 "Enter a custom URL to link this slide to. Don't forget the http// at the "
 "front!"
-msgstr ""
-
-#: ../inc/meta-config.php:41
-msgid "Hide Title"
 msgstr ""
 
 #: ../inc/meta-config.php:48
 msgid "Slide Caption"
 msgstr ""
 
-#: ../inc/meta-config.php:60 ../inc/meta/usage.php:51
+#: ../inc/meta-config.php:60
 msgid "Feature Settings"
 msgstr ""
 
-#: ../inc/meta-config.php:68 ../inc/meta/usage.php:59
+#: ../inc/meta-config.php:68
 msgid ""
 "Enter a custom URL to link this feature to. Don't forget the http// at the "
 "front! This link will be added to the featured image and title."
 msgstr ""
 
-#: ../inc/meta-config.php:74 ../inc/meta/usage.php:65
+#: ../inc/meta-config.php:74
 msgid "Icon Font Class"
 msgstr ""
 
-#: ../inc/meta-config.php:75 ../inc/meta/usage.php:66
+#: ../inc/meta-config.php:75
 msgid ""
-"Enter the icon font classname (without the fa- part) to display an icon "
-"instead of a featured image."
+"Enter a FontAwesome icon name to display an icon instead of a featured "
+"image."
 msgstr ""
 
-#: ../inc/meta-config.php:75 ../inc/meta/usage.php:66
+#: ../inc/meta-config.php:75
 msgid "Learn More."
-msgstr ""
-
-#: ../inc/meta-config.php:87 ../inc/meta-config.php:107
-#: ../inc/meta/usage.php:78 ../inc/meta/usage.php:98
-msgid "Post Settings"
-msgstr ""
-
-#: ../inc/meta-config.php:94 ../inc/meta-config.php:114
-#: ../inc/meta/usage.php:85 ../inc/meta/usage.php:105
-msgid "Video URL"
-msgstr ""
-
-#: ../inc/meta-config.php:95 ../inc/meta-config.php:115
-#: ../inc/meta/usage.php:86 ../inc/meta/usage.php:106
-msgid ""
-"Enter in a video URL that is compatible with WordPress's built-in oEmbed "
-"feature."
-msgstr ""
-
-#: ../inc/meta-config.php:95 ../inc/meta-config.php:115
-#: ../inc/meta/usage.php:86 ../inc/meta/usage.php:106
-msgid "Learn More"
-msgstr ""
-
-#: ../inc/meta/usage.php:39
-msgid "Subheading"
-msgstr ""
-
-#: ../inc/welcome.php:54 ../inc/welcome.php:55
-msgid "Theme"
-msgstr ""
-
-#: ../inc/welcome.php:93
-msgid "A free WordPress theme by WPExplorer"
-msgstr ""
-
-#: ../inc/welcome.php:93
-msgid "Changelog"
-msgstr ""
-
-#: ../inc/welcome.php:93
-msgid "Theme Page"
-msgstr ""
-
-#: ../inc/welcome.php:93
-msgid "More Themes"
-msgstr ""
-
-#: ../inc/welcome.php:97
-msgid "About"
-msgstr ""
-
-#: ../inc/welcome.php:101
-msgid "GPL License"
-msgstr ""
-
-#: ../inc/welcome.php:102
-msgid ""
-"This theme is licensed under the GPL license. This means you can use it for "
-"anything you like as long as it remains GPL."
-msgstr ""
-
-#: ../inc/welcome.php:106
-msgid "Credits"
-msgstr ""
-
-#: ../inc/welcome.php:108
-msgid "This theme was created by:"
-msgstr ""
-
-#: ../inc/welcome.php:110
-msgid ""
-"Be sure to follow us on social media for awesome WordPress related content "
-"and new theme releases."
-msgstr ""
-
-#: ../inc/welcome.php:134
-msgid "Video Guide"
-msgstr ""
-
-#: ../inc/welcome.php:138
-msgid "Learn how to use this theme easily via the Video Guide."
-msgstr ""
-
-#: ../inc/welcome.php:146
-msgid "Getting Started"
-msgstr ""
-
-#: ../inc/welcome.php:152
-msgid ""
-"Below you will find some useful links to get you started with this theme."
-msgstr ""
-
-#: ../inc/welcome.php:162
-msgid "Customize Your Site"
-msgstr ""
-
-#: ../inc/welcome.php:167
-msgid "Recommendations"
-msgstr ""
-
-#: ../inc/welcome.php:172
-msgid "Plugins"
-msgstr ""
-
-#: ../inc/welcome.php:173
-msgid ""
-"Below you will find links to plugins we (WPExplorer.com staff) personally "
-"like and recommend. None of these plugins are required for your theme to "
-"work, they simply add additional functionality."
-msgstr ""
-
-#: ../inc/welcome.php:189
-msgid "Total Drag & Drop Theme"
-msgstr ""
-
-#: ../inc/welcome.php:190
-msgid ""
-"Check out our most advanced (yet easy to use) and flexible theme to date."
-msgstr ""
-
-#: ../inc/welcome.php:198
-msgid "WordPress Hosting"
-msgstr ""
-
-#: ../inc/welcome.php:199
-msgid ""
-"If you need fast and reliable hosting we recommend the same host we use and "
-"love WPEngine."
-msgstr ""
-
-#: ../inc/welcome.php:207
-msgid "Deals & Coupons"
-msgstr ""
-
-#: ../inc/welcome.php:208
-msgid "Check out our coupons page for great deals on WordPress resources."
 msgstr ""
 
 #: ../partials/archive-header.php:30
@@ -1096,8 +659,8 @@ msgstr ""
 msgid "Edit this "
 msgstr ""
 
-#: ../partials/entry/meta.php:20 ../partials/home/blog.php:65
-#: ../partials/portfolio/single-meta.php:20 ../partials/single/meta.php:20
+#: ../partials/entry/meta.php:20 ../partials/portfolio/single-meta.php:20
+#: ../partials/single/meta.php:20
 msgid "Posted on"
 msgstr ""
 
@@ -1138,6 +701,10 @@ msgstr ""
 msgid "Recent Work"
 msgstr ""
 
+#: ../partials/mobile-search.php:15 ../searchform.php:14
+msgid "To search type and hit enter"
+msgstr ""
+
 #: ../partials/none.php:15
 #, php-format
 msgid ""
@@ -1166,15 +733,11 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
 msgstr ""
 
-#: ../partials/portfolio/single-related.php:40
+#: ../partials/portfolio/single-related.php:36
 msgid "Other Work"
 msgstr ""
 
-#: ../partials/single/author-bio.php:35
+#: ../partials/single/author-bio.php:43
 #, php-format
 msgid "Written by %s"
-msgstr ""
-
-#: ../searchform.php:14
-msgid "To search type and hit enter"
 msgstr ""
