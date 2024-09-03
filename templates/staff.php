@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Templates
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -34,25 +34,12 @@ get_header(); ?>
 
 			// If staff posts are found lets loop through them
 			if ( $wpex_query->posts ) : ?>
-
-				<div id="staff-wrap" class="wpex-row clr">
-
-					<?php $wpex_count=0; ?>
-
+				<div id="staff-wrap" class="wpex-grid wpex-grid-cols-<?php echo sanitize_html_class( get_theme_mod( 'wpex_staff_columns' ) ?: 3 ); ?>">
 					<?php foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
-
-						<?php $wpex_count++; ?>
-
-							<?php get_template_part( 'partials/staff/entry' ); ?>
-
-						<?php if ( $wpex_count == '3' ) $wpex_count=0; ?>
-
+						<?php get_template_part( 'partials/staff/entry' ); ?>
 					<?php endforeach; ?>
-
 				</div><!-- #staff-wrap -->
-
 				<?php wpex_pagination(); ?>
-
 			<?php endif; ?>
 
 			<?php

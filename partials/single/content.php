@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -14,6 +14,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } ?>
 
-<div class="entry clr">
+<div class="single-post-content entry clr">
 	<?php the_content(); ?>
 </div><!-- .entry -->

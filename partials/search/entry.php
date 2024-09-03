@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'search-entry' ); ?>>
 
 	<?php
 	// Display post thumbnail

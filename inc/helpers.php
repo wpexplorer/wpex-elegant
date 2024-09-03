@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Includes
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
@@ -87,8 +87,8 @@ if ( ! function_exists( 'wpex_excerpt' ) ) {
 		else {
 			$output = wp_trim_words( strip_shortcodes( get_the_content( $id ) ), $length );
 			if ( $readmore == true ) {
-				$text			= apply_filters( 'wpex_readmore_text', __( 'continue reading', 'wpex-elegant' ) );
-				$readmore_link	= '<span class="wpex-readmore"><a href="' . esc_url( get_permalink( $id ) ) . '" rel="bookmark">' . esc_html( $text ) . ' &rarr;</a></span>';
+				$text			= apply_filters( 'wpex_readmore_text', esc_html__( 'continue reading', 'wpex-elegant' ) );
+				$readmore_link	= '<span class="wpex-readmore"><a href="' . esc_url( get_permalink( $id ) ) . '" rel="bookmark">' . esc_html( $text ) . '</a></span>';
 				$output .= apply_filters( 'wpex_readmore_link', $readmore_link );
 			}
 		}
@@ -176,9 +176,9 @@ if ( ! function_exists( 'wpex_pagejump' ) ) {
 		// Display next/previous pagination
 		if ( 1 != $pages ) {
 			echo '<div class="post-navigation clr"><div class="alignleft">';
-				previous_posts_link( '&larr; ' . __( 'Newer Posts', 'wpex-elegant' ) );
+				previous_posts_link( '&larr; ' . esc_html__( 'Newer Posts', 'wpex-elegant' ) );
 			echo '</div><div class="alignright">';
-				next_posts_link( __( 'Older Posts', 'wpex-elegant' ) .' &rarr;' );
+				next_posts_link( esc_html__( 'Older Posts', 'wpex-elegant' ) .' &rarr;' );
 			echo '</div></div>';
 		}
 

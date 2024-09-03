@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -18,17 +18,17 @@ if ( is_active_sidebar( 'footer-one' ) || is_active_sidebar( 'footer-two' ) || i
 
 	<div id="footer" class="clr container">
 
-		<div id="footer-widgets" class="wpex-row clr">
+		<div id="footer-widgets" class="wpex-grid wpex-grid-cols-3 wpex-grid-cols-fixed">
 
-			<div class="footer-box span_1_of_3 col col-1">
+			<div class="footer-box">
 				<?php dynamic_sidebar( 'footer-one' ); ?>
 			</div><!-- .footer-box -->
 
-			<div class="footer-box span_1_of_3 col col-2">
+			<div class="footer-box">
 				<?php dynamic_sidebar( 'footer-two' ); ?>
 			</div><!-- .footer-box -->
 
-			<div class="footer-box span_1_of_3 col col-3">
+			<div class="footer-box">
 				<?php dynamic_sidebar( 'footer-three' ); ?>
 			</div><!-- .footer-box -->
 			

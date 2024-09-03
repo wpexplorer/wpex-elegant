@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -27,7 +27,7 @@ if ( is_front_page() || is_home() ) {
 		// Search title
 		if ( is_search() ) :
 
-			printf( __( 'Search Results for: %s', 'wpex-elegant' ), get_search_query() );
+			printf( esc_html__( 'Search Results for: %s', 'wpex-elegant' ), get_search_query() );
 
 		// Home title
 		elseif ( is_home() ) :

@@ -17,22 +17,10 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Templates
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
-
-// Theme info
-if ( ! function_exists( 'wpex_theme_info' ) ) {
-	function wpex_theme_info() {
-		return array(
-			'name'    => 'Elegant Theme',
-			'slug'    => 'wpex-elegant',
-			'url'     => 'https://www.wpexplorer.com/elegant-free-wordpress-theme/',
-			'support' => 'https://github.com/wpexplorer/wpex-elegant/issues/',
-		);
-	}
-}
 
 class WPEX_Theme_Class {
 
@@ -45,41 +33,34 @@ class WPEX_Theme_Class {
 	public function __construct() {
 
 		// Define Contstants
-		add_action( 'after_setup_theme', array( 'WPEX_Theme_Class', 'constants' ) );
+		add_action( 'after_setup_theme', array( $this, 'constants' ) );
 
 		// Load theme functions
-		add_action( 'after_setup_theme', array( 'WPEX_Theme_Class', 'load_files' ) );
+		add_action( 'after_setup_theme', array( $this, 'load_files' ) );
 
 		// Load Classes
-		add_action( 'after_setup_theme', array( 'WPEX_Theme_Class', 'classes' ) );
+		add_action( 'after_setup_theme', array( $this, 'classes' ) );
 
 		// Theme setup: Adds theme-support, image sizes, menus, etc.
-		add_action( 'after_setup_theme', array( 'WPEX_Theme_Class', 'setup' )  );
+		add_action( 'after_setup_theme', array( $this, 'setup' )  );
 
 		// Flush rewrite rules on theme switch
-		add_action( 'after_switch_theme', array( 'WPEX_Theme_Class', 'flush_rewrite_rules' ) );
+		add_action( 'after_switch_theme', array( $this, 'flush_rewrite_rules' ) );
 
 		// Load front-end scripts
-		add_action( 'wp_enqueue_scripts', array( 'WPEX_Theme_Class', 'enqueue_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
 		// Register sidebar widget areas
-		add_action( 'widgets_init', array( 'WPEX_Theme_Class', 'register_sidebars' ) );
-
-		// Alter post formats based on custom post types
-		add_action( 'load-post.php', array( 'WPEX_Theme_Class', 'adjust_formats' ) );
-		add_action( 'load-post-new.php', array( 'WPEX_Theme_Class', 'adjust_formats' ) );
+		add_action( 'widgets_init', array( $this, 'register_sidebars' ) );
 
 		// Alters posts per page for specific archives
-		add_filter( 'pre_get_posts', array( 'WPEX_Theme_Class', 'pre_get_posts' ) );
+		add_filter( 'pre_get_posts', array( $this, 'pre_get_posts' ) );
 
 		// Set default gallery metabox post types
-		add_filter( 'wpex_gallery_metabox_post_types', array( 'WPEX_Theme_Class', 'gallery_metabox' ), 1 );
+		add_filter( 'wpex_gallery_metabox_post_types', '__return_empty_array', 1 );
 
 		// Filter the archive title
-		add_filter( 'get_the_archive_title', array( 'WPEX_Theme_Class', 'get_the_archive_title' ) );
-
-		// Add current year shortcode
-		add_shortcode( 'current_year', array( 'WPEX_Theme_Class', 'current_year_shortcode' ) );
+		add_filter( 'get_the_archive_title', array( $this, 'get_the_archive_title' ) );
 
 	}
 
@@ -90,31 +71,11 @@ class WPEX_Theme_Class {
 	 * @access  public
 	 */
 	public static function constants() {
-
-		$version = self::theme_version();
-
-		define( 'WPEX_THEME_VERSION', $version );
+		define( 'WPEX_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 		define( 'WPEX_INCLUDES_DIR', get_template_directory() .'/inc/' );
 		define( 'WPEX_CLASSES_DIR', WPEX_INCLUDES_DIR .'/classes/' );
-		define( 'WPEX_JS_DIR_URI', get_template_directory_uri(). '/js/' );
-		define( 'WPEX_CSS_DIR_URI', get_template_directory_uri(). '/css/' );
-
-	}
-
-	/**
-	 * Returns current theme version
-	 *
-	 * @since   2.0.0
-	 * @access  public
-	 */
-	public static function theme_version() {
-
-		// Get theme data
-		$theme = wp_get_theme();
-
-		// Return theme version
-		return $theme->get( 'Version' );
-
+		define( 'WPEX_JS_DIR_URI', get_template_directory_uri(). '/assets/js/' );
+		define( 'WPEX_CSS_DIR_URI', get_template_directory_uri(). '/assets/css/' );
 	}
 
 	/**
@@ -137,29 +98,15 @@ class WPEX_Theme_Class {
 		require_once ( $dir .'customizer/staff.php' );
 		require_once ( $dir .'customizer/blog.php' );
 		require_once ( $dir .'customizer/copyright.php' );
-		require_once ( $dir .'customizer/styling.php' );
-		require_once ( $dir .'customizer/typography.php' );
 
 		// Helper functions
-		require_once ( $dir .'helpers.php' );
+		require_once ( $dir . 'helpers.php' );
 
 		// Adds classes to post entries
-		require_once ( $dir .'post-classes.php' );
+		require_once ( $dir . 'post-classes.php' );
 
 		// Comments output
-		require_once ( $dir .'comments-callback.php' );
-
-		// MCE Editor tweaks
-		require_once( $dir .'mce-tweaks.php' );
-
-		if ( is_admin() ) {
-			if ( ! defined( 'WPEX_DISABLE_THEME_DASHBOARD_FEEDS' ) ) {
-				require_once get_parent_theme_file_path( '/admin/dashboard-feed.php' );
-			}
-			if ( ! defined( 'WPEX_DISABLE_THEME_ABOUT_PAGE' ) ) {
-				require_once get_parent_theme_file_path( '/admin/about.php' );
-			}
-		}
+		require_once ( $dir . 'comments-callback.php' );
 
 	}
 
@@ -218,15 +165,12 @@ class WPEX_Theme_Class {
 		// Register navigation menus
 		register_nav_menus (
 			array(
-				'main_menu'	=> __( 'Main', 'wpex-elegant' ),
+				'main_menu'	=> esc_html__( 'Main', 'wpex-elegant' ),
 			)
 		);
 
 		// Localization support
-		load_theme_textdomain( 'wpex-elegant', get_template_directory() .'/languages' );
-
-		// Enable some useful post formats for the blog
-		add_theme_support( 'post-formats', array( 'video' ) );
+		load_theme_textdomain( 'wpex-elegant', get_template_directory() . '/languages' );
 
 		// Add theme support
 		add_theme_support( 'title-tag' );
@@ -234,26 +178,27 @@ class WPEX_Theme_Class {
 		add_theme_support( 'custom-background' );
 		add_theme_support( 'post-thumbnails' );
 
-		// Set default thumbnail size
-		set_post_thumbnail_size( 150, 150 );
-
 		// Add image sizes
-		add_image_size( 'wpex-entry', 640, 340, true );
-		add_image_size( 'wpex-post', 640, 340, true );
+		add_image_size( 'wpex-entry', 9999, 9999, true );
+		add_image_size( 'wpex-post', 9999, 9999, true );
 
 		if ( get_theme_mod( 'wpex_portfolio', true ) ) {
-			add_image_size( 'wpex-portfolio-entry', 400, 260, true );
+			add_image_size( 'wpex-portfolio-entry', 9999, 9999, true );
 			add_image_size( 'wpex-portfolio-post', 9999, 9999, false );
 		}
 
 		if ( get_theme_mod( 'wpex_staff', true ) ) {
-			add_image_size( 'wpex-staff-entry', 400, 9999, false );
+			add_image_size( 'wpex-staff-entry', 9999, 9999, false );
 			add_image_size( 'wpex-staff-post', 9999, 9999, false );
 		}
 
 		if ( get_theme_mod( 'wpex_homepage_slider', true ) ) {
 			add_image_size( 'wpex-home-slider', 9999, 9999, false );
 		}
+
+		// Editor CSS.
+		add_theme_support( 'wp-block-styles' );
+		add_editor_style();
 
 	}
 
@@ -286,42 +231,84 @@ class WPEX_Theme_Class {
 			false,
 			WPEX_THEME_VERSION
 		);
+
 		wp_enqueue_style(
 			'wpex-responsive',
 			WPEX_CSS_DIR_URI .'responsive.css',
 			array( 'wpex-style' ),
 			WPEX_THEME_VERSION
 		);
+
 		wp_enqueue_style(
 			'wpex-font-awesome',
-			WPEX_CSS_DIR_URI .'font-awesome.min.css',
+			get_template_directory_uri() .'/assets/lib/fontawesome/css/all.min.css',
 			false,
-			'4.5.0'
-		);
-		wp_enqueue_style(
-			'open-sans',
-			'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic',
-			array( 'wpex-style' ),
-			null
+			'6.0'
 		);
 
 		// jQuery
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+		
 		wp_enqueue_script(
-			'wpex-plugins',
-			WPEX_JS_DIR_URI .'plugins.js',
+			'wpex-superfish',
+			WPEX_JS_DIR_URI . 'superfish.js',
 			array( 'jquery' ),
 			WPEX_THEME_VERSION,
-			true
+			[
+				'strategy' => 'defer',
+			]
 		);
+
+		wp_enqueue_script(
+			'wpex-sidr',
+			WPEX_JS_DIR_URI . 'sidr.js',
+			array( 'jquery' ),
+			WPEX_THEME_VERSION,
+			[
+				'strategy' => 'defer',
+			]
+		);
+		
 		wp_enqueue_script(
 			'wpex-global',
 			WPEX_JS_DIR_URI .'global.js',
-			array( 'jquery', 'wpex-plugins' ),
+			array( 'jquery', 'wpex-superfish', 'wpex-sidr' ),
 			WPEX_THEME_VERSION,
-			true
+			[
+				'strategy' => 'defer',
+			]
+		);
+
+		wp_register_script(
+			'wpex-flexslider',
+			WPEX_JS_DIR_URI . 'flexslider.js',
+			array( 'jquery' ),
+			WPEX_THEME_VERSION,
+			[
+				'strategy' => 'defer',
+			]
+		);
+
+		wp_register_script(
+			'wpex-home-slider',
+			WPEX_JS_DIR_URI . 'home-slider.js',
+			array( 'wpex-flexslider' ),
+			WPEX_THEME_VERSION,
+			[
+				'strategy' => 'defer',
+			]
+		);
+
+		wp_register_script(
+			'wpex-post-slider',
+			WPEX_JS_DIR_URI . 'post-slider.js',
+			array( 'wpex-flexslider' ),
+			WPEX_THEME_VERSION,
+			[
+				'strategy' => 'defer',
+			]
 		);
 
 	}
@@ -336,9 +323,9 @@ class WPEX_Theme_Class {
 
 		// Sidebar
 		register_sidebar( array(
-			'name'			=> __( 'Sidebar', 'wpex-elegant' ),
+			'name'			=> esc_html__( 'Sidebar', 'wpex-elegant' ),
 			'id'			=> 'sidebar',
-			'description'	=> __( 'Widgets in this area are used in the sidebar region.', 'wpex-elegant' ),
+			'description'	=> esc_html__( 'Widgets in this area are used in the sidebar region.', 'wpex-elegant' ),
 			'before_widget'	=> '<div d="%1$s" class="sidebar-widget %2$s clr">',
 			'after_widget'	=> '</div>',
 			'before_title'	=> '<h5 class="widget-title">',
@@ -347,9 +334,9 @@ class WPEX_Theme_Class {
 
 		// Footer 1
 		register_sidebar( array(
-			'name'			=> __( 'Footer 1', 'wpex-elegant' ),
+			'name'			=> esc_html__( 'Footer 1', 'wpex-elegant' ),
 			'id'			=> 'footer-one',
-			'description'	=> __( 'Widgets in this area are used in the first footer region.', 'wpex-elegant' ),
+			'description'	=> esc_html__( 'Widgets in this area are used in the first footer region.', 'wpex-elegant' ),
 			'before_widget'	=> '<div d="%1$s" class="footer-widget %2$s clr">',
 			'after_widget'	=> '</div>',
 			'before_title'	=> '<h6 class="widget-title">',
@@ -358,9 +345,9 @@ class WPEX_Theme_Class {
 
 		// Footer 2
 		register_sidebar( array(
-			'name'			=> __( 'Footer 2', 'wpex-elegant' ),
+			'name'			=> esc_html__( 'Footer 2', 'wpex-elegant' ),
 			'id'			=> 'footer-two',
-			'description'	=> __( 'Widgets in this area are used in the second footer region.', 'wpex-elegant' ),
+			'description'	=> esc_html__( 'Widgets in this area are used in the second footer region.', 'wpex-elegant' ),
 			'before_widget'	=> '<div d="%1$s" class="footer-widget %2$s clr">',
 			'after_widget'	=> '</div>',
 			'before_title'	=> '<h6 class="widget-title">',
@@ -369,41 +356,15 @@ class WPEX_Theme_Class {
 
 		// Footer 3
 		register_sidebar( array(
-			'name'			=> __( 'Footer 3', 'wpex-elegant' ),
+			'name'			=> esc_html__( 'Footer 3', 'wpex-elegant' ),
 			'id'			=> 'footer-three',
-			'description'	=> __( 'Widgets in this area are used in the third footer region.', 'wpex-elegant' ),
+			'description'	=> esc_html__( 'Widgets in this area are used in the third footer region.', 'wpex-elegant' ),
 			'before_widget'	=> '<div d="%1$s" class="footer-widget %2$s clr">',
 			'after_widget'	=> '</div>',
 			'before_title'	=> '<h6 class="widget-title">',
 			'after_title'	=> '</h6>',
 		) );
 
-	}
-
-	/**
-	 * Alter post formats based on custom post types
-	 *
-	 * @since   2.0.0
-	 * @access  public
-	 */
-	public static function adjust_formats() {
-		if ( isset( $_GET['post'] ) ) {
-			$post = get_post($_GET['post']);
-			if ($post) {
-				$post_type = $post->post_type;
-			}
-		} elseif ( ! isset( $_GET['post_type'] ) ) {
-			$post_type = 'post';
-		} elseif ( in_array( $_GET['post_type'], get_post_types( array('show_ui' => true ) ) ) ) {
-			$post_type = $_GET['post_type'];
-		} else {
-			return; // Page is going to fail anyway
-		}
-		if ( 'portfolio' == $post_type ) {
-			add_theme_support( 'post-formats', array( 'video', 'gallery' ) );
-		} elseif ( 'post' == $post_type ) {
-			add_theme_support( 'post-formats', array( 'video' ) );
-		}
 	}
 
 	/**
@@ -415,7 +376,7 @@ class WPEX_Theme_Class {
 	public static function pre_get_posts( $query ) {
 
 		// Return if wrong query
-		if ( is_admin() || ! $query->is_main_query() ) {
+		if ( is_admin() || ! $query->is_main_query() || ! is_tax() ) {
 			return;
 		}
 
@@ -431,36 +392,6 @@ class WPEX_Theme_Class {
 			return;
 		}
 
-		// Exclude types from search
-		elseif ( is_search() ) {
-
-			// Gather all searchable post types
-			$types = get_post_types( array( 'exclude_from_search' => false ) );
-
-			// Make sure you got the proper results, and that your post type is in the results
-			if ( is_array( $types ) && in_array( 'slides', $types ) ) {
-
-				// Remove the post type from the array
-				unset( $types['slides'] );
-
-				// Set the query to the remaining searchable post types
-				$query->set( 'post_type', $types );
-
-			}
-
-		}
-
-	}
-
-	/**
-	 * Set default gallery metabox post types
-	 *
-	 * @since   2.0.0
-	 * @access  public
-	 */
-	public static function gallery_metabox( $types ) {
-		$types = array();
-		return $types;
 	}
 
 	/**
@@ -474,16 +405,6 @@ class WPEX_Theme_Class {
 			$title = single_term_title();
 		}
 		return $title;
-	}
-
-	/**
-	 * Current year shortcode, useful for the footer copyright
-	 *
-	 * @since   2.3
-	 * @access  public
-	 */
-	public static function current_year_shortcode() {
-		return date( 'Y' );
 	}
 
 }

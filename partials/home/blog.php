@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -34,17 +34,14 @@ $wpex_query = new WP_Query( array(
 // Display features
 if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 
-	<div id="homepage-blog" class="clr">
+	<div id="homepage-blog">
 
 		<h2 class="heading"><span><?php _e( 'From The Blog', 'wpex-elegant' ); ?></span></h2>
 
-		<?php $wpex_count=0; ?>
+		<div class="wpex-grid wpex-grid-cols-3">
+			<?php foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
 
-		<?php foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
-
-			<?php $wpex_count++; ?>
-
-				<article class="recent-blog-entry clr col span_1_of_<?php echo esc_attr( $columns ); ?> col-<?php echo absint( $wpex_count ); ?>">
+				<article class="recent-blog-entry">
 
 					<?php
 					// Display post thumbnail
@@ -62,8 +59,7 @@ if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 						<h3 class="recent-blog-entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<ul class="post-meta clr">
 							<li class="meta-date">
-								<?php _e( 'Posted on', 'wpex-elegant' ); ?>
-								<span class="meta-date-text"><?php echo get_the_date(); ?></span>
+								<span class="meta-date-text"><span class="fa-regular fa-calendar" aria-hidden="true"></span><?php echo get_the_date(); ?></span>
 							</li>
 
 						</ul><!-- .post-meta -->
@@ -75,11 +71,8 @@ if ( $wpex_query->posts && '0' != $posts_per_page ) : ?>
 
 				</article><!-- .recent-blog -->
 
-			<?php if ( $wpex_count == $columns ) {
-				$wpex_count=0;
-			} ?>
-
-		<?php endforeach; ?>
+			<?php endforeach; ?>
+		</div>
 
 	</div><!-- #homepage-portfolio -->
 

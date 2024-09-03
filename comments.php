@@ -8,8 +8,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Templates
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -47,12 +47,12 @@ if ( ! comments_open() && get_comment_pages_count() == 0 ) {
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { ?>
 			<nav class="navigation comment-navigation row clr" role="navigation">
 				<h4 class="assistive-text section-heading heading"><span><?php _e( 'Comment navigation', 'wpex-elegant' ); ?></span></h4>
-				<div class="nav-previous span_12 col clr-margin"><?php previous_comments_link( __( '&larr; Older Comments', 'wpex-elegant' ) ); ?></div>
-				<div class="nav-next span_12 col"><?php next_comments_link( __( 'Newer Comments &rarr;', 'wpex-elegant' ) ); ?></div>
+				<div class="nav-previous span_12 col clr-margin"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'wpex-elegant' ) ); ?></div>
+				<div class="nav-next span_12 col"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'wpex-elegant' ) ); ?></div>
 			</nav>
 		<?php } ?>
 	<?php } // have_comments() ?>
 	<?php comment_form( array(
-		'title_reply'	=> '<div class="heading"><span>'. __('Leave a Comment','wpex-elegant') .'</span></div>',
+		'title_reply'	=> '<div class="heading"><span>'. esc_html__('Leave a Comment','wpex-elegant') .'</span></div>',
 	)); ?>
 </div><!-- #comments -->

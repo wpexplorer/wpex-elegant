@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Customizer
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
@@ -13,7 +13,7 @@ function wpex_customizer_portfolio( $wp_customize ) {
 
 	// Portfolio Section
 	$wp_customize->add_section( 'wpex_portfolio' , array(
-		'title'    => __( 'Portfolio', 'wpex-elegant' ),
+		'title'    => esc_html__( 'Portfolio', 'wpex-elegant' ),
 		'priority' => 210,
 	) );
 	
@@ -25,7 +25,7 @@ function wpex_customizer_portfolio( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_portfolio', array(
-		'label'		=> __( 'Portfolio Post Type', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Portfolio Post Type', 'wpex-elegant' ),
 		'section'	=> 'wpex_portfolio',
 		'settings'	=> 'wpex_portfolio',
 		'type'		=> 'checkbox',
@@ -39,7 +39,7 @@ function wpex_customizer_portfolio( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_portfolio_comments', array(
-		'label'		=> __( 'Portfolio Comments', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Portfolio Comments', 'wpex-elegant' ),
 		'section'	=> 'wpex_portfolio',
 		'settings'	=> 'wpex_portfolio_comments',
 		'type'		=> 'checkbox',
@@ -53,7 +53,7 @@ function wpex_customizer_portfolio( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_portfolio_related', array(
-		'label'		=> __( 'Portfolio Related', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Portfolio Related', 'wpex-elegant' ),
 		'section'	=> 'wpex_portfolio',
 		'settings'	=> 'wpex_portfolio_related',
 		'type'		=> 'checkbox',
@@ -67,7 +67,7 @@ function wpex_customizer_portfolio( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( 'wpex_portfolio_columns', array(
-		'label'		=> __( 'Columns', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Archive Columns', 'wpex-elegant' ),
 		'section'	=> 'wpex_portfolio',
 		'settings'	=> 'wpex_portfolio_columns',
 		'type'		=> 'select',
@@ -79,10 +79,24 @@ function wpex_customizer_portfolio( $wp_customize ) {
 		),
 	) );
 
+	// Posts Per Page - Archive
+	$wp_customize->add_setting( 'wpex_portfolio_posts_per_page', array(
+		'type'		        => 'theme_mod',
+		'default'	        => '12',
+		'sanitize_callback' => 'absint',
+	) );
+	
+	$wp_customize->add_control( 'wpex_portfolio_posts_per_page', array(
+		'label'		=> esc_html__( 'Archive Items Per Page', 'wpex-elegant' ),
+		'section'	=> 'wpex_portfolio',
+		'settings'	=> 'wpex_portfolio_posts_per_page',
+		'type'		=> 'text',
+	) );
+
 	// Homepage Portfolio Category
 	if ( taxonomy_exists( 'portfolio_category' ) ) {
 		$choices = array(
-			'all'	=> __( 'All', 'wpex-elegant' )
+			'all'	=> esc_html__( 'All', 'wpex-elegant' )
 		);
 		$cats = get_terms( 'portfolio_category' );
 			if ( $cats ) {
@@ -97,7 +111,7 @@ function wpex_customizer_portfolio( $wp_customize ) {
 		) );
 		
 		$wp_customize->add_control( 'wpex_home_portfolio_category', array(
-			'label'		=> __( 'Portfolio Homepage Category','wpex-elegant' ),
+			'label'		=> esc_html__( 'Portfolio Homepage Category','wpex-elegant' ),
 			'section'	=> 'wpex_portfolio',
 			'settings'	=> 'wpex_home_portfolio_category',
 			'type'		=> 'select',
@@ -108,29 +122,69 @@ function wpex_customizer_portfolio( $wp_customize ) {
 	// Homepage Count
 	$wp_customize->add_setting( 'wpex_home_portfolio_count', array(
 		'type'		=> 'theme_mod',
-		'default'	=> '8',
+		'default'	=> '4',
 		'sanitize_callback' => 'absint',
 	) );
 	
 	$wp_customize->add_control( 'wpex_home_portfolio_count', array(
-		'label'		=> __( 'Homepage Count', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Homepage Count', 'wpex-elegant' ),
 		'section'	=> 'wpex_portfolio',
 		'settings'	=> 'wpex_home_portfolio_count',
 		'type'		=> 'text',
 	) );
 
-	// Posts Per Page - Archive
-	$wp_customize->add_setting( 'wpex_portfolio_posts_per_page', array(
-		'type'		        => 'theme_mod',
-		'default'	        => '12',
+	// Home Columns.
+	$wp_customize->add_setting( 'wpex_home_portfolio_columns', array(
+		'type'		=> 'theme_mod',
+		'default'	=> '4',
 		'sanitize_callback' => 'absint',
 	) );
 	
-	$wp_customize->add_control( 'wpex_portfolio_posts_per_page', array(
-		'label'		=> __( 'Archive Items Per Page', 'wpex-elegant' ),
+	$wp_customize->add_control( 'wpex_home_portfolio_columns', array(
+		'label'		=> esc_html__( 'Homepage Columns', 'wpex-elegant' ),
 		'section'	=> 'wpex_portfolio',
-		'settings'	=> 'wpex_portfolio_posts_per_page',
+		'settings'	=> 'wpex_home_portfolio_columns',
+		'type'		=> 'select',
+		'choices'   => array(
+			'1' => '1',
+			'2' => '2',
+			'3' => '3',
+			'4' => '4',
+		),
+	) );
+
+	// Related Count
+	$wp_customize->add_setting( 'wpex_related_portfolio_count', array(
+		'type'		=> 'theme_mod',
+		'default'	=> '4',
+		'sanitize_callback' => 'absint',
+	) );
+	
+	$wp_customize->add_control( 'wpex_related_portfolio_count', array(
+		'label'		=> esc_html__( 'Related Count', 'wpex-elegant' ),
+		'section'	=> 'wpex_portfolio',
+		'settings'	=> 'wpex_related_portfolio_count',
 		'type'		=> 'text',
+	) );
+
+	// Related Columns
+	$wp_customize->add_setting( 'wpex_related_portfolio_columns', array(
+		'type'		=> 'theme_mod',
+		'default'	=> '4',
+		'sanitize_callback' => 'absint',
+	) );
+	
+	$wp_customize->add_control( 'wpex_related_portfolio_columns', array(
+		'label'		=> esc_html__( 'Related Columns', 'wpex-elegant' ),
+		'section'	=> 'wpex_portfolio',
+		'settings'	=> 'wpex_related_portfolio_columns',
+		'type'		=> 'select',
+		'choices'   => array(
+			'1' => '1',
+			'2' => '2',
+			'3' => '3',
+			'4' => '4',
+		),
 	) );
 
 }

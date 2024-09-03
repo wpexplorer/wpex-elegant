@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Customizer
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
@@ -13,7 +13,7 @@ function wpex_customizer_general( $wp_customize ) {
 
 	// General Section
 	$wp_customize->add_section( 'wpex_header_section' , array(
-		'title'      => __( 'Header', 'wpex-elegant' ),
+		'title'      => esc_html__( 'Header', 'wpex-elegant' ),
 		'priority'   => 210,
 	) );
 
@@ -24,7 +24,7 @@ function wpex_customizer_general( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wpex_logo', array(
-		'label'    => __('Image Logo','wpex-elegant'),
+		'label'    => esc_html__('Image Logo','wpex-elegant'),
 		'section'  => 'wpex_header_section',
 		'settings' => 'wpex_logo',
 	) ) );

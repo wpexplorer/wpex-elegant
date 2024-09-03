@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( has_post_thumbnail() ) : ?>
 
-		<div class="staff-entry-media clr">
+		<div class="staff-entry-media">
 			<?php
 			// Display post thumbnail
 			the_post_thumbnail( 'wpex-staff-entry', array(

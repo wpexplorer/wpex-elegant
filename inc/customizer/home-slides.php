@@ -4,15 +4,15 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Customizer
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
 function wpex_customizer_homepage_slider( $wp_customize ) {
 
 	$wp_customize->add_section( 'wpex_home_slides' , array(
-		'title'    => __( 'Home Slider', 'wpex-elegant' ),
+		'title'    => esc_html__( 'Home Slider', 'wpex-elegant' ),
 		'priority' => 210,
 	) );
 	
@@ -23,7 +23,7 @@ function wpex_customizer_homepage_slider( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_homepage_slider', array(
-		'label'		=> __( 'Enable Home Slider', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Enable Home Slider', 'wpex-elegant' ),
 		'section'	=> 'wpex_home_slides',
 		'settings'	=> 'wpex_homepage_slider',
 		'type'		=> 'checkbox',
@@ -36,7 +36,7 @@ function wpex_customizer_homepage_slider( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_homepage_slider_center', array(
-		'label'		=> __( 'Center (Box) Home Slider', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Center (Box) Home Slider', 'wpex-elegant' ),
 		'section'	=> 'wpex_home_slides',
 		'settings'	=> 'wpex_homepage_slider_center',
 		'type'		=> 'checkbox',
@@ -49,7 +49,7 @@ function wpex_customizer_homepage_slider( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_homepage_slider_title', array(
-		'label'		=> __( 'Show Title', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Show Title', 'wpex-elegant' ),
 		'section'	=> 'wpex_home_slides',
 		'settings'	=> 'wpex_homepage_slider_title',
 		'type'		=> 'checkbox',

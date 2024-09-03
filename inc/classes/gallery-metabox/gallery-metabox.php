@@ -5,9 +5,9 @@
  * http://wordpress.org/plugins/easy-image-gallery/
  * https://github.com/woothemes/woocommerce
  *
- * @author      Alexander Clarke
+ * @author      WPExplorer
  * @copyright   Copyright (c) 2014, Symple Workz LLC
- * @link        http://www.wpexplorer.com
+ * @link        https://www.wpexplorer.com
  * @version     1.0.0
  * @link        https://github.com/wpexplorer/gallery-metabox
  */
@@ -53,7 +53,7 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
             foreach ( $types as $type ) {
                 add_meta_box(
                     'wpex-gallery-metabox',         // ID
-                    __( 'Image Gallery', 'wpex-elegant' ),  // Title
+                    esc_html__( 'Image Gallery', 'wpex-elegant' ),  // Title
                     array( $this, 'render' ),       // Callback
                     $type,                          // Post type
                     'normal',                       // Cotext
@@ -79,7 +79,7 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
                             if ( wp_attachment_is_image ( $attachment_id  ) ) {
                                 echo '<li class="image" data-attachment_id="' . $attachment_id . '"><div class="attachment-preview"><div class="thumbnail">
                                             ' . wp_get_attachment_image( $attachment_id, 'thumbnail' ) . '</div>
-                                            <a href="#" class="wpex-gmb-remove" title="' . __( 'Remove image', 'wpex-elegant' ) . '"><div class="media-modal-icon"></div></a>
+                                            <a href="#" class="wpex-gmb-remove" title="' . esc_html__( 'Remove image', 'wpex-elegant' ) . '"><div class="media-modal-icon"></div></a>
                                         </div></li>';
                             }
                         }
@@ -90,11 +90,6 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
             </div>
             <p class="add_wpex_gallery_images hide-if-no-js">
                 <a href="#" class="button-primary"><?php _e( 'Add/Edit Images', 'wpex-elegant' ); ?></a>
-            </p>
-            <p>
-                <label for="easy_image_gallery_link_images">
-                    <input type="checkbox" id="easy_image_gallery_link_images" value="on" name="easy_image_gallery_link_images"<?php checked( get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true ), 'on', true ); ?> /> <?php _e( 'Enable Lightbox for this gallery?', 'wpex-elegant' )?>
-                </label>
             </p>
             <?php // Props to WooCommerce for the following JS code ?>
             <script type="text/javascript">
@@ -218,12 +213,6 @@ if ( ! class_exists( 'WPEX_Gallery_Metabox' ) ) {
                 // Delete gallery
                 delete_post_meta( $post_id, '_easy_image_gallery' );
             }
-            // link to larger images
-            if ( isset( $_POST[ 'easy_image_gallery_link_images' ] ) ) {
-                update_post_meta( $post_id, '_easy_image_gallery_link_images', $_POST[ 'easy_image_gallery_link_images' ] );
-            } else {
-                update_post_meta( $post_id, '_easy_image_gallery_link_images', 'off' );
-            }
             // Add action
             do_action( 'wpex_save_gallery_metabox', $post_id );
         }
@@ -296,21 +285,6 @@ if ( ! function_exists ( 'wpex_get_attachment' ) ) {
  */
 if ( ! function_exists ( 'wpex_gallery_count' ) ) {
     function wpex_gallery_count() {
-        $ids = wpex_get_gallery_ids();
-        return count( $ids );
-    }
-}
-
-/**
- * Check if lightbox is enabled
- *
- * @since   1.0.0
- * @return  bool
- */
-if ( ! function_exists ( 'wpex_gallery_is_lightbox_enabled' ) ) {
-    function wpex_gallery_is_lightbox_enabled() {
-        if ( 'on' == get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true ) ) {
-            return true;
-        }
+        return (bool) wpex_get_gallery_ids();
     }
 }

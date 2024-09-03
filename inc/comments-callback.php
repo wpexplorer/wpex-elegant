@@ -10,8 +10,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Includes
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
@@ -23,7 +23,7 @@ if ( ! function_exists( 'wpex_comment' ) ) {
 			case 'trackback' :
 			// Display trackbacks differently than normal comments. ?>
 		<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
-			<p><?php _e( 'Pingback:', 'wpex-elegant' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'wpex-elegant' ), '<span class="ping-meta"><span class="edit-link">', '</span></span>' ); ?></p>
+			<p><?php _e( 'Pingback:', 'wpex-elegant' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_html__( 'Edit', 'wpex-elegant' ), '<span class="ping-meta"><span class="edit-link">', '</span></span>' ); ?></p>
 		<?php
 				break;
 			default :
@@ -44,11 +44,11 @@ if ( ! function_exists( 'wpex_comment' ) ) {
 								get_comment_time( 'c' ),
 								sprintf( _x( '%1$s', '1: date', 'wpex-elegant' ), get_comment_date() )
 							);
-							//edit_comment_link( __( 'Edit', 'wpex-elegant' ), '<span class="edit-link">', '<span>' );
+							//edit_comment_link( esc_html__( 'Edit', 'wpex-elegant' ), '<span class="edit-link">', '<span>' );
 						?>
 						</span><!-- .comment-date -->
 						<span class="reply">
-							<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'wpex-elegant' ) . '', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+							<?php comment_reply_link( array_merge( $args, array( 'reply_text' => esc_html__( 'Reply', 'wpex-elegant' ) . '', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 						</span><!-- .reply -->
 					</header><!-- .comment-meta -->
 					<?php if ( '0' == $comment->comment_approved ) : ?>

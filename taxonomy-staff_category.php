@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Templates
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -19,27 +19,11 @@ get_header(); ?>
 
 			<?php if ( have_posts( ) ) : ?>
 
-				<div id="portfolio-wrap" class="wpex-row clr">
-
-					<?php $wpex_count=0; ?>
-
-					<?php
-					$columns = get_theme_mod( 'wpex_staff_columns' );
-					$columns = $columns ? absint( $columns ) : 3; ?>
-
+				<div id="staff-wrap" class="wpex-grid wpex-grid-cols-<?php echo sanitize_html_class( get_theme_mod( 'wpex_staff_columns' ) ?: 3 ); ?>">
 					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php $wpex_count++; ?>
-
-							<?php get_template_part( 'partials/staff/entry' ); ?>
-
-						<?php if ( $wpex_count == $columns ) {
-							$wpex_count = 0;
-						} ?>
-						
+						<?php get_template_part( 'partials/staff/entry' ); ?>
 					<?php endwhile; ?>
-
-				</div><!-- #portfolio-wrap -->
+				</div><!-- #staff-wrap -->
 
 				<?php wpex_pagination(); ?>
 

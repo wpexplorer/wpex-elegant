@@ -4,6 +4,7 @@
  * CMB field class
  * @since  1.1.0
  */
+#[\AllowDynamicProperties]
 class cmb_Meta_Box_field {
 
 	/**
@@ -456,8 +457,8 @@ class cmb_Meta_Box_field {
 		$args['options']    = isset( $args['options'] ) && is_array( $args['options'] ) ? $args['options'] : array();
 
 		$args['options']    = 'group' == $args['type'] ? wp_parse_args( $args['options'], array(
-			'add_button'    => __( 'Add Group', 'cmb' ),
-			'remove_button' => __( 'Remove Group', 'cmb' ),
+			'add_button'    => esc_html__( 'Add Group', 'cmb' ),
+			'remove_button' => esc_html__( 'Remove Group', 'cmb' ),
 		) ) : $args['options'];
 
 		$args['_id']        = $args['id'];

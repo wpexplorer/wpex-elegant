@@ -6,8 +6,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Templates
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'partials/page', 'header' ); ?>
 
-			<article class="entry clr">
+			<article class="single-post-content entry clr">
 
 				<?php echo wp_get_attachment_image( get_the_ID(), 'full' ); ?>
 

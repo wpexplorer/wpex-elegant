@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -49,7 +49,7 @@ if ( $wpex_query->posts ) : ?>
 			if ( $term ) {
 				$term = get_term( $term, 'portfolio_category' );
 			}
-			$heading = ( $term && $term->name ) ? $term->name : __( 'Recent Work', 'wpex-elegant' );
+			$heading = ( $term && $term->name ) ? $term->name : esc_html__( 'Recent Work', 'wpex-elegant' );
 		}
 		if ( $heading ) : ?>
 			<h2 class="heading">
@@ -57,17 +57,10 @@ if ( $wpex_query->posts ) : ?>
 			</h2>
 		<?php endif; ?>
 
-		<div class="wpex-row clr">
+		<div class="wpex-grid wpex-grid-cols-<?php echo sanitize_html_class( get_theme_mod( 'wpex_home_portfolio_columns' ) ?: 4 ); ?>">
 			<?php
-			$wpex_count = 0;
-			$columns    = get_theme_mod( 'wpex_portfolio_columns' );
-			$columns    = $columns ? absint( $columns ) : 4;
 			foreach( $wpex_query->posts as $post ) : setup_postdata( $post );
-				$wpex_count++;
 				get_template_part( 'partials/portfolio/entry', get_post_format() );
-				if ( $columns == $wpex_count ) {
-					$wpex_count = 0;
-				}
 			endforeach; ?>
 		</div><!-- .wpex-row -->
 

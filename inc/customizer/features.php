@@ -4,15 +4,15 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Customizer
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
 function wpex_customizer_features( $wp_customize ) {
 
 	$wp_customize->add_section( 'wpex_features' , array(
-		'title'    => __( 'Home Features', 'wpex-elegant' ),
+		'title'    => esc_html__( 'Home Features', 'wpex-elegant' ),
 		'priority' => 210,
 	) );
 	
@@ -23,7 +23,7 @@ function wpex_customizer_features( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_home_features', array(
-		'label'		=> __( 'Enable Home Features Post Type', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Enable Home Features Post Type', 'wpex-elegant' ),
 		'section'	=> 'wpex_features',
 		'settings'	=> 'wpex_home_features',
 		'type'		=> 'checkbox',
@@ -37,7 +37,7 @@ function wpex_customizer_features( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( 'wpex_features_columns', array(
-		'label'		=> __( 'Homepage Columns', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Homepage Columns', 'wpex-elegant' ),
 		'section'	=> 'wpex_features',
 		'settings'	=> 'wpex_features_columns',
 		'type'		=> 'select',

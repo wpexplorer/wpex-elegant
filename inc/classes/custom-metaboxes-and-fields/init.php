@@ -255,10 +255,10 @@ class cmb_Meta_Box {
 			   wp_register_script( 'iris', admin_url( 'js/iris.min.js' ), array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), self::CMB_VERSION );
 		   	wp_register_script( 'wp-color-picker', admin_url( 'js/color-picker.min.js' ), array( 'iris' ), self::CMB_VERSION );
 				wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', array(
-					'clear'         => __( 'Clear', 'wpex-elegant' ),
-					'defaultString' => __( 'Default', 'wpex-elegant' ),
-					'pick'          => __( 'Select Color', 'wpex-elegant' ),
-					'current'       => __( 'Current Color', 'wpex-elegant' ),
+					'clear'         => esc_html__( 'Clear', 'wpex-elegant' ),
+					'defaultString' => esc_html__( 'Default', 'wpex-elegant' ),
+					'pick'          => esc_html__( 'Select Color', 'wpex-elegant' ),
+					'current'       => esc_html__( 'Current Color', 'wpex-elegant' ),
 				) );
 			}
 		} else {
@@ -285,7 +285,7 @@ class cmb_Meta_Box {
 			'ajaxurl'         => admin_url( '/admin-ajax.php' ),
 			'up_arrow'        => '[ ↑ ]&nbsp;',
 			'down_arrow'      => '&nbsp;[ ↓ ]',
-			'check_toggle'    => __( 'Select / Deselect All', 'cmb' ),
+			'check_toggle'    => esc_html__( 'Select / Deselect All', 'cmb' ),
 		) ) );
 
 		wp_register_style( 'cmb-styles', CMB_META_BOX_URL . 'style'. $min .'.css', $styles );
@@ -1176,7 +1176,7 @@ function cmb_metabox_form( $meta_box, $object_id, $echo = true ) {
 
 	$form_format = apply_filters( 'cmb_frontend_form_format', '<form class="cmb-form" method="post" id="%s" enctype="multipart/form-data" encoding="multipart/form-data"><input type="hidden" name="object_id" value="%s">%s<input type="submit" name="submit-cmb" value="%s" class="button-primary"></form>', $object_id, $meta_box, $form );
 
-	$form = sprintf( $form_format, $meta_box['id'], $object_id, $form, __( 'Save', 'wpex-elegant' ) );
+	$form = sprintf( $form_format, $meta_box['id'], $object_id, $form, esc_html__( 'Save', 'wpex-elegant' ) );
 
 	if ( $echo )
 		echo $form;

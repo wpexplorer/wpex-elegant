@@ -4,13 +4,13 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Classes
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
 class WPEX_Dropdown_Walker_Nav_Menu extends Walker_Nav_Menu {
-	function display_element($element, &$children_elements, $max_depth, $depth=0, $args, &$output) {
+	function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
 		
 		$id_field = $this->db_fields['id'];
 		

@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -15,8 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Get copyright text
-$copy = get_theme_mod( 'wpex_copyright' );
-$copy = $copy ? $copy : '&copy; [current_year] Theme by <a href="https://www.wpexplorer.com/" target="_blank">WPExplorer</a> powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>'; ?>
+$copy = get_theme_mod( 'wpex_copyright' ) ?: 'Copyright ' . get_the_date( 'Y' ) . ' <a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html( get_bloginfo( 'name' ) ) . '</a>'; ?>
 
 <footer id="copyright-wrap" class="clr">
 	<div id="copyright" role="contentinfo" class="clr">

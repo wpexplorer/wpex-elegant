@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Post Types
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
@@ -48,23 +48,24 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 
 			// Define post type labels
 			$labels = array(
-				'name'					=> __( 'Staff', 'wpex-elegant' ),
-				'singular_name'			=> __( 'Staff Member', 'wpex-elegant' ),
-				'add_new'				=> __( 'Add New Member', 'wpex-elegant' ),
-				'add_new_item'			=> __( 'Add New Staff Member', 'wpex-elegant' ),
-				'edit_item'				=> __( 'Edit Staff Member', 'wpex-elegant' ),
-				'new_item'				=> __( 'Add New Staff Member', 'wpex-elegant' ),
-				'view_item'				=> __( 'View Member', 'wpex-elegant' ),
-				'search_items'			=> __( 'Search Staff', 'wpex-elegant' ),
-				'not_found'				=> __( 'No staff items found', 'wpex-elegant' ),
-				'not_found_in_trash'	=> __( 'No staff items found in trash', 'wpex-elegant' )
+				'name' => esc_html__( 'Staff', 'wpex-elegant' ),
+				'singular_name' => esc_html__( 'Staff Member', 'wpex-elegant' ),
+				'add_new' => esc_html__( 'Add New Member', 'wpex-elegant' ),
+				'add_new_item' => esc_html__( 'Add New Staff Member', 'wpex-elegant' ),
+				'edit_item' => esc_html__( 'Edit Staff Member', 'wpex-elegant' ),
+				'new_item' => esc_html__( 'Add New Staff Member', 'wpex-elegant' ),
+				'view_item' => esc_html__( 'View Member', 'wpex-elegant' ),
+				'search_items' => esc_html__( 'Search Staff', 'wpex-elegant' ),
+				'not_found' => esc_html__( 'No staff items found', 'wpex-elegant' ),
+				'not_found_in_trash' => esc_html__( 'No staff items found in trash', 'wpex-elegant' )
 			);
 
 			// Define post type args
 			$args = array(
-				'labels'			=> $labels,
-				'public'			=> true,
-				'supports'			=> array(
+				'labels' => $labels,
+				'public' => true,
+				'publicly_queryable' => false,
+				'supports' => array(
 					'title',
 					'editor',
 					'excerpt',
@@ -73,12 +74,9 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 					'custom-fields',
 					'revisions'
 				),
-				'capability_type'	=> 'post',
-				'rewrite'			=> array(
-					'slug' => 'staff-member'
-				),
-				'has_archive'		=> false,
-				'menu_icon'			=> 'dashicons-groups',
+				'capability_type' => 'post',
+				'has_archive' => false,
+				'menu_icon' => 'dashicons-groups',
 			);
 
 			// Apply filters for child theming
@@ -90,21 +88,21 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 
 			// Define staff category taxonomy labels
 			$cat_labels = array(
-				'name'							=> __( 'Staff Categories', 'wpex-elegant' ),
-				'singular_name'					=> __( 'Staff Category', 'wpex-elegant' ),
-				'search_items'					=> __( 'Search Staff Categories', 'wpex-elegant' ),
-				'popular_items'					=> __( 'Popular Staff Categories', 'wpex-elegant' ),
-				'all_items'						=> __( 'All Staff Categories', 'wpex-elegant' ),
-				'parent_item'					=> __( 'Parent Staff Category', 'wpex-elegant' ),
-				'parent_item_colon'				=> __( 'Parent Staff Category:', 'wpex-elegant' ),
-				'edit_item'						=> __( 'Edit Staff Category', 'wpex-elegant' ),
-				'update_item'					=> __( 'Update Staff Category', 'wpex-elegant' ),
-				'add_new_item'					=> __( 'Add New Staff Category', 'wpex-elegant' ),
-				'new_item_name'					=> __( 'New Staff Category Name', 'wpex-elegant' ),
-				'separate_items_with_commas'	=> __( 'Separate staff categories with commas', 'wpex-elegant' ),
-				'add_or_remove_items'			=> __( 'Add or remove staff categories', 'wpex-elegant' ),
-				'choose_from_most_used'			=> __( 'Choose from the most used staff categories', 'wpex-elegant' ),
-				'menu_name'						=> __( 'Categories', 'wpex-elegant' ),
+				'name'							=> esc_html__( 'Staff Categories', 'wpex-elegant' ),
+				'singular_name'					=> esc_html__( 'Staff Category', 'wpex-elegant' ),
+				'search_items'					=> esc_html__( 'Search Staff Categories', 'wpex-elegant' ),
+				'popular_items'					=> esc_html__( 'Popular Staff Categories', 'wpex-elegant' ),
+				'all_items'						=> esc_html__( 'All Staff Categories', 'wpex-elegant' ),
+				'parent_item'					=> esc_html__( 'Parent Staff Category', 'wpex-elegant' ),
+				'parent_item_colon'				=> esc_html__( 'Parent Staff Category:', 'wpex-elegant' ),
+				'edit_item'						=> esc_html__( 'Edit Staff Category', 'wpex-elegant' ),
+				'update_item'					=> esc_html__( 'Update Staff Category', 'wpex-elegant' ),
+				'add_new_item'					=> esc_html__( 'Add New Staff Category', 'wpex-elegant' ),
+				'new_item_name'					=> esc_html__( 'New Staff Category Name', 'wpex-elegant' ),
+				'separate_items_with_commas'	=> esc_html__( 'Separate staff categories with commas', 'wpex-elegant' ),
+				'add_or_remove_items'			=> esc_html__( 'Add or remove staff categories', 'wpex-elegant' ),
+				'choose_from_most_used'			=> esc_html__( 'Choose from the most used staff categories', 'wpex-elegant' ),
+				'menu_name'						=> esc_html__( 'Categories', 'wpex-elegant' ),
 			);
 
 			// Define staff category taxonomy args
@@ -137,8 +135,8 @@ if ( ! class_exists( 'WPEX_Staff_Post_Type' ) ) {
 		 *
 		 */
 		public function edit_cols( $columns ) {
-			$columns[ 'staff_thumbnail' ] = __( 'Thumbnail', 'wpex-elegant' );
-			$columns[ 'staff_category' ]  = __( 'Category', 'wpex-elegant' );
+			$columns[ 'staff_thumbnail' ] = esc_html__( 'Thumbnail', 'wpex-elegant' );
+			$columns[ 'staff_category' ]  = esc_html__( 'Category', 'wpex-elegant' );
 			return $columns;
 		}
 

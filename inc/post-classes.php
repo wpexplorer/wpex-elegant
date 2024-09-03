@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Includes
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
@@ -14,14 +14,7 @@ if ( ! function_exists( 'wpex_post_entry_classes' ) ) {
 	function wpex_post_entry_classes( $classes ) {
 		
 		// Post Data
-		global $post, $wpex_count;
-		$post_id = $post->ID;
-		$post_type = get_post_type($post_id);
-
-		// Do nothing for slides
-		if ( $post_type == 'slides' ) {
-			return $classes;
-		}
+		$post_type = get_post_type();
 
 		// Search results
 		if ( is_search() ) {
@@ -37,18 +30,9 @@ if ( ! function_exists( 'wpex_post_entry_classes' ) ) {
 			$classes[] = $post_type .'-entry';
 		}
 
-		// Counter
-		if ( $wpex_count ) {
-			$classes[] = 'count-'. $wpex_count;
-		}
-
 		// Portfolio
 		if ( $post_type == 'portfolio' ) {
-			$columns = get_theme_mod( 'wpex_portfolio_columns' );
-			$columns = $columns ? $columns : '4';
-			$classes[] = 'span_1_of_' . esc_attr( $columns );
-			$classes[] = 'col';
-			$classes[] = 'clr';
+			// none
 		}
 
 		// Staff

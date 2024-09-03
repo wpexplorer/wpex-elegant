@@ -4,15 +4,15 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Templates
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 ?>
 
 <div class="page-content">
 	<?php if ( is_home() && current_user_can( 'publish_posts' ) ) { ?>
-		<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wpex-elegant' ), admin_url( 'post-new.php' ) ); ?></p>
+		<p><?php printf( esc_html__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wpex-elegant' ), admin_url( 'post-new.php' ) ); ?></p>
 	<?php } elseif ( is_search() ) { ?>
 		<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with different keywords.', 'wpex-elegant' ); ?></p>
 	<?php } elseif ( is_category() ) { ?>

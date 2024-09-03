@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -23,6 +23,8 @@ $wpex_query = new WP_Query( array(
 
 // Display slides if we find some
 if ( $wpex_query->posts ) :
+
+	wp_enqueue_script( 'wpex-home-slider' );
 
 	$center = get_theme_mod( 'wpex_homepage_slider_center' ); ?>
 
@@ -60,7 +62,6 @@ if ( $wpex_query->posts ) :
 										<div class="homepage-slide-title"><?php the_title(); ?></div>
 									<?php endif; ?>
 									<?php if ( $caption ) { ?>
-										<div class="clr"></div>
 										<div class="homepage-slide-caption"><?php echo wp_kses_post( $caption ); ?></div>
 									<?php } ?>
 								</div><!-- .homepage-slider-content -->
@@ -71,6 +72,7 @@ if ( $wpex_query->posts ) :
 						// Display post thumbnail
 						the_post_thumbnail( 'wpex-home-slider', array(
 							'alt' => wpex_get_esc_title(),
+							'loading' => false
 						) ); ?>
 
 						<?php if ( $url ) echo '</a>'; ?>

@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -20,26 +20,20 @@ if ( ! get_theme_mod( 'wpex_homepage_features', true ) ) {
 }
 
 // Query features
-$wpex_query = new WP_Query(
-	array(
-		'order'          => 'ASC',
-		'orderby'        => 'menu_order',
-		'post_type'      => 'features',
-		'posts_per_page' => '-1',
-		'no_found_rows'  => true,
-	)
-);
+$wpex_query = new WP_Query( array(
+	'order'          => 'ASC',
+	'orderby'        => 'menu_order',
+	'post_type'      => 'features',
+	'posts_per_page' => '-1',
+	'no_found_rows'  => true,
+) );
 
 // Display features
 if ( $wpex_query->posts ) : ?>
 
-	<div id="homepage-features" class="wpex-row clr">
-		<?php
-		$wpex_count=0;
-		foreach ( $wpex_query->posts as $post ) : setup_postdata( $post );
-			$wpex_count++;
+	<div id="homepage-features" class="wpex-grid wpex-grid-cols-4">
+		<?php foreach ( $wpex_query->posts as $post ) : setup_postdata( $post );
 			get_template_part( 'partials/features/entry' );
-			if ( '4' == $wpex_count ) $wpex_count=0;
 		endforeach; ?>
 	</div><!-- #homepage-features -->
 

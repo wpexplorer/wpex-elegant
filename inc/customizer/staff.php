@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Customizer
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
@@ -13,7 +13,7 @@ function wpex_customizer_staff( $wp_customize ) {
 
 	// Staff Section
 	$wp_customize->add_section( 'wpex_staff' , array(
-		'title' => __( 'Staff', 'wpex-elegant' ),
+		'title' => esc_html__( 'Staff', 'wpex-elegant' ),
 		'priority' => 210,
 	) );
 	
@@ -25,7 +25,7 @@ function wpex_customizer_staff( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_staff', array(
-		'label'		=> __( 'Staff Post Type', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Staff Post Type', 'wpex-elegant' ),
 		'section'	=> 'wpex_staff',
 		'settings'	=> 'wpex_staff',
 		'type'		=> 'checkbox',
@@ -39,7 +39,7 @@ function wpex_customizer_staff( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_staff_comments', array(
-		'label' => __( 'Staff Comments', 'wpex-elegant' ),
+		'label' => esc_html__( 'Staff Comments', 'wpex-elegant' ),
 		'section' => 'wpex_staff',
 		'settings' => 'wpex_staff_comments',
 		'type' => 'checkbox',
@@ -54,7 +54,7 @@ function wpex_customizer_staff( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( 'wpex_staff_columns', array(
-		'label'		=> __( 'Columns', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Columns', 'wpex-elegant' ),
 		'section'	=> 'wpex_staff',
 		'settings'	=> 'wpex_staff_columns',
 		'type'		=> 'select',
@@ -74,7 +74,7 @@ function wpex_customizer_staff( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( 'wpex_staff_posts_per_page', array(
-		'label' => __( 'Archive Posts Per Page', 'wpex-elegant' ),
+		'label' => esc_html__( 'Archive Posts Per Page', 'wpex-elegant' ),
 		'section' => 'wpex_staff',
 		'settings' => 'wpex_staff_posts_per_page',
 		'type' => 'text',

@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 } ?>
 
-<div id="header-wrap" class="fixed-header clr">
+<div id="header-wrap">
 
-    <header id="header" class="site-header container clr" role="banner">
+    <header id="header" class="site-header container" role="banner">
 
         <?php get_template_part( 'partials/header/branding' ); ?>
         

@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Post Types
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
@@ -46,28 +46,29 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 
 			// Define post type labels
 			$labels = array(
-				'name'					=> __( 'Slides', 'wpex-elegant' ),
-				'menu_name'				=> __( 'Home Slides', 'wpex-elegant' ),
-				'singular_name'			=> __( 'Slides Item', 'wpex-elegant' ),
-				'add_new'				=> __( 'Add New Item', 'wpex-elegant' ),
-				'add_new_item'			=> __( 'Add New Slides Item', 'wpex-elegant' ),
-				'edit_item'				=> __( 'Edit Slides Item', 'wpex-elegant' ),
-				'new_item'				=> __( 'Add New Slides Item', 'wpex-elegant' ),
-				'view_item'				=> __( 'View Item', 'wpex-elegant' ),
-				'search_items'			=> __( 'Search Slides', 'wpex-elegant' ),
-				'not_found'				=> __( 'No slides items found', 'wpex-elegant' ),
-				'not_found_in_trash'	=> __( 'No slides items found in trash', 'wpex-elegant' )
+				'name'					=> esc_html__( 'Slides', 'wpex-elegant' ),
+				'menu_name'				=> esc_html__( 'Home Slides', 'wpex-elegant' ),
+				'singular_name'			=> esc_html__( 'Slides Item', 'wpex-elegant' ),
+				'add_new'				=> esc_html__( 'Add New Item', 'wpex-elegant' ),
+				'add_new_item'			=> esc_html__( 'Add New Slides Item', 'wpex-elegant' ),
+				'edit_item'				=> esc_html__( 'Edit Slides Item', 'wpex-elegant' ),
+				'new_item'				=> esc_html__( 'Add New Slides Item', 'wpex-elegant' ),
+				'view_item'				=> esc_html__( 'View Item', 'wpex-elegant' ),
+				'search_items'			=> esc_html__( 'Search Slides', 'wpex-elegant' ),
+				'not_found'				=> esc_html__( 'No slides items found', 'wpex-elegant' ),
+				'not_found_in_trash'	=> esc_html__( 'No slides items found in trash', 'wpex-elegant' )
 			);
 
 			// Define post type args
 			$args = array(
-				'labels'			=> $labels,
-				'public'			=> true,
-				'supports'			=> array( 'title', 'thumbnail', 'custom-fields' ),
-				'capability_type'	=> 'post',
-				'rewrite'			=> array( 'slug' => 'slides' ),
-				'has_archive'		=> false,
-				'menu_icon'			=> 'dashicons-images-alt2',
+				'labels'			  => $labels,
+				'public'			  => true,
+				'supports'			  => array( 'title', 'thumbnail', 'custom-fields' ),
+				'capability_type'	  => 'post',
+				'rewrite'			  => array( 'slug' => 'slides' ),
+				'has_archive'		  => false,
+				'menu_icon'			  => 'dashicons-images-alt2',
+				'exclude_from_search' => true,
 			);
 
 			// Apply filters for child theming
@@ -88,8 +89,8 @@ if ( ! class_exists( 'WPEX_Slides_Post_Type' ) ) {
 		public function edit_cols( $columns ) {
 			$slides_columns = array(
 				'cb'				=> '<input type=\"checkbox\" />',
-				'title'				=> __( 'Title', 'wpex-elegant' ),
-				'slides_thumbnail'	=> __( 'Thumbnail', 'wpex-elegant' )
+				'title'				=> esc_html__( 'Title', 'wpex-elegant' ),
+				'slides_thumbnail'	=> esc_html__( 'Thumbnail', 'wpex-elegant' )
 			);
 			return $slides_columns;
 		}

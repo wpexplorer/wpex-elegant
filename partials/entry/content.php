@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 	// Display custom excerpt
 	else {
-		wpex_excerpt( 93, get_theme_mod( 'wpex_blog_readmore', true ) );
+		wpex_excerpt( 40, get_theme_mod( 'wpex_blog_readmore', true ) );
 	} ?>
 
 </div><!-- .loop-entry-content -->

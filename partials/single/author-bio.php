@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -40,7 +40,7 @@ if ( ! $author_description ) {
 
 <div class="author-info clr">
 
-	<h4 class="heading"><span><?php printf( __( 'Written by %s', 'wpex-elegant' ), $author ); ?></span></h4>
+	<h4 class="heading"><span><?php printf( esc_html__( 'Written by %s', 'wpex-elegant' ), $author ); ?></span></h4>
 
 	<div class="author-info-inner clr">
 

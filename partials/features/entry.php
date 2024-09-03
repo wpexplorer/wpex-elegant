@@ -3,8 +3,8 @@
  * The default template for displaying features entries
  *
  * @package Elegant WordPress theme
- * @author  Alexander Clarke
- * @link    http://www.wpexplorer.com
+ * @author  WPExplorer
+ * @link    https://www.wpexplorer.com
  * @since   1.0.0
  */
 

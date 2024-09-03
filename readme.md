@@ -2,7 +2,7 @@
 A 100% free GPL WordPress theme with built-in support for staff, portfolio, custom homepage and a blog.
 
 * Demo: http://wpexplorer-demos.com/elegant/
-* Landing Page: http://www.wpexplorer.com/elegant-free-wordpress-theme/
+* Landing Page: https://www.wpexplorer.com/elegant-free-wordpress-theme/
 
 
 ### Disclaimer

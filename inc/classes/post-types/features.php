@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Post Types
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       2.0.0
  */
 
@@ -46,17 +46,17 @@ if ( ! class_exists( 'WPEX_Features_Post_Type' ) ) {
 
 			// Declare post type labels
 			$labels = array(
-				'name'					=> __( 'Features', 'wpex-elegant' ),
-				'menu_name'				=> __( 'Home Features', 'wpex-elegant' ),
-				'singular_name'			=> __( 'Features Item', 'wpex-elegant' ),
-				'add_new'				=> __( 'Add New Item', 'wpex-elegant' ),
-				'add_new_item'			=> __( 'Add New Features Item', 'wpex-elegant' ),
-				'edit_item'				=> __( 'Edit Features Item', 'wpex-elegant' ),
-				'new_item'				=> __( 'Add New Features Item', 'wpex-elegant' ),
-				'view_item'				=> __( 'View Item', 'wpex-elegant' ),
-				'search_items'			=> __( 'Search Features', 'wpex-elegant' ),
-				'not_found'				=> __( 'No features items found', 'wpex-elegant' ),
-				'not_found_in_trash'	=> __( 'No features items found in trash', 'wpex-elegant' )
+				'name'					=> esc_html__( 'Features', 'wpex-elegant' ),
+				'menu_name'				=> esc_html__( 'Home Features', 'wpex-elegant' ),
+				'singular_name'			=> esc_html__( 'Features Item', 'wpex-elegant' ),
+				'add_new'				=> esc_html__( 'Add New Item', 'wpex-elegant' ),
+				'add_new_item'			=> esc_html__( 'Add New Features Item', 'wpex-elegant' ),
+				'edit_item'				=> esc_html__( 'Edit Features Item', 'wpex-elegant' ),
+				'new_item'				=> esc_html__( 'Add New Features Item', 'wpex-elegant' ),
+				'view_item'				=> esc_html__( 'View Item', 'wpex-elegant' ),
+				'search_items'			=> esc_html__( 'Search Features', 'wpex-elegant' ),
+				'not_found'				=> esc_html__( 'No features items found', 'wpex-elegant' ),
+				'not_found_in_trash'	=> esc_html__( 'No features items found in trash', 'wpex-elegant' )
 			);
 
 			// Declare post type args
@@ -88,8 +88,8 @@ if ( ! class_exists( 'WPEX_Features_Post_Type' ) ) {
 		public function edit_cols( $features_columns ) {
 			$features_columns = array(
 				"cb"					=> "<input type=\"checkbox\" />",
-				"title"					=> __( 'Title', 'wpex-elegant' ),
-				"features_thumbnail"	=> __( 'Thumbnail', 'wpex-elegant' )
+				"title"					=> esc_html__( 'Title', 'wpex-elegant' ),
+				"features_thumbnail"	=> esc_html__( 'Thumbnail', 'wpex-elegant' )
 			);
 			return $features_columns;
 		}

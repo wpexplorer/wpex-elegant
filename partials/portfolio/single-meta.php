@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( comments_open() ) { ?>
 		<li class="meta-comments comment-scroll">
 			<span class="meta-seperator">/</span><?php _e( 'With', 'wpex-elegant' ); ?>
-			<?php comments_popup_link( __( '0 Comments', 'wpex-elegant' ), __( '1 Comment',  'wpex-elegant' ), __( '% Comments', 'wpex-elegant' ), 'comments-link' ); ?>
+			<?php comments_popup_link( esc_html__( '0 Comments', 'wpex-elegant' ), esc_html__( '1 Comment',  'wpex-elegant' ), esc_html__( '% Comments', 'wpex-elegant' ), 'comments-link' ); ?>
 		</li>
 	<?php } ?>
 

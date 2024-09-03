@@ -4,8 +4,8 @@
  *
  * @package     Elegant WordPress theme
  * @subpackage  Partials
- * @author      Alexander Clarke
- * @link        http://www.wpexplorer.com
+ * @author      WPExplorer
+ * @link        https://www.wpexplorer.com
  * @since       1.0.0
  */
 
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close"></a></div>
 <div id="site-navigation-wrap">
-	<a href="#sidr-main" id="navigation-toggle"><span class="fa fa-bars"></span><?php echo __( 'Menu', 'wpex-elegant' ); ?></a>
+	<a href="#sidr-main" id="navigation-toggle"><span class="fa fa-bars"></span><?php esc_html_e( 'Menu', 'wpex-elegant' ); ?></a>
 	<nav id="site-navigation" class="navigation main-navigation clr" role="navigation">
 		<?php
 		// Display main menu

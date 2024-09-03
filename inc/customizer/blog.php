@@ -4,8 +4,8 @@
  *
  * @package Elegant WordPress theme
  * @subpackage Customizer
- * @author Alexander Clarke
- * @link http://www.wpexplorer.com
+ * @author WPExplorer
+ * @link https://www.wpexplorer.com
  * @since 2.0.0
  */
 
@@ -13,7 +13,7 @@ function wpex_customizer_blog( $wp_customize ) {
 
 	// Blog Section
 	$wp_customize->add_section( 'wpex_blog' , array(
-		'title' => __( 'Blog', 'wpex-elegant' ),
+		'title' => esc_html__( 'Blog', 'wpex-elegant' ),
 		'priority' => 210,
 	) );
 
@@ -25,7 +25,7 @@ function wpex_customizer_blog( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( 'wpex_home_blog_count', array(
-		'label'		=> __( 'Homepage Count', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Homepage Count', 'wpex-elegant' ),
 		'section'	=> 'wpex_blog',
 		'settings'	=> 'wpex_home_blog_count',
 		'type'		=> 'text',
@@ -39,7 +39,7 @@ function wpex_customizer_blog( $wp_customize ) {
 	) );
 	
 	$wp_customize->add_control( 'wpex_home_blog_columns', array(
-		'label'		=> __( 'Homepage Columns', 'wpex-elegant' ),
+		'label'		=> esc_html__( 'Homepage Columns', 'wpex-elegant' ),
 		'section'	=> 'wpex_blog',
 		'settings'	=> 'wpex_home_blog_columns',
 		'type'		=> 'select',
@@ -59,7 +59,7 @@ function wpex_customizer_blog( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_blog_readmore', array(
-		'label' => __('Read More Link','wpex-elegant'),
+		'label' => esc_html__('Read More Link','wpex-elegant'),
 		'section' => 'wpex_blog',
 		'settings' => 'wpex_blog_readmore',
 		'type' => 'checkbox',
@@ -73,7 +73,7 @@ function wpex_customizer_blog( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_blog_entry_thumb', array(
-		'label' => __('Featured Image on Entries','wpex-elegant'),
+		'label' => esc_html__('Featured Image on Entries','wpex-elegant'),
 		'section' => 'wpex_blog',
 		'settings' => 'wpex_blog_entry_thumb',
 		'type' => 'checkbox',
@@ -87,7 +87,7 @@ function wpex_customizer_blog( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'wpex_blog_post_thumb', array(
-		'label' => __('Featured Image on Posts','wpex-elegant'),
+		'label' => esc_html__('Featured Image on Posts','wpex-elegant'),
 		'section' => 'wpex_blog',
 		'settings' => 'wpex_blog_post_thumb',
 		'type' => 'checkbox',
