@@ -27,11 +27,11 @@ select { max-width: 100%; }
 :root {
     --wpex-accent: #139461;
     --wpex-on-accent: #fff;
-    --wpex-text-sm:0.875em;
-    --wpex-text-lg:1.125em;
-    --wpex-text-xl:1.25em;
-    --wpex-text-2xl:1.5em;
-    --wpex-text-3xl:1.875em;
+    --wpex-text-sm: 0.875em;
+    --wpex-text-lg: 1.125em;
+    --wpex-text-xl: 1.25em;
+    --wpex-text-2xl: 1.5em;
+    --wpex-text-3xl: 1.875em;
 }
 
 /* The Grid
