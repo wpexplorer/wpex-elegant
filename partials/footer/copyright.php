@@ -15,7 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Get copyright text
-$copy = get_theme_mod( 'wpex_copyright' ) ?: 'Copyright ' . get_the_date( 'Y' ) . ' <a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html( get_bloginfo( 'name' ) ) . '</a>'; ?>
+$copy = get_theme_mod( 'wpex_copyright' ) ?: 'Copyright ' . get_the_date( 'Y' ) . ' <a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html( get_bloginfo( 'name' ) ) . '</a>';
+
+?>
 
 <footer id="copyright-wrap" class="clr">
 	<div id="copyright" role="contentinfo" class="clr">
